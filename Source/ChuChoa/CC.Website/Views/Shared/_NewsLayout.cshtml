@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChuChoa.com - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="row topmost-menu">
+            <div class="navbar navbar-xs navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Chu Choa", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Danh mục
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Xe một bánh", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Xe hai bánh", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Xe ba bánh", "About", "Home")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><p class="navbar-text">Hotline: 09 79 908 950</p></li>
+                        </ul>
+                    </div>
+
+                    <div class="lower-header-menu">
+                        @Html.ActionLink("Liên hệ", "Contact", "Home")
+                    </div>
+                </div>
+
+                <hr class="hrstyle" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row header-news">
+                    <div class="col-md-2 col-sm-3 hidden-xs header-news-logo">
+                        <a href="#"><img src="~/Content/assets/News/header_news_logo.png" alt="" /></a>
+                    </div>
+                    <div class="col-md-10 col-sm-9 col-xs-12 header-news-img">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row hidden-xs">
+            <nav class="navbar navbar-news">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="@Url.Action("Index", "Home")"><span class="fa fa-home"></span></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Đánh giá", "Review", "News")</li>
+                        <li>@Html.ActionLink("Công nghệ", "TechnicalNews", "News")</li>
+                        <li>@Html.ActionLink("Tâm điểm", "StarTop", "News")</li>
+                        <li>@Html.ActionLink("Tư vấn", "Advice", "News")</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main class="container body-content">
+        @RenderBody()
+    </main>
+
+    <footer class="row footer">
+        <div class="container">
+            <div class="copyright text-right">
+                <p>&copy; @DateTime.Now.Year - ChuChoa.com</p>
+            </div>
+            <div class="legal pull-right">
+                <ol>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Help</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

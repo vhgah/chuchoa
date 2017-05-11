@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "BMW kết hợp với Montblanc cho ra đời bộ sưu tập đồ công nghệ xe hơi";
+    Layout = "~/Views/Shared/_NewsLayout.cshtml";
+}
+
+<div class="breadcrumb-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")"><span class="fa fa-home"></span></a></li>
+        <li>@Html.ActionLink("Tin tức", "Index", "News")</li>
+        <li>@Html.ActionLink("Tin công nghệ", "TechnicalNews", "News")</li>
+        <li class="active">BMW kết hợp với Montblanc cho ra đời bộ sưu tập đồ công nghệ xe hơi</li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-md-9">
+        <div class="news-content-detail">
+            <h3>
+                Ý tưởng đặt ra rất đơn giản. Những chiếc BMW 5-Series cực kỳ phong cách và có công nghệ đẳng cấp. Vậy tại sao không chuyển những ưu điểm đó lên một màn hình ngay cả khi chủ nhân đi xa khỏi chiếc xe?
+            </h3>
+            <p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><img src="~/Content/upload/images/1487913070.ky-thuat-phanh-chan-trai-cach-de-hien-ban-la-tay-lai-dang-cap-1.jpg" style="width: 700px;"></span></p><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><span style="font-family: Arial; font-size: 14px;"><div style="text-align: justify;"><img src="~/Content/upload/images/170309101620-bentley-bobtail-2-super-169.jpg" style="width: 700px;"></div></span><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><span style="font-family: Arial; font-size: 14px;"><div style="text-align: justify;"><img src="~/Content/upload/images/170309100725-1961-ferrari-berlinetta-by-scaglietti-1-super-169.jpg" style="width: 700px;"></div></span><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;">Ý tưởng nói trên đã dẫn tới sự hợp tác giữa hãng xe Đức và thương hiệu sản xuất hàng xa xỉ </span><a href="#" target="_blank">Montblanc</a><span style="font-family: Arial; font-size: 14px;">, với mục tiêu làm ra một bộ sưu tập vừa sang trọng lại vừa thể hiện công nghệ cao. Điểm nhấn của </span><a href="#" target="_blank">bộ sưu tập</a><span style="font-family: Arial; font-size: 14px;"> này là một cái keyfob cho người lái xe. Keyfob là một thiết bị điện tử có cơ chế xác thực bằng mã bảo vệ. Về cơ bản nó là một dây bằng da bò màu đen rất thời trang đeo ở cổ tay và có những tính năng theo kiểu chiếc đồng hồ Apple Watch.</span><br></p><p style="text-align: justify; "><br></p><span style="font-family: Arial; font-size: 14px;"><div style="text-align: justify;"><img src="~/Content/upload/images/170309101110-1961-ferrari-berlinetta-by-scaglietti-3-super-169.jpg" style="width: 700px;"></div></span><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><span style="font-family: Arial; font-size: 14px;"><div style="text-align: justify;"><img src="~/Content/upload/images/170309101457-bentley-bobtail-1-super-169.jpg" style="width: 700px;"></div></span><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;">Bộ sưu tập </span><a href="#" target="_blank">BMW 5-Series</a><span style="font-family: Arial; font-size: 14px;"> cũng bao gồm một bộ tai nghe P3 S2 của hãng âm thanh cao cấp Bowers &amp; Wilkins, có khả năng tái tạo trải nghiệm âm thanh của xe trên đường. Cuối cùng còn có thêm một notebook có tên gọi là BMW Smart Writing Set của Moleskine. Đây là một chiếc tablet sử dụng bút thông minh cho phép soạn văn bản, bản vẽ và có thể gửi tới điện thoại thông minh, máy tính bảng hoặc hệ thống thông tin giải trí trên xe và chia sẻ thông qua hệ điều hành Microsoft Office 365.</span></p><p style="text-align: justify; "><br></p><span style="font-family: Arial; font-size: 14px;"><div style="text-align: justify;"><img src="~/Content/upload/images/170309101620-bentley-bobtail-2-super-169.jpg" style="width: 700px;"></div></span><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;"><br></span></p><p style="text-align: justify; "><span style="font-family: Arial; font-size: 14px;">Phần chính của bộ sưu tập này sẽ được </span><a href="#" target="_blank">BMW</a><span style="font-family: Arial; font-size: 14px;"> và Montblanc ra mắt vào mùa Hè này với giá 430 Euro, trong khi tai nghe và notebook sẽ được giới thiệu vào tháng Ba tới với mức giá tương ứng là 150 và 250 Euro.</span></p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="panel panel-primary panel-news">
+            <div class="panel-heading">
+                Tin nổi bật
+                <a class="pull-right" href="#"><span class="fa fa-chevron-right"></span></a>
+            </div>
+            <div class="panel-body article">
+                <div class="article-media">
+                    <a href="@Url.Action("TechinicalNewsDetail", "News")"><img src="~/Content/upload/images/170310092143-rm-sothebys-bentley-1-super-169.jpg" alt="" /></a>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-content-headline">
+                        <a href="@Url.Action("TechinicalNewsDetail", "News")">Ferrari to split with parent company</a>
+                    </h3>
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item"><a href="@Url.Action("TechinicalNewsDetail", "News")">Vén màn xe thể thao hạng sang Audi RS5 Coupe 2018</a></li>
+                <li class="list-group-item"><a href="@Url.Action("TechinicalNewsDetail", "News")">Dendrobium - siêu xe đầu tiên của người Singapore - chính thức trình làng</a></li>
+                <li class="list-group-item"><a href="@Url.Action("TechinicalNewsDetail", "News")">Morbi leo risus</a></li>
+                <li class="list-group-item"><a href="@Url.Action("TechinicalNewsDetail", "News")">Porta ac consectetur ac</a></li>
+                <li class="list-group-item"><a href="@Url.Action("TechinicalNewsDetail", "News")">vestibulum at eros</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
