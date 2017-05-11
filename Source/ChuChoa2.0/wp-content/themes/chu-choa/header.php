@@ -30,8 +30,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
-						<a class="navbar-brand" area="" href="http://localhost/chuchoa.com/">Chu Choa</a>
+                        </button>                        
+						<a class="navbar-brand" area="" href="<?php echo home_url(); ?>">Chu Choa</a>                        
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -67,7 +67,7 @@
             <div class="container">
                 <div class="row header-news">
                     <div class="col-md-2 col-sm-3 hidden-xs header-news-logo">
-                        <a href="#"><img src="~/Content/assets/News/header_news_logo.png" alt="" /></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(). "/assets/images/header_news_logo.png"; ?>" alt="" /></a>
                     </div>
                     <div class="col-md-10 col-sm-9 col-xs-12 header-news-img">
 
@@ -82,13 +82,15 @@
             <nav class="navbar navbar-news">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="@Url.Action("Index", "Home")"><span class="fa fa-home"></span></a>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><span class="fa fa-home"></span></a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li><a>Đánh giá</a></li>
-                        <li><a>Công nghệ</a></li>
-                        <li><a>Tâm điểm</a></li>
-                        <li><a>Tư vấn</a></li>
+                        <?php
+                            $menus = chuchoa_get_menus( 'top-menu' );
+                            foreach ( $menus as $menu_idx => $menu ) : ?>
+                                <li><a href="<?php echo esc_url( $menu->url ); ?>"><?php echo esc_html( $menu->title ); ?></a></li>                                
+                            <?php endforeach; 
+                        ?>
                     </ul>
                 </div>
             </nav>
@@ -96,3 +98,5 @@
     </header>
 
 	<div id="content" class="site-content">
+        <main class="container body-content">
+        

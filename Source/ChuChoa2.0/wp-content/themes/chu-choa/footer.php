@@ -11,15 +11,24 @@
 
 ?>
 
-	</div><!-- #content -->
+	</main><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'chu-choa' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'chu-choa' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'chu-choa' ), 'chu-choa', '<a href="https://automattic.com/" rel="designer">CuongND</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="row footer">
+        <div class="container">
+            <div class="copyright text-right">
+                <p>&copy; <?php echo date("Y")?> - ChuChoa.com</p>
+            </div>
+            <div class="legal pull-right">
+                <ol>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Help</a></li>
+                </ol>
+            </div>
+
+        </div>
+    </footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

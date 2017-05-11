@@ -107,8 +107,9 @@ textarea {
 }
 
 .header-news-img {
-    background-image: url("assets/News/header_news.jpg");
+    background-image: url("../images/header_news.jpg");
     background-size: cover;
+    background-position: center;
     height: 120px;
 }
 

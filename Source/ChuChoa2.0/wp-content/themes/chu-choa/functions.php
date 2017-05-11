@@ -44,7 +44,7 @@ function chu_choa_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'top-menu' => esc_html__( 'Chu Choa', 'chu-choa' ),
+		'top-menu' => esc_html__( 'Top Menu', 'chu-choa' ),
 	) );
 
 	/*
@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'chu_choa_widgets_init' );
 function chu_choa_scripts() {
 	wp_enqueue_style( 'chu-choa-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css' );	
+	// wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/assets/css/bootstrap-theme.min.css' );	
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );		
 	wp_enqueue_style( 'site', get_template_directory_uri() . '/assets/css/Site.css' );
 	
@@ -124,6 +124,10 @@ function chu_choa_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'chu_choa_scripts' );
 
+/**
+ * load custom functions
+ */
+require get_template_directory() . '/inc/custom_functions.php';
 
 /**
  * Implement the Custom Header feature.
