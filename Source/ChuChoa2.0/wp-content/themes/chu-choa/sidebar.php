@@ -13,7 +13,7 @@ if (!$hot_cat){
 
 $hot_news = chuchoa_get_hot_news();
 if ($hot_news->have_posts()){
-    $first_post = $hot_news->the_post();
+    $hot_news->the_post();
 }
 else{
     return;
@@ -31,7 +31,10 @@ else{
                 <?php
                     $news_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
                 ?>
-                <img src="<?php echo $news_thumbnail; ?>" alt="<?php echo the_title(); ?>" />
+                <div class="hoverNews">		
+                        <figure><img src="<?php echo $news_thumbnail; ?>" alt="<?php echo the_title(); ?>" /></figure>
+                </div>
+                
             </a>
         </div>
         <div class="article-content">

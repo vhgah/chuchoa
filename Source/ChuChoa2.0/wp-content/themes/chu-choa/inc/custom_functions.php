@@ -55,7 +55,7 @@ add_action( 'add_meta_boxes', function ( $post_type ) {
 			function ( $post ) {
 				$cate_main = get_post_meta( $post->ID, '_chuchoa_cate_main', true );
 				echo '<label for="cate_main">' . esc_html__( 'Chuyên mục chính', 'chu-choa' ) . ': </label>';
-				wp_dropdown_categories(array('id'=>'cate_main', 'name'=>'cate_main', 'selected'=>$cate_main));
+				wp_dropdown_categories(array('id'=>'cate_main', 'name'=>'cate_main', 'selected'=>$cate_main, 'depth' => 0, 'hide_if_empty' => false, 'hierarchical' => 1,));
 			},
 			'post',
 			'after_title',
@@ -193,6 +193,33 @@ function chuchoa_get_category_by_slug($slug){
 	return $category;
 }
 
+function chuchoa_get_category_by_id( $id ) {
+	$category = get_category( $id );
+
+	if ( ! function_exists( 'pll_get_term' ) ) {
+		return $category;
+	}
+
+	$is_default_lang = chuchoa_is_default_language();
+
+	if ( ! $category ) {
+		return null;
+	}
+
+	if ( ! $is_default_lang ) {
+		$tran_id = pll_get_term( $category->cat_ID );
+		if ( $tran_id ) {
+			$tran_category = get_category( $tran_id );
+
+			if ( $tran_category ) {
+				$category = $tran_category;
+			}
+		}
+	}
+
+	return $category;
+}
+
 function chuchoa_get_hot_news($limit = 10){
 	$slug = 'tam-diem';
 
@@ -238,10 +265,58 @@ function chuchoa_get_current_cat_ID(){
 	return null;
 }
 
-function chuchoa_get_subcategory($parent_cate_ID){
-	$args = array('taxonomy'=> 'category',
-		'child_of'      => $parent_cate_ID, 
+function chuchoa_get_subcategory($parent_cate_ID){	
+	$cats = get_categories( array ('child_of' => $parent_cate_ID, 'hide_if_empty' => false, ));	
+	$list_cats = array();
+	
+	foreach($cats as $c){
+		array_push($list_cats, $c->term_id);
+	}
+
+	return $list_cats;
+}
+
+function chuchoa_get_hot_post_in_categories($cateID){
+	$hot_cate = chuchoa_get_category_by_slug("tam-diem");
+
+	if (!$hot_cate)
+		$hot_cate = -1;
+
+	return get_posts(array('category__and'=>array($hot_cate->cat_ID, $cateID)));
+}
+
+function chuchoa_get_post_in_time($cat_id, $query_date, $limit = 10){
+	$query_args = array(
+		'posts_per_page' => $limit,
+		'orderby' => array( 'date' => 'DESC' ),
+		'cat' => $cat_id,
+		'date_query' => $query_date,
 	);
 
-	return get_terms($args);
+	return new WP_Query( $query_args );
+}
+
+function chuchoa_get_first_post_each_cat(){
+	$root_cat = chuchoa_get_category_by_slug("tin-tuc");
+	$list_cats = chuchoa_get_subcategory($root_cat->cat_ID);
+
+	$news_query  = new WP_Query;
+	$list_post = array();
+
+	foreach ( $list_cats as $scat ) {		
+		$news_query->query( array(
+			'cat'                 => $scat,
+			'posts_per_page'      => 1,
+			'post_type' => 'post',
+			'no_found_rows'       => true,
+			'post__not_in' => $list_post,
+		));
+		if ( $news_query->have_posts() ) {
+			$news_query->the_post();
+			array_push($list_post, get_the_ID());
+		}		
+		wp_reset_postdata();
+	}
+
+	return $list_post;
 }
