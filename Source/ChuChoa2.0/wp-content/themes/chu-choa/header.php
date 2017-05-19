@@ -23,45 +23,34 @@
 
 	<header>
         <div class="row topmost-menu">
-            <div class="navbar navbar-xs navbar-inverse">
+            <div class="top-navbar">
                 <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>                        
-						<a class="navbar-brand" area="" href="<?php echo home_url(); ?>">Chu Choa</a>                        
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    Danh mục
-                                    <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu"> 
-<?php
-    $menus = chuchoa_get_menus('top-menu');
-    foreach ( $menus as $menuIdx => $menu ) : ?>
-        <li><a href="<?php echo esc_url( $menu->url ); ?>"><?php echo $menu->title; ?></a></li>								
-<?php endforeach; ?>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><p class="navbar-text">Hotline: 09 79 908 950</p></li>
-                        </ul>
-                    </div>
-
-                    <div class="lower-header-menu">
+                    <ul class="top-navbar-header">                                              
+						<li><a class="top-navbar-brand" area="" href="<?php echo home_url(); ?>">Chu Choa</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Danh mục
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                    $menus = chuchoa_get_menus('top-menu');
+                                    foreach ( $menus as $menuIdx => $menu ) : ?>
+                                        <li><a href="<?php echo esc_url( $menu->url ); ?>"><?php echo $menu->title; ?></a></li>								
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--<div class="lower-header-menu">
                         <a href="#">Liên hệ</a>                        
-                    </div>
+                    </div>-->
                 </div>
 
-                <hr class="hrstyle" />
+                <!--<hr class="hrstyle" />-->
             </div>
         </div>
+        
+        <div class="clearfix"></div>
 
         <div class="row">
             <div class="container">

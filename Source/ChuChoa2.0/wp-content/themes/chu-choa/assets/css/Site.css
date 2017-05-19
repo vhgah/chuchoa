@@ -9,8 +9,17 @@ a {
     color: black;
 }
 
+
+/* Remove the blue Webkit background when element is tapped */
+
+a,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 a:active,
-a:hover {
+a:hover,
+a:focus {
     color: black;
     text-decoration: none;
 }
@@ -44,27 +53,48 @@ textarea {
 
 /* Top most navbar */
 
-.topmost-menu {
-    height: 50px;
+.top-navbar {
+    background-color: #23282d;
+}
+
+.top-navbar-header {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.top-navbar-header a {
+    color: white;
+    font-size: 12px;
+}
+
+.top-navbar-brand {
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+.top-navbar-header>li {
+    display: inline;
+    margin-right: 15px;
 }
 
 .navbar-xs {
-    min-height: 28px;
+    /*min-height: 28px;*/
     margin-bottom: 0;
-    height: 28px;
+    /*height: 28px;*/
     border-radius: 0;
 }
 
 .navbar-xs>.container {
-    height: 28px;
+    /*height: 28px;*/
 }
 
 .navbar-xs .navbar-brand {
     padding: 0px 12px;
     font-size: 14px;
     line-height: 28px;
-    min-height: 28px;
-    height: 28px;
+    /*min-height: 28px;
+    height: 28px;*/
 }
 
 .navbar-xs .navbar-nav>li>a {
@@ -361,7 +391,7 @@ textarea {
 }
 
 .panel-subhots-news .list-group-item .article-content {
-    position: relative;
+    /*position: relative;*/
     margin: 0;
     padding: 0;
 }
@@ -472,4 +502,10 @@ p.article-excerpt {
     100% {
         left: 125%;
     }
+}
+
+.article-media {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
 }
