@@ -13,6 +13,12 @@ get_template_part( 'breadcrumb-bar');
 $current_cat = chuchoa_get_current_cat_ID();
 $sub_cats = chuchoa_get_subcategory($current_cat);
 $hot_posts = chuchoa_get_hot_post_in_categories($current_cat);
+$ignore_posts = [];
+for ($i = 0; $i < count($hot_posts); $i++) {
+    $cur_post = $hot_posts[$i];
+    array_push($ignore_posts, $cur_post->ID);
+}
+$_SESSION["first_post_each_cat"] = $ignore_posts;
 ?>
 
 <div class="row">
@@ -22,7 +28,7 @@ $hot_posts = chuchoa_get_hot_post_in_categories($current_cat);
         ?>            
             <div class="panel panel-primary panel-subhots-news">
                 <div class="panel-body article">
-                    <div class="article-media">
+                    <div class="article-media fixheaderoverlap">
                         <?php
                             $url = wp_get_attachment_url( get_post_thumbnail_id($first_hot_post->ID), 'thumbnail' );
                             $news_thumbnail = has_post_thumbnail($first_hot_post->ID) ? $url : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
@@ -54,7 +60,7 @@ $hot_posts = chuchoa_get_hot_post_in_categories($current_cat);
                     ?>
                         <div class="row list-group-item article-media">
                             <div class="col-md-4">
-                                <a href="<?php get_permalink($cur_post->ID); ?>">
+                                <a href="<?php echo get_permalink($cur_post->ID); ?>">
                                     <div class="hoverNews">		
                                         <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>
                                     </div>
@@ -63,7 +69,7 @@ $hot_posts = chuchoa_get_hot_post_in_categories($current_cat);
 
                             <div class="col-md-8 article-content">
                                 <h2 class="article-content-headline">
-                                    <a href="<?php get_permalink($cur_post->ID); ?>"><?php echo $cur_post->post_title; ?></a>
+                                    <a href="<?php echo get_permalink($cur_post->ID); ?>"><?php echo $cur_post->post_title; ?></a>
                                 </h2>                               
                             </div>
                         </div> 
@@ -77,6 +83,133 @@ $hot_posts = chuchoa_get_hot_post_in_categories($current_cat);
         <?php get_sidebar(); ?>
     </div>
 </div>
+
+<?php 
+    $cur_week_query = array(
+                            array(
+                                'column' => 'post_date_gmt',
+                                'after' => '1 week ago',
+                            ),
+                        );
+    $list_posts_current_week = chuchoa_get_post_in_time($current_cat, $cur_week_query, $ignore_posts);
+
+    $old_post_query = array(
+                            array(
+                                'column' => 'post_date_gmt',
+                                'before' => '1 week ago',
+                            ),
+                        );
+    $list_posts_old = chuchoa_get_post_in_time($current_cat, $old_post_query, $ignore_posts);
+?>
+    <div class="row">
+        <div class="col-md-12 content-category-news">
+            <div class="col-md-6">
+                <div class="panel panel-primary panel-subhots-news">
+                    <?php 
+                        if ($list_posts_current_week->have_posts()){
+                            $list_posts_current_week->the_post();
+                            $news_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
+                    ?>
+                            <div class="panel-body article">
+                                <div class="article-media">
+                                    <a href="<?php echo the_permalink();?>">
+                                        <div class="hoverNews">		
+                                                <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>
+                                        </div>
+                                    </a>
+                                    <div class="article-content">
+                                        <h2 class="article-content-headline">
+                                            <a href="<?php echo the_permalink();?>"><?php echo the_title(); ?></a>
+                                        </h2>
+                                        <p class="article-excerpt">
+                                            <?php echo get_the_excerpt(); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="list-group">
+                                <?php while($list_posts_current_week->have_posts()){
+                                        $list_posts_current_week->the_post(); 
+                                        $news_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
+                                ?>
+                                        <div class="row list-group-item article-media">
+                                            <div class="col-md-4">
+                                                <a href="<?php echo the_permalink();?>">
+                                                    <div class="hoverNews">		
+                                                            <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-8 article-content">
+                                                <h2 class="article-content-headline">
+                                                    <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                <?php } ?>
+                            </div>
+                    <?php               
+                        }
+                    ?>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-primary panel-subhots-news">
+                    <?php 
+                        if ($list_posts_old->have_posts()){
+                            $list_posts_old->the_post();
+                            $news_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
+                    ?>
+                            <div class="panel-body article">
+                                <div class="article-media">
+                                    <a href="<?php echo the_permalink();?>">
+                                        <div class="hoverNews">		
+                                                <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>
+                                        </div>
+                                    </a>
+                                    <div class="article-content">
+                                        <h2 class="article-content-headline">
+                                            <a href="<?php echo the_permalink();?>"><?php echo the_title(); ?></a>
+                                        </h2>
+                                         <p class="article-excerpt">
+                                            <?php echo get_the_excerpt(); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="list-group">
+                                <?php while($list_posts_old->have_posts()){
+                                        $list_posts_old->the_post(); 
+                                        $news_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
+                                ?>
+                                        <div class="row list-group-item article-media">
+                                            <div class="col-md-4">
+                                                <a href="<?php echo the_permalink();?>">
+                                                    <div class="hoverNews">		
+                                                            <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="col-md-8 article-content">
+                                                <h2 class="article-content-headline">
+                                                    <a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                <?php } ?>
+                            </div>
+                    <?php               
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 <?php 
     if ($sub_cats){

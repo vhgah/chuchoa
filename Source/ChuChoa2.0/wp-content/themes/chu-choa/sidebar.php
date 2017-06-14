@@ -11,7 +11,12 @@ if (!$hot_cat){
     return;
 }
 
-$hot_news = chuchoa_get_hot_news();
+if (isset($_SESSION["first_post_each_cat"]) )
+    $hot_news = chuchoa_get_filted_hot_news(10, $_SESSION["first_post_each_cat"]);
+else 
+    $hot_news = chuchoa_get_hot_news();
+    
+
 if ($hot_news->have_posts()){
     $hot_news->the_post();
 }

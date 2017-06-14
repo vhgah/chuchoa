@@ -8,7 +8,9 @@
  */
 
 get_header(); 
-$first_post_each_cat = chuchoa_get_first_post_each_cat();
+
+$first_post_each_cat = chuchoa_get_first_post_each_cat();    
+$_SESSION["first_post_each_cat"] = $first_post_each_cat;
 $root_cat = chuchoa_get_category_by_slug("tin-tuc");
 $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
 ?>
@@ -56,14 +58,25 @@ $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
     </div>
 </div>
 
-<?php for ($i = 0; $i < count($sub_cats); $i++) {
-    $sc = get_category( $sub_cats[$i]);
-    $lst_posts = chuchoa_get_hot_post_in_categories($sub_cats[$i]);  
-    if ($i % 3 == 0){           
-        if ($lst_posts){
-            $first_post = $lst_posts[0];
-            $url = wp_get_attachment_url( get_post_thumbnail_id($first_post->ID), 'thumbnail' );
-            $news_thumbnail = has_post_thumbnail($first_post->ID) ? $url : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
+<?php 
+    $block_counter = 0;
+   	$hot_cat = chuchoa_get_category_by_slug('tam-diem');
+    for ($i = 0; $i < count($sub_cats); $i++) {
+       	if ($sub_cats[$i] == $hot_cat->cat_ID){
+            continue;
+        }
+    		
+
+        $sc = get_category( $sub_cats[$i]);
+        $lst_posts = chuchoa_get_filted_post_in_categories($sub_cats[$i], $first_post_each_cat);  
+        if (!$lst_posts || !isset($lst_posts)){
+            continue;
+        }    
+        if (($block_counter % 3) == 0){           
+            if ($lst_posts){
+                $first_post = $lst_posts[0];
+                $url = wp_get_attachment_url( get_post_thumbnail_id($first_post->ID), 'thumbnail' );
+                $news_thumbnail = has_post_thumbnail($first_post->ID) ? $url : get_theme_file_uri( '/assets/images/news/default-news.jpg' );
         
     ?>
         <div class="row">
@@ -92,12 +105,12 @@ $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
                         ?>
                             <div class="row list-group-item article-media">
                                 <div class="col-md-4">
-                                    <a href="<?php get_permalink($p->ID); ?>"><div class="hoverNews">		 			                        <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>                             </div></a>
+                                    <a href="<?php echo get_permalink($p->ID); ?>"><div class="hoverNews">		 			                        <figure><img src="<?php echo $news_thumbnail; ?>" alt="" /></figure>                             </div></a>
                                 </div>
 
                                 <div class="col-md-8 article-content">
                                     <h2 class="article-content-headline">
-                                        <a href="<?php get_permalink($p->ID); ?>"><?php echo $p->post_title; ?></a>
+                                        <a href="<?php echo get_permalink($p->ID); ?>"><?php echo $p->post_title; ?></a>
                                     </h2>
                                 </div>
                             </div>
@@ -107,7 +120,7 @@ $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
             </div>
     <?php }
     }
-    if ($i % 3 == 1){ ?>
+    if (($block_counter % 3) == 1){ ?>
         <div class="col-md-3 col-md-pull-5 col-xs-6">
     <?php
         if ($lst_posts){
@@ -144,7 +157,7 @@ $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
     ?>
         </div>
     <?php }
-    if ($i % 3 == 2){ ?>
+    if (($block_counter % 3) == 2){ ?>
         <div class="col-md-4 col-xs-6">
         <?php
             if ($lst_posts){
@@ -180,7 +193,9 @@ $sub_cats = chuchoa_get_subcategory($root_cat->cat_ID);
         }
     ?>
         </div>
+        </div>
     <?php }
+    $block_counter = $block_counter + 1;
 } ?>
 
 <?php get_footer();

@@ -220,6 +220,25 @@ function chuchoa_get_category_by_id( $id ) {
 	return $category;
 }
 
+function chuchoa_get_filted_hot_news($limit = 10, $lst_ignore = []){
+	$slug = 'tam-diem';
+
+	$category = chuchoa_get_category_by_slug( $slug );
+
+	if ( ! $category ) {
+		return new WP_Query;
+	}
+
+	return new WP_Query( array(
+		'category_name' => $category->slug,
+		'posts_per_page' => $limit,
+		'no_found_rows' => true,
+		'post_status' => 'publish',
+		'orderby' => array( 'date' => 'DESC' ),
+		'post__not_in' => $lst_ignore,
+	) );
+}
+
 function chuchoa_get_hot_news($limit = 10){
 	$slug = 'tam-diem';
 
@@ -280,16 +299,38 @@ function chuchoa_get_hot_post_in_categories($cateID){
 	$hot_cate = chuchoa_get_category_by_slug("tam-diem");
 
 	if (!$hot_cate)
-		$hot_cate = -1;
+		$hot_cate = [];
 
 	return get_posts(array('category__and'=>array($hot_cate->cat_ID, $cateID)));
 }
 
-function chuchoa_get_post_in_time($cat_id, $query_date, $limit = 10){
+function chuchoa_get_filted_post_in_categories($cateID, $lst_ignore, $limit = 10 ){
+	if (!$cateID)
+		return [];
+
+	$hot_cate = chuchoa_get_category_by_slug("tam-diem");
+
+	if (!$hot_cate)
+		$hot_cate = [];
+
+	return get_posts(array('cat'=>$cateID, 
+							'category__not_in' => array($hot_cate->cat_ID),
+							'post__not_in' => $lst_ignore, 'posts_per_page' => $limit,
+							'orderby' => array( 'date' => 'DESC' ) ));
+}
+
+function chuchoa_get_post_in_time($cat_id, $query_date, $ignore = [], $limit = 10){
+	$hot_cate = chuchoa_get_category_by_slug("tam-diem");
+
+	if (!$hot_cate)
+		$hot_cate = [];
+
 	$query_args = array(
 		'posts_per_page' => $limit,
 		'orderby' => array( 'date' => 'DESC' ),
 		'cat' => $cat_id,
+		'category__not_in' => array($hot_cate->cat_ID),
+		'post__not_in' => $ignore,
 		'date_query' => $query_date,
 	);
 
@@ -310,6 +351,7 @@ function chuchoa_get_first_post_each_cat(){
 			'post_type' => 'post',
 			'no_found_rows'       => true,
 			'post__not_in' => $list_post,
+			'orderby' => array( 'date' => 'DESC' ),
 		));
 		if ( $news_query->have_posts() ) {
 			$news_query->the_post();
@@ -318,5 +360,8 @@ function chuchoa_get_first_post_each_cat(){
 		wp_reset_postdata();
 	}
 
+	rsort($list_post);
 	return $list_post;
 }
+
+

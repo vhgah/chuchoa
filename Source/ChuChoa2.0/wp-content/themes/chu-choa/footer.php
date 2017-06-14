@@ -20,8 +20,11 @@
             </div>
             <div class="legal pull-right">
                 <ol>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li class="dropup"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://hinata.chuchoa.com">Hinata</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Help</a></li>
                 </ol>

@@ -1,4 +1,5 @@
 @import url("roboto.css");
+@import url("https://fonts.googleapis.com/css?family=Lora");
 body {
     padding-left: 15px;
     padding-right: 15px;
@@ -146,9 +147,11 @@ textarea {
 }
 
 .header-news-logo img {
-    width: auto;
-    height: 120px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
 }
+
 
 
 /*Main menu*/
@@ -290,7 +293,7 @@ textarea {
     background-color: #1dabd8;
 }
 
-.article-media img {
+.article-media, .article-media img, .article-media a {
     width: 100%;
 }
 
@@ -324,12 +327,17 @@ textarea {
 }
 
 .panel-hot-news .article-content {
-    background-color: #007eb0;
+    background-color: #808080;
     opacity: 0.8;
     bottom: 0;
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+.panel-hot-news .article-content a {
+    color: black;
+    font-family: 'Lora', serif;
 }
 
 .panel-hot-news .article-content a:hover {
@@ -360,12 +368,16 @@ textarea {
     border: none;
 }
 
+.panel-subhots-news a, .panel-subhots-news a:hover, .panel-subhots-news a:focus{
+    color: white;
+}
+
 .panel-subhots-news .article {
     position: relative;
 }
 
 .panel-subhots-news .article .article-content {
-    background-color: #007eb0;
+    background-color: #007eb0;    
     opacity: 0.8;
     bottom: 0;
     left: 0;
@@ -373,11 +385,16 @@ textarea {
     width: 100%;
 }
 
+.panel-subhots-news p.article-excerpt {
+    color: #b2ffb4;
+}
+
 .panel-subhots-news .article-content-headline {
     margin-left: 15px;
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
+    font-family: 'Lora', serif;
 }
 
 .panel-subhots-news .list-group-item {
@@ -388,6 +405,7 @@ textarea {
 .panel-subhots-news .list-group-item a {
     font-size: 14px;
     line-height: 26px;
+    color: black;
 }
 
 .panel-subhots-news .list-group-item .article-content {
@@ -504,8 +522,43 @@ p.article-excerpt {
     }
 }
 
-.article-media {
+.fixheaderoverlap {
     display: inline-flex;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
+}
+
+.news-content .postthumb{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.news-content .postexcerpt h4{
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.news-content img, .news-content .wp-caption{
+    height: auto; 
+    max-width: 100%;
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
