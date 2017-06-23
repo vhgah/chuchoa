@@ -1,0 +1,23 @@
+.chuchoa-title {
+  padding: 0;
+}
+
+.chuchoa-title .navbar-nav > li > a.chuchoa-title__logo{
+  padding: 5px;
+}
+
+.chuchoa-title__logo-image {
+  height: 50px;
+}
+
+.chuchoa-title__toggle-menu{
+  height: 60px;
+  padding: 0 15px;
+  margin-top: 0;
+  margin-bottom: 0;  
+}
+
+.chuchoa-title__toggle-menu > i{
+  font-size: 32px;
+  color: white;
+}
