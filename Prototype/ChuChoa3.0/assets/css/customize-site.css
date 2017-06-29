@@ -30,3 +30,43 @@
 .chuchoa-drawer span.mdl-navigation__link.mdl-navigation__link {
   color: rgb(33,150,243);
 }
+
+/*
+    chuchoa-be-together-section
+*/
+.chuchoa-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+}
+
+.chuchoa-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.chuchoa-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .chuchoa-be-together-section {
+    height: 350px;
+  }
+
+  .chuchoa-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .chuchoa-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+}
+/*
+    end chuchoa-be-together-section
+*/

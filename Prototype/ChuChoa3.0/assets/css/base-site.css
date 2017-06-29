@@ -118,7 +118,7 @@ a img{
 
 .chuchoa-drawer .mdl-layout-title {
   position: relative;
-  height: 160px;
+  height: 100px;
 }
 
 .chuchoa-drawer .chuchoa-logo-image {
@@ -126,39 +126,53 @@ a img{
   bottom: 16px;
 }
 
-.chuchoa-be-together-section {
-  position: relative;
-  height: 800px;
-  width: auto;
-  background: url('images/slide01.jpg') center 30% no-repeat;
-  background-size: cover;
+
+/*
+  Slide
+*/
+.pt-perspective {
+	position: relative;
+	-webkit-perspective: 1200px;
+	-moz-perspective: 1200px;
+	perspective: 1200px;
 }
 
-.logo-font {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  line-height: 1;
-  font-weight: 500;
+.pt-page {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
-.chuchoa-slogan {
-  font-size: 60px;
-  padding-top: 160px;
+.pt-page-current,
+.no-js .pt-page {
+	visibility: visible;
+	z-index: 1;
 }
 
-.chuchoa-sub-slogan {
-  font-size: 21px;
-  padding-top: 24px;
+.no-js body {
+	overflow: auto;
 }
 
-.chuchoa-create-character {
-  font-size: 21px;
-  padding-top: 400px;
+.pt-page-ontop {
+	z-index: 999;
 }
+/*
+  End Slide
+*/
 
-  .chuchoa-create-character a {
-    text-decoration: none;
-    font-weight: 300;
-  }
 
 .chuchoa-screen-section {
   position: relative;
@@ -423,7 +437,7 @@ a img{
   /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
      consecutive "+" operators in some cases. Therefore, we need to use both
      here to cover all the bases. */
-  .android.chuchoa-search-box.is-focused ~ .chuchoa-mobile-title,
+  .chuchoa-search-box.is-focused ~ .chuchoa-mobile-title,
   .chuchoa-search-box.is-focused + .chuchoa-navigation-container + .chuchoa-mobile-title {
     opacity: 0;
   }
@@ -440,30 +454,8 @@ a img{
     width: 100%;
   }
 
-  .chuchoa-be-together-section {
-    height: 350px;
-  }
 
-  .chuchoa-slogan {
-    font-size: 26px;
-    margin: 0 16px;
-    padding-top: 24px;
-  }
 
-  .chuchoa-sub-slogan {
-    font-size: 16px;
-    margin: 0 16px;
-    padding-top: 8px;
-  }
-
-  .chuchoa-create-character {
-    padding-top: 200px;
-    font-size: 16px;
-  }
-
-  .chuchoa-create-character img {
-    height: 12px;
-  }
 
   .chuchoa-fab {
     display: none;

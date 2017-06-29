@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="assets/css/icon.css" />
   <link rel="stylesheet" href="assets/css/material.min.css" />
 
-  <!--<link rel="stylesheet" href="assets/css/animations.css" />-->
+  <link rel="stylesheet" href="assets/css/animations.css" />
 
   <link rel="stylesheet" href="assets/css/base-site.css" />
   <link rel="stylesheet" href="assets/css/customize-site.css" />
@@ -24,9 +24,9 @@
 
     <div class="chuchoa-header mdl-layout__header mdl-layout__header--waterfall">
       <div class="mdl-layout__header-row">
-        <span class="chuchoa-title mdl-layout-title">
+        <a class="chuchoa-title mdl-layout-title" href="">
           <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
-        </span>
+        </a>
         <!-- Add spacer, to align navigation to the right in desktop -->
         <div class="chuchoa-header-spacer mdl-layout-spacer"></div>
         <div class="chuchoa-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
@@ -52,14 +52,15 @@
               <li class="mdl-menu__item">Thị trường</li>
               <li class="mdl-menu__item">Tư vấn</li>
               <li class="mdl-menu__item">Đánh giá</li>
+              <li class="mdl-menu__item">Công nghệ</li>
             </ul>
             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Giới thiệu</a>
             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Liên hệ</a>
           </nav>
         </div>
-        <span class="chuchoa-mobile-title mdl-layout-title">
+        <a class="chuchoa-mobile-title mdl-layout-title" href="">
           <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
-        </span>
+        </a>
         <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
           <i class="material-icons">more_vert</i>
         </button>
@@ -75,40 +76,41 @@
         <img class="chuchoa-logo-image" src="assets/images/logo.png">
       </span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Phones</a>
-        <a class="mdl-navigation__link" href="">Tablets</a>
-        <a class="mdl-navigation__link" href="">Wear</a>
-        <a class="mdl-navigation__link" href="">TV</a>
-        <a class="mdl-navigation__link" href="">Auto</a>
-        <a class="mdl-navigation__link" href="">One</a>
-        <a class="mdl-navigation__link" href="">Play</a>
+        <a class="mdl-navigation__link" href="">Mua bán</a>
+        <a class="mdl-navigation__link" href="">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="">Cậu hỏi thường gặp</a>
+        <a class="mdl-navigation__link" href="">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="">Liên hệ</a>        
         <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">Versions</span>
-        <a class="mdl-navigation__link" href="">Lollipop 5.0</a>
-        <a class="mdl-navigation__link" href="">KitKat 4.4</a>
-        <a class="mdl-navigation__link" href="">Jelly Bean 4.3</a>
-        <a class="mdl-navigation__link" href="">Android history</a>
-        <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">Resources</span>
-        <a class="mdl-navigation__link" href="">Official blog</a>
-        <a class="mdl-navigation__link" href="">Android on Google+</a>
-        <a class="mdl-navigation__link" href="">Android on Twitter</a>
-        <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">For developers</span>
-        <a class="mdl-navigation__link" href="">App developer resources</a>
-        <a class="mdl-navigation__link" href="">Android Open Source Project</a>
-        <a class="mdl-navigation__link" href="">Android SDK</a>
+        <span class="mdl-navigation__link" href="">Tin tức</span>
+        <a class="mdl-navigation__link" href="">Thị trường</a>
+        <a class="mdl-navigation__link" href="">Tư vấn</a>
+        <a class="mdl-navigation__link" href="">Đánh giá</a>
+        <a class="mdl-navigation__link" href="">Công nghệ</a>
       </nav>
     </div>
 
     <div class="chuchoa-content mdl-layout__content">
       <a name="top"></a>
       <div class="chuchoa-be-together-section mdl-typography--text-center">
+        <div class="pt-holder pt-perspective">
+          <div class="pt-page pt-page-1"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+          <div class="pt-page pt-page-2"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+          <div class="pt-page pt-page-3"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+          <div class="pt-page pt-page-4"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+          <div class="pt-page pt-page-5"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+          <div class="pt-page pt-page-6"><h1><span>A collection of</span><strong>Page</strong> Transitions</h1></div>
+        </div>
+
         <div class="logo-font chuchoa-slogan">be together. not the same.</div>
         <div class="logo-font chuchoa-sub-slogan">welcome to android... be yourself. do your thing. see what's going on.</div>
-        <div class="logo-font chuchoa-create-character">
-          <a href=""><img src="images/andy.png"> create your android character</a>
-        </div>
+        <form class="chuchoa-search" action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="text1">
+              <label class="mdl-textfield__label" for="text1">Text...</label>
+          </div>
+        </form>
 
         <a href="#screens">
           <button class="chuchoa-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
@@ -116,6 +118,7 @@
           </button>
         </a>
       </div>
+
       <div class="chuchoa-screen-section mdl-typography--text-center">
         <a name="screens"></a>
         <div class="mdl-typography--display-1-color-contrast">Powering screens of all sizes</div>
@@ -308,9 +311,9 @@
     </div>
   </div>
   
-  <!--<script defer src="assets/js/jquery-1.12.4.js"></script>
-  <script defer src="assets/js/modernizr.custom.js"></script>  
-  <script defer src="assets/js/pagetransitions.js"></script>-->
+  <!--<script defer src="assets/js/jquery-1.12.4.js"></script>-->
+  <!--<script defer src="assets/js/modernizr.custom.js"></script>  -->
+  <script defer src="assets/js/pagetransitions.js"></script>
     
   <script defer src="assets/js/material.js"></script>  
 

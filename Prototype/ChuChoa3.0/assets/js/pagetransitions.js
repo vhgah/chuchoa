@@ -2,7 +2,6 @@ var PageTransitions = (function() {
 
 	var $main = $( '#pt-main' ),
 		$pages = $main.children( 'div.pt-page' ),
-		$iterate = $( '#iterateEffects' ),
 		animcursor = 1,
 		pagesCount = $pages.length,
 		current = 0,
@@ -42,14 +41,6 @@ var PageTransitions = (function() {
 
 		$pages.eq( current ).addClass( 'pt-page-current' );
 
-		// $( '#dl-menu' ).dlmenu( {
-		// 	animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' },
-		// 	onLinkClick : function( el, ev ) {
-		// 		ev.preventDefault();
-		// 		nextPage( el.data( 'animation' ) );
-		// 	}
-		// } );
-
         var animcursorCheck = function() {
             if( isAnimating ) {
                 return false;
@@ -62,26 +53,6 @@ var PageTransitions = (function() {
             }
             return animcursor;
         };
-
-        // $( "body" ).keyup(function(event) {
-        //     var key = event.which,
-        //         animation = $( '#dl-menu' ).data().dlmenu.$el.data( 'animation' );
-
-        //     if ( key == keys.RIGHT || key == keys.SPACE || key == keys.ENTER || key == keys.DOWN || key == keys.PAGE_DOWN ) {
-        //         nextPage( animcursorCheck() );
-        //         ++animcursor;
-        //     }
-        //     if ( key == keys.LEFT || key == keys.BACKSPACE || key == keys.PAGE_UP ) {
-        //         --animcursor;
-        //         nextPage( animcursorCheck() );
-        //     }
-        // });
-
-        $iterate.on( 'click', function() {
-            nextPage( animcursorCheck() );
-            ++animcursor;
-        } );
-
 	}
 
 	function nextPage(options ) {
