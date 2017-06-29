@@ -10,3 +10,471 @@ a img{
   border: 0px;
 }
 
+.chuchoa-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.chuchoa-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+}
+
+.chuchoa-mobile-title {
+  display: none !important;
+}
+
+
+.chuchoa-logo-image {
+  height: 28px;
+  width: 140px;
+}
+
+
+.chuchoa-header {
+  overflow: visible;
+}
+
+.chuchoa-header .mdl-navigation__link {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+  .chuchoa-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .chuchoa-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .chuchoa-search-box.is-focused + .chuchoa-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .chuchoa-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    border-bottom: 4px solid transparent;
+  }
+
+.mdl-navigation__link.chuchoa-navigation__link--more{
+  padding-right: 5px;
+}
+
+.chuchoa-navigation__link--more .material-icons {
+  top: 45%;
+}
+
+  .chuchoa-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .chuchoa-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.chuchoa-drawer {
+  border-right: none;
+}
+
+.chuchoa-drawer-separator {
+  height: 1px;
+  margin: 8px 0;
+}
+
+.chuchoa-drawer .mdl-navigation__link.mdl-navigation__link {
+  font-size: 14px;
+}
+
+.chuchoa-drawer .mdl-layout-title {
+  position: relative;
+  height: 160px;
+}
+
+.chuchoa-drawer .chuchoa-logo-image {
+  position: absolute;
+  bottom: 16px;
+}
+
+.chuchoa-be-together-section {
+  position: relative;
+  height: 800px;
+  width: auto;
+  background: url('images/slide01.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+
+.logo-font {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.chuchoa-slogan {
+  font-size: 60px;
+  padding-top: 160px;
+}
+
+.chuchoa-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.chuchoa-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .chuchoa-create-character a {
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+.chuchoa-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.chuchoa-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.chuchoa-screen {
+  text-align: center;
+}
+
+.chuchoa-screen .chuchoa-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.chuchoa-image-link {
+  text-decoration: none;
+}
+
+.chuchoa-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .chuchoa-wear .chuchoa-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.chuchoa-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .chuchoa-phone .chuchoa-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.chuchoa-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .chuchoa-tablet .chuchoa-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .chuchoa-tablet .chuchoa-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.chuchoa-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .chuchoa-tv .chuchoa-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.chuchoa-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .chuchoa-auto .chuchoa-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.chuchoa-wear-section {
+  position: relative;
+  background: url('images/wear.png') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.chuchoa-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.chuchoa-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+}
+
+  .chuchoa-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.chuchoa-link {
+  text-decoration: none;
+}
+
+
+
+  .chuchoa-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.chuchoa-alt-link {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+  .chuchoa-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.chuchoa-customized-section {
+  text-align: center;
+}
+
+.chuchoa-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .chuchoa-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.chuchoa-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.chuchoa-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .chuchoa-more-section .chuchoa-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.chuchoa-card-container {
+}
+
+  .chuchoa-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .chuchoa-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .chuchoa-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .chuchoa-card-container .mdl-card__title-text {
+    height: auto;
+  }
+
+  .chuchoa-card-container .mdl-card__supporting-text {
+    height: auto;
+    padding-bottom: 56px;
+  }
+
+  .chuchoa-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .chuchoa-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.chuchoa-footer {
+  position: relative;
+}
+
+
+  .chuchoa-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .chuchoa-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .chuchoa-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .chuchoa-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .chuchoa-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.chuchoa-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .chuchoa-navigation-container {
+    display: none;
+  }
+
+  .chuchoa-title {
+    display: none !important;
+  }
+
+  .chuchoa-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .android.chuchoa-search-box.is-focused ~ .chuchoa-mobile-title,
+  .chuchoa-search-box.is-focused + .chuchoa-navigation-container + .chuchoa-mobile-title {
+    opacity: 0;
+  }
+
+  .chuchoa-more-button {
+    display: none;
+  }
+
+  .chuchoa-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .chuchoa-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .chuchoa-be-together-section {
+    height: 350px;
+  }
+
+  .chuchoa-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .chuchoa-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .chuchoa-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .chuchoa-create-character img {
+    height: 12px;
+  }
+
+  .chuchoa-fab {
+    display: none;
+  }
+
+  .chuchoa-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .chuchoa-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}

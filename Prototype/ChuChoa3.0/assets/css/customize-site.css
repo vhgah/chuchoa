@@ -1,23 +1,32 @@
-.chuchoa-title {
-  padding: 0;
+.chuchoa-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 1px solid white;
 }
 
-.chuchoa-title .navbar-nav > li > a.chuchoa-title__logo{
-  padding: 5px;
+.chuchoa-header .mdl-layout__drawer-button {
+  background: transparent;
 }
 
-.chuchoa-title__logo-image {
-  height: 50px;
+.chuchoa-navigation .mdl-navigation__link {
+  background-color: transparent !important;
 }
 
-.chuchoa-title__toggle-menu{
-  height: 60px;
-  padding: 0 15px;
-  margin-top: 0;
-  margin-bottom: 0;  
+.chuchoa-navigation .mdl-navigation__link:hover {
+  border-bottom: 4px solid greenyellow;
 }
 
-.chuchoa-title__toggle-menu > i{
-  font-size: 32px;
-  color: white;
+.chuchoa-drawer-separator {
+  background-color: darkgrey;
+}
+
+.chuchoa-drawer .mdl-navigation__link.mdl-navigation__link {
+  color: #757575;
+}
+
+.chuchoa-drawer .mdl-layout-title{
+  background: rgba(210, 210, 210, 0.3);;
+}
+
+.chuchoa-drawer span.mdl-navigation__link.mdl-navigation__link {
+  color: rgb(33,150,243);
 }
