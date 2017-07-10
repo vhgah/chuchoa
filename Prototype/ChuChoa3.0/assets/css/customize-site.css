@@ -32,41 +32,23 @@
 }
 
 /*
-    chuchoa-be-together-section
+    chuchoa-banner-section
 */
-.chuchoa-be-together-section {
-  position: relative;
-  height: 800px;
-  width: auto;
+.chuchoa-banner-section {
+  /*position: relative;*/
+  /*height: 800px;*/
+  width: 100%;
 }
 
-.chuchoa-slogan {
-  font-size: 60px;
-  padding-top: 160px;
-}
-
-.chuchoa-sub-slogan {
-  font-size: 21px;
-  padding-top: 24px;
+.chuchoa-banner-section .pt-page img {
+  width: 100%;
 }
 
 @media (max-width: 900px) {
-  .chuchoa-be-together-section {
-    height: 350px;
-  }
-
-  .chuchoa-slogan {
-    font-size: 26px;
-    margin: 0 16px;
-    padding-top: 24px;
-  }
-
-  .chuchoa-sub-slogan {
-    font-size: 16px;
-    margin: 0 16px;
-    padding-top: 8px;
+  .chuchoa-banner-section {
+    /*height: 350px;*/
   }
 }
 /*
-    end chuchoa-be-together-section
+    end chuchoa-banner-section
 */
