@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="../Tailoring/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="../Tailoring/assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Profile - Tailori.ng</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+    <link href="../Tailoring/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Tailoring/assets/css/material-kit.css" rel="stylesheet"/>
+
+</head>
+
+<body class="profile-page">
+	<nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+    	<div class="container">
+        	<!-- Brand and toggle get grouped for better mobile display -->
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="http://www.tailori.ng">Tailori.ng</a>
+        	</div>
+
+        	<div class="collapse navbar-collapse" id="navigation-example">
+        		<ul class="nav navbar-nav navbar-right">
+    				<li>
+    					<a href="../Tailoring/shop.html" class="btn" target="_blank">
+    						Shop
+    					</a>
+    				</li>
+    				<li>
+    					<a href="../Tailoring/build.html" target="_blank" class="btn">
+                            Build
+    					</a>
+    				</li>
+					<li>
+    					<a href="../Tailoring/cart.html" target="_blank" class="btn">
+                            View Cart
+    					</a>
+    				</li>
+					<li>
+    					<a href="../Tailoring/userprofile.html" target="_blank" class="btn">
+                            Profile
+    					</a>
+    				</li>
+		           
+    				<li>
+    					<a href="../Tailoring/about-page.html" target="_blank" class="btn">
+                            About
+    					</a>
+    				</li>
+					<li>
+    					<a href="../Tailoring/contact-page.html" target="_blank" class="btn">
+                            Contact
+    					</a>
+    				</li>
+		            <li>
+		                <a href="https://twitter.com/Tailoring" target="_blank" class="btn btn-simple">
+							<i class="fa fa-twitter"></i>
+						</a>
+		            </li>
+		            <li>
+		                <a href="https://www.facebook.com/Tailoring" target="_blank" class="btn btn-simple">
+							<i class="fa fa-facebook-square"></i>
+						</a>
+		            </li>
+					<li>
+		                <a href="https://www.instagram.com/Tailoring" target="_blank" class="btn btn-simple">
+							<i class="fa fa-instagram"></i>
+						</a>
+		            </li>
+        		</ul>
+        	</div>
+    	</div>
+    </nav>
+
+    <div class="wrapper">
+		<div class="header header-filter" style="background-image: url('../Tailoring/assets/img/examples/city.jpg');"></div>
+
+		<div class="main main-raised">
+			<div class="profile-content">
+	            <div class="container">
+	                <div class="row">
+	                    <div class="profile">
+	                        <div class="avatar">
+	                            <img src="../Tailoring/assets/img/christian.jpg" alt="Circle Image" class="img-circle img-responsive img-raised">
+	                        </div>
+	                        <div class="name">
+	                            <h3 class="title">Christian Louboutin</h3>
+								<h6>Ibadan</h6>
+	                        </div>
+	                    </div>
+	                </div>
+	                <!--div class="description text-center">
+                        <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+	                </div-->
+
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="profile-tabs">
+			                    <div class="nav-align-center">
+									<ul class="nav nav-pills" role="tablist">
+										<li class="active">
+											<a href="#basicprofile" role="tab" data-toggle="tab">
+												<i class="material-icons">camera</i>
+												Basic Profile
+											</a>
+										</li>
+										<li>
+				                            <a href="#sizeprofile" role="tab" data-toggle="tab">
+												<i class="material-icons">palette</i>
+												Size Profile
+				                            </a>
+				                        </li>
+				                        <li>
+				                            <a href="#orders" role="tab" data-toggle="tab">
+												<i class="material-icons">favorite</i>
+				                                Orders
+				                            </a>
+				                        </li>
+				                    </ul>
+
+				                    <div class="tab-content ">
+										<div class="tab-pane active" id="basicprofile">
+											<!--Begining of Card-->
+											<div class = "card card-raised">
+												<div class="row card-body">
+												<form class = "form" method = "" action = "">
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Full Name" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Email" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-3 dropdown">
+														<a href="#" class="btn btn-simple dropdown-toggle" data-toggle="dropdown" data-placement = "top">
+    														Select a location
+    														<b class="caret"></b>
+														</a>
+														<ul class="dropdown-menu">
+															<li><a href="#">Ibadan</a></li>
+															<li><a href="#">Ogbomoso</a></li>
+															<li><a href="#">Ikeja</a></li>
+															
+														</ul>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Phone Number" class="form-control" />
+														</div>
+													</div>
+													
+												<div class="col-md-12">
+														<button class="btn btn-raised btn-primary" >Update</button>
+													</div>
+													
+												</form>
+												<div class="col-md-4">
+													<h5> Change Password </h3>
+												</div>
+												
+												<form class = "form" name = "" method = "">
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="New Password" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Retype New Password" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<button class="btn btn-raised btn-primary" >Update</button>
+													</div>
+													
+												</form> 
+											</div>
+											</div>
+				                            <!--End of Card-->
+											<div class="space">
+												</div>
+				                        </div>
+				                        <div class="tab-pane text-center" id="sizeprofile">
+											<!-- Begin Card -->
+											<div class = "card card-raised"> 
+												<div class = "header-custom">
+													Saved Size Profiles
+												</div>
+												<div class = "card-body col-md-12" >
+													<!-- list of already saved profiles -->
+													
+													<!-- Button trigger modal -->
+													<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#editSizeModal">
+  														Dad
+													</button>
+													<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#editSizeModal">
+  														Mom
+													</button>
+												</div>
+											</div>
+											<!-- End Card -->
+											<div class="space">
+												</div>
+											
+											<!-- Begin Card -->
+											
+											<div class = "card card-raised">
+												<div class = "header-custom">
+													Add New Size Profile
+												</div>
+												<div class = "card-body">
+													<div class="row">
+												<!--List of size profiles-->
+												<form class = "form" name="" method = "">
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Style Alias" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Bust" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Chest" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Height" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Hips" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Inseam (Legs)" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Shoulder" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Sleeve" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Thigh" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Underbust" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Upperarm" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Waist" class="form-control" />
+														</div>
+													</div>
+													<div class = "col-md-12">
+														<div class="checkbox">
+															<label>
+																<input type="checkbox" name="optionsCheckboxes" >
+																	Default Size Profile?
+															</label>
+														</div>
+														
+													</div>
+													
+													<div class="col-md-12">
+														<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#descCar">
+  														Help
+													</button>
+														<button class="btn btn-raised btn-primary" >Add to Profile</button>
+													</div>
+												</form>
+											</div>
+												</div>
+											</div>
+											
+											<!-- End Card -->
+											<div class="space">
+												</div>
+				                        </div>
+										<div class="tab-pane text-center" id="orders">
+											<!-- Begin Card -->
+											
+											<div class = "card card-raised">
+												<div class = "card-body">
+													<div class="row">
+														<h4> No Orders yet</h4>
+													</div>
+												</div>
+											</div>
+											
+											<!-- End Card -->
+											<div class="space">
+												</div>
+				                        </div>
+
+				                    </div>
+								</div>
+							</div>
+							<!-- End Profile Tabs -->
+						</div>
+	                </div>
+
+	            </div>
+	        </div>
+		</div>
+
+    </div>
+    <footer class="footer">
+		        <div class="container">
+		            <nav class="pull-left">
+						<ul>
+							<li>
+								<a href="http://www.tailori.ng">
+									Tailori.ng
+								</a>
+							</li>
+							<li>
+								<a href="http://tailori.ng/about-page.html">
+								   About Us
+								</a>
+							</li>
+							<li>
+								<a href="http://blog.tailori.ng">
+								   Blog
+								</a>
+							</li>
+							<li>
+								<a href="http://www.tailori.ng/help-page">
+									Help
+								</a>
+							</li>
+						</ul>
+		            </nav>
+		            <div class="copyright pull-right">
+		                &copy; 2016, made with <i class="fa fa-heart heart"></i> by <a href="http://www.simplexsquad.com" target="_blank">Simplex Squad</a>
+		            </div>
+		        </div>
+		    </footer>
+
+
+</body>
+<!-- Modal Core -->
+							<div class="modal fade" id="editSizeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  							<div class="modal-dialog">
+    							<div class="modal-content">
+									<form class="form" method="" action="">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        									<h4 class="modal-title" id="myModalLabel">Dad</h4>
+      									</div>
+      									<div class="modal-body">
+        									Edit your profile here.
+												<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Style Alias" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Bust" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Chest" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Height" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Hips" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Inseam (Legs)" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Shoulder" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Sleeve" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Thigh" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Underbust" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Upperarm" class="form-control" />
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+    														<input type="text" value="" placeholder="Waist" class="form-control" />
+														</div>
+													</div>
+      									</div>
+      									<div class="modal-footer">
+        									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        									<button type="button" class="btn btn-info ">Send</button>
+      									</div>
+									</form>
+    							</div>
+  							</div>
+							  </div>
+							  <!-- Modal Core end -->
+							  
+							  <div class="modal fade and carousel slide" tabindex="-1" role="dialog" id = "descCar" aria-labelledby="descriptionCarousel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body-custom">
+          <!-- Carousel Card -->
+						
+							<div id="descriptionCarousel" class="carousel slide" data-ride="carousel">
+								<div class="carousel slide" data-ride="carousel">
+
+									<!-- Indicators -->
+									<ol class="carousel-indicators">
+										<li data-target="#descriptionCarousel" data-slide-to="0" class="active"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="1"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="2"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="3"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="4"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="5"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="6"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="7"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="8"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="9"></li>
+										<li data-target="#descriptionCarousel" data-slide-to="10"></li>
+									</ol>
+
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner">
+										<div class="item active">
+											<img src="assets/img/measurment-help/bust.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+										
+										<div class="item">
+											<img src="assets/img/measurment-help/chest.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/height.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/hips.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/inseam.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/shoulder.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/sleeve-length.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/thigh.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/underbust.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/upper-arm.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Somewhere Beyond, United States</h4>
+											</div>
+										</div>
+										<div class="item">
+											<img src="assets/img/measurment-help/waist.jpg" alt="Awesome Image">
+											<div class="carousel-caption">
+												<h4><i class="material-icons">location_on</i> Yellowstone National Park, United States</h4>
+											</div>
+										</div>
+									</div>
+
+									<!-- Controls -->
+									<a class="left carousel-control" href="#descriptionCarousel" data-slide="prev">
+										<i class="material-icons">keyboard_arrow_left</i>
+									</a>
+									<a class="right carousel-control" href="#descriptionCarousel" data-slide="next">
+										<i class="material-icons">keyboard_arrow_right</i>
+									</a>
+								</div>
+							</div>
+						
+						<!-- End Carousel Card -->
+        </div><!-- /.modal-body -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+	 
+	<!--   Core JS Files   -->
+	<script src="../Tailoring/assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="../Tailoring/assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../Tailoring/assets/js/material.min.js"></script>
+
+	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+	<script src="../Tailoring/assets/js/nouislider.min.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+	<script src="../Tailoring/assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+	<script src="../Tailoring/assets/js/material-kit.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$().ready(function(){
+			// the body of this function is in assets/material-kit.js
+			$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+		});
+	</script>
+
+
+
+
+</html>
