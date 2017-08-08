@@ -177,12 +177,12 @@ a img{
 	z-index: 999;
 }
 
-.pt-page .pt-page__content .pt-caption {
+.pt-caption {
   color: black;
-  font-size: 15px;
+  font-size: 56px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  top: 8px;
   width: 100%;
 }
 

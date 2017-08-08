@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Roboto Slab';
     font-style: normal;
-    font-weight: normal;
+    font-weight: lighter;
     src: url('../fonts/RobotoSlab-Light.ttf') format('truetype');
 }
 
@@ -17,13 +17,13 @@
 @font-face {
     font-family: 'Roboto Slab';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 100;
     src: url('../fonts/RobotoSlab-Thin.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Roboto Slab';
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     src: url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
 }
