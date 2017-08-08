@@ -21,6 +21,7 @@ var PageTransitions = (function() {
 		return;
 	
 	var $main = $mains[0];
+	var $dots = $main.parentElement.getElementsByClassName("pt-dot");
 	var	$pages = $main.getElementsByClassName( 'pt-page' ),
 			animcursor = 1,
 			pagesCount = $pages.length,
@@ -49,9 +50,20 @@ var PageTransitions = (function() {
 			for (var index = 0; index < $pages.length; index++) {
 				var page = $pages[index];
 				page.dataset.originalClassList = page.className;
-			}			
+			}		
 				
 			$pages[current].className += ' pt-page-current';
+
+			if ($dots != null && $dots.length > 0 ){
+				for (var index = 0; index < $dots.length; index++) {
+					var dot = $dots[index];
+					dot.dataset.originalClassList = dot.className;
+				}
+
+				$dots[current].className += ' pt-dot-current';
+			}
+
+			
 
 			var animcursorCheck = function() {
 				if( isAnimating ) {
@@ -67,8 +79,20 @@ var PageTransitions = (function() {
 			};
 		}
 
-		function nextPage(options ) {
-			var animation = (options.animation) ? options.animation : options;
+		function nextPage() {
+			gotoPage(undefined, undefined, true);
+		}
+
+		function prePage() {
+			gotoPage();
+		}
+
+		function showPage(pageNumber){			
+			gotoPage(pageNumber, undefined, undefined);
+		}
+
+		function gotoPage(pageNumber, animate, directNext ) {
+			var animation = (animate) ? animate : Math.floor(Math.random() * (67 - 0 + 1) ) + 0;
 
 			if( isAnimating ) {
 				return false;
@@ -78,20 +102,30 @@ var PageTransitions = (function() {
 
 			var $currPage = $pages[current];
 
-			if(typeof options.showPage != 'undefined'){
-				if( options.showPage < pagesCount - 1 ) {
-					current = options.showPage;
+			if(typeof pageNumber != 'undefined'){
+				if( pageNumber <= pagesCount - 1 ) {
+					current = pageNumber;
 				}
 				else {
 					current = 0;
 				}
 			}
 			else{
-				if( current < pagesCount - 1 ) {
-					++current;
+				if (directNext){
+					if( current < pagesCount - 1) {
+						++current;
+					}
+					else {
+						current = 0;
+					}
 				}
-				else {
-					current = 0;
+				else{
+					if( current > 0) {
+						--current;
+					}
+					else {
+						current = pagesCount - 1;
+					}
 				}
 			}
 
@@ -403,12 +437,27 @@ var PageTransitions = (function() {
 		function resetPage( $outpage, $inpage ) {
 			$outpage.className = $outpage.dataset.originalClassList;
 			$inpage.className = $inpage.dataset.originalClassList + ' pt-page-current';
+
+			SetDotActive();
+		}
+
+		function SetDotActive(sender){			
+			if ($dots != null && $dots.length > 0 ){
+				for (var index = 0; index < $dots.length; index++) {
+					var $dot = $dots[index];
+					$dot.className = $dot.dataset.originalClassList;
+				}
+
+				$dots[current].className += ' pt-dot-current';
+			}
 		}
 
 		init();
 
 		return {
 			init : init,
-			nextPage : nextPage
+			nextPage : nextPage,
+			prePage : prePage,
+			showPage : showPage
 		};
 })();

@@ -10,6 +10,16 @@ a img{
   border: 0px;
 }
 
+/*
+  Common class
+*/
+.text-center{
+  text-align: center;
+}
+/*
+  End common class
+*/
+
 .chuchoa-header .mdl-menu__container {
   z-index: 50;
   margin: 0 !important;
@@ -47,38 +57,38 @@ a img{
   font-size: 14px;
 }
 
-  .chuchoa-navigation-container {
-    /* Simple hack to make the overflow happen to the left instead... */
-    direction: rtl;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 500px;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.chuchoa-navigation-container {
+  /* Simple hack to make the overflow happen to the left instead... */
+  direction: rtl;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 500px;
+  transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .chuchoa-navigation {
-    /* ... and now make sure the content is actually LTR */
-    direction: ltr;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 800px;
-  }
+.chuchoa-navigation {
+  /* ... and now make sure the content is actually LTR */
+  direction: ltr;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 800px;
+}
 
-  .chuchoa-search-box.is-focused + .chuchoa-navigation-container {
-    opacity: 0;
-    width: 100px;
-  }
+.chuchoa-search-box.is-focused + .chuchoa-navigation-container {
+  opacity: 0;
+  width: 100px;
+}
 
 
-  .chuchoa-navigation .mdl-navigation__link {
-    display: inline-block;
-    height: 60px;
-    line-height: 68px;
-    border-bottom: 4px solid transparent;
-  }
+.chuchoa-navigation .mdl-navigation__link {
+  display: inline-block;
+  height: 60px;
+  line-height: 68px;
+  border-bottom: 4px solid transparent;
+}
 
 .mdl-navigation__link.chuchoa-navigation__link--more{
   padding-right: 5px;
@@ -88,20 +98,19 @@ a img{
   top: 45%;
 }
 
-  .chuchoa-search-box {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
+.chuchoa-search-box {
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
-  .chuchoa-more-button {
-    -webkit-order: 3;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-
+.chuchoa-more-button {
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+}
 
 .chuchoa-drawer {
   border-right: none;
@@ -181,6 +190,56 @@ a img{
   position: relative;
   width: 100%;
 }
+
+/* Next & previous buttons */
+.pt-prev, .pt-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.pt-prev {
+  left: 0;
+}
+
+.pt-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.pt-prev:hover, .pt-next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.pt-dots{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.pt-dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.pt-dot-current, .pt-dot:hover {
+  background-color: #717171;
+}
+
 /*
   End Slide
 */
