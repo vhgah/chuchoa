@@ -34,16 +34,6 @@ var PageTransitions = (function() {
 			animEndEventName = whichTransitionEvent(),
 			animations = {
 				max: 67
-			},
-			keys = {
-				BACKSPACE: 8,
-				DOWN: 40,
-				ENTER: 13,
-				LEFT: 37,
-				RIGHT: 39,
-				SPACE: 32,
-				PAGE_DOWN: 34,
-				PAGE_UP: 33
 			};
 
 		function init() {
@@ -92,7 +82,7 @@ var PageTransitions = (function() {
 		}
 
 		function gotoPage(pageNumber, animate, directNext ) {
-			var animation = (animate) ? animate : Math.floor(Math.random() * (67 - 0 + 1) ) + 0;
+			var animation = (animate) ? animate : GetRandRange();
 
 			if( isAnimating ) {
 				return false;
@@ -130,10 +120,78 @@ var PageTransitions = (function() {
 			}
 
 			var $nextPage = $pages[current];
-			$nextPage.className += ' pt-page-current';
-			var	outClass = '', inClass = '';
+			$nextPage.className += ' pt-page-current';			
+			var codeAnimation = GetAnimation(animation);
+			var	outClass = codeAnimation[0], inClass = codeAnimation[1];
 
-			switch( animation ) {
+			function OutAnimEndEventName(){
+				$currPage.removeEventListener( animEndEventName,  OutAnimEndEventName);
+				endCurrPage = true;
+				if( endNextPage ) {
+					onEndAnimation( $currPage, $nextPage );
+				}
+			}
+			$currPage.addEventListener( animEndEventName, OutAnimEndEventName );
+			$currPage.className += ' ' + outClass;			
+
+			var nextCaptions = $nextPage.getElementsByClassName("pt-caption-effect");			
+			for (var index = 0; index < nextCaptions.length; index++) {
+				var nextcaption = nextCaptions[index];
+				var codeAnimation = GetAnimation(GetRandRange());
+
+				nextcaption.dataset.originalClassList = nextcaption.className;
+				nextcaption.className += ' pt-page-delay200 ' + codeAnimation[1];
+			}
+
+			function InAnimEndEventName(){
+				$nextPage.removeEventListener(animEndEventName, InAnimEndEventName );
+				endNextPage = true;
+				if( endCurrPage ) {
+					onEndAnimation( $currPage, $nextPage );
+				}
+			}
+			$nextPage.addEventListener( animEndEventName, InAnimEndEventName );
+			$nextPage.className += ' ' + inClass;	
+		}
+
+		function onEndAnimation( $outpage, $inpage ) {
+			endCurrPage = false;
+			endNextPage = false;
+			resetPage( $outpage, $inpage );
+			isAnimating = false;
+		}
+
+		function resetPage( $outpage, $inpage ) {
+			$outpage.className = $outpage.dataset.originalClassList;
+			$inpage.className = $inpage.dataset.originalClassList + ' pt-page-current';
+			
+			var inCaptions = $inpage.getElementsByClassName("pt-caption-effect");			
+			for (var index = 0; index < inCaptions.length; index++) {
+				var incaption = inCaptions[index];
+				incaption.className = incaption.dataset.originalClassList;
+			}
+
+			SetDotActive();
+		}
+
+		function SetDotActive(sender){			
+			if ($dots != null && $dots.length > 0 ){
+				for (var index = 0; index < $dots.length; index++) {
+					var $dot = $dots[index];
+					$dot.className = $dot.dataset.originalClassList;
+				}
+
+				$dots[current].className += ' pt-dot-current';
+			}
+		}
+
+		function GetRandRange(){
+			return Math.floor(Math.random() * (67 - 0 + 1) ) + 0;
+		}
+
+		function GetAnimation(code){
+			var outClass = '', inClass = '';
+			switch( code ) {
 
 				case 1:
 					outClass = 'pt-page-moveToLeft';
@@ -403,53 +461,9 @@ var PageTransitions = (function() {
 					outClass = 'pt-page-rotateSlideOut';
 					inClass = 'pt-page-rotateSlideIn';
 					break;
+			};
 
-			}
-			
-			function OutAnimEndEventName(){
-				$currPage.removeEventListener( animEndEventName,  OutAnimEndEventName);
-				endCurrPage = true;
-				if( endNextPage ) {
-					onEndAnimation( $currPage, $nextPage );
-				}
-			}
-			$currPage.className += ' ' + outClass;
-			$currPage.addEventListener( animEndEventName, OutAnimEndEventName );
-
-			function InAnimEndEventName(){
-				$nextPage.removeEventListener(animEndEventName, InAnimEndEventName );
-				endNextPage = true;
-				if( endCurrPage ) {
-					onEndAnimation( $currPage, $nextPage );
-				}
-			}
-			$nextPage.className += ' ' + inClass;
-			$nextPage.addEventListener( animEndEventName, InAnimEndEventName );
-		}
-
-		function onEndAnimation( $outpage, $inpage ) {
-			endCurrPage = false;
-			endNextPage = false;
-			resetPage( $outpage, $inpage );
-			isAnimating = false;
-		}
-
-		function resetPage( $outpage, $inpage ) {
-			$outpage.className = $outpage.dataset.originalClassList;
-			$inpage.className = $inpage.dataset.originalClassList + ' pt-page-current';
-
-			SetDotActive();
-		}
-
-		function SetDotActive(sender){			
-			if ($dots != null && $dots.length > 0 ){
-				for (var index = 0; index < $dots.length; index++) {
-					var $dot = $dots[index];
-					$dot.className = $dot.dataset.originalClassList;
-				}
-
-				$dots[current].className += ' pt-dot-current';
-			}
+			return [outClass, inClass];
 		}
 
 		init();

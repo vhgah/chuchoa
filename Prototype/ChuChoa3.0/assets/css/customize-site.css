@@ -48,23 +48,54 @@
 .chuchoa-caption--page1{
   top: 25%;
   color: white;
-  line-height: 28px;
 }
 
 .chuchoa-caption--page1-header{
   font-weight: 100;
   text-transform: uppercase;
+  text-shadow: black 2px 3px 15px;
 }
 
 .chuchoa-caption--page1-bar{
   width: 120px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
+.chuchoa-caption--page1-content p{
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 31px;
+}
+
+.chuchoa-caption--page1-button{
+  margin-top: 15px;
 }
 
 @media (max-width: 900px) {
-  .chuchoa-banner-section {
-    /*height: 350px;*/
+  .chuchoa-caption--page1{
+    top: 15%;
+  }
+
+  .chuchoa-caption--page1-header{
+    font-size: 38px;
+  }
+
+  .chuchoa-caption--page1-bar{
+    margin-bottom: 7px;
+    margin-top: 15px;
+  }
+
+  .chuchoa-caption--page1-content p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .chuchoa-caption--page1-button{
+    margin-top: 7px;
   }
 }
 /*
