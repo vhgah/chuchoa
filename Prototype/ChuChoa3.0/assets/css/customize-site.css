@@ -96,6 +96,7 @@
 
   .chuchoa-caption--page-header{
     font-size: 38px;
+    line-height: 42px;
   }
 
   .chuchoa-caption--page-bar{
@@ -111,6 +112,35 @@
 
   .chuchoa-caption--page-button{
     margin-top: 7px;
+  }
+
+  /*end caption Page*/
+}
+
+@media (max-width: 416px) {
+  /*caption Page*/
+  .chuchoa-caption--page{
+    top: 8%;
+  }
+
+  .chuchoa-caption--page-header{
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .chuchoa-caption--page-bar{
+    margin-bottom: 3px;
+    margin-top: 7px;
+  }
+
+  .chuchoa-caption--page-content p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .chuchoa-caption--page-button{
+    margin-top: 3px;
   }
 
   /*end caption Page*/
