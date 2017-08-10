@@ -245,7 +245,103 @@ a img{
   End Slide
 */
 
-/**** Mobile layout ****/
+/* section*/
+.chuchoa-section {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.chuchoa-section--header{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.chuchoa-section--bar {
+  width: 120px;
+  border-top: solid 1px blue ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.chuchoa-card-post-tags a, .chuchoa-card-post__info a, .chuchoa-card-post__title-text a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* parallax */
+.chuchoa-section__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+.chuchoa-background-parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.chuchoa-section__background--bottom-align img {
+    bottom: 0;
+}
+
+.chuchoa-section__background img {
+    position: absolute;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+  
+.chuchoa-background-parallax img {
+    position: absolute;
+    left: 50%;
+    display: none;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.chuchoa-section__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+/* end parallax */
+
+.chuchoa-section__content {
+    position: relative;
+    z-index: 4;
+}
+
+/* end section*/
+
+@media screen and (min-width: 840px){
+  .mdl-grid--no-fullwidth {
+    width: 1170px;
+    max-width: 90%;
+  }
+}
+
+/**** Medium layout ****/
 @media (max-width: 900px) {
   .chuchoa-navigation-container {
     display: none;
@@ -283,7 +379,10 @@ a img{
     width: 100%;
   }
 
-
+  .chuchoa-section--header{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
 
   .chuchoa-fab {
@@ -292,5 +391,13 @@ a img{
 
   .chuchoa-footer .mdl-mega-footer--bottom-section {
     display: none;
+  }
+}
+
+/**** Small layout ****/
+@media (max-width: 415px) {
+  .chuchoa-section--header{
+    margin-top: 15px;
+    margin-bottom: 7px;
   }
 }

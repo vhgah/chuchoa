@@ -108,19 +108,26 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 0;
   }
 
   .chuchoa-caption--page-button{
-    margin-top: 7px;
+    margin-top: 0;
+  }
+
+  .pt-dots {
+    visibility: collapse;
   }
 
   /*end caption Page*/
 }
 
-@media (max-width: 416px) {
+@media (max-width: 415px) {
   /*caption Page*/
   .chuchoa-caption--page{
     top: 8%;
+    max-width: 90%;
+    left: 5%;
   }
 
   .chuchoa-caption--page-header{
@@ -137,10 +144,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 0;
   }
 
   .chuchoa-caption--page-button{
-    margin-top: 3px;
+    visibility: hidden;
   }
 
   /*end caption Page*/
@@ -148,3 +156,80 @@
 /*
     end chuchoa-banner-section
 */
+
+/* chuchoa-contact-section */
+.chuchoa-contact-section--label{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.chuchoa-contact-section--form{
+  margin-bottom: 80px;
+}
+.chuchoa-contact-section--button-discount{
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+/* end chuchoa-contact-section */
+
+/* chuchoa-news-section */
+.chuchoa-card-post {
+    transition: all .3s;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    min-height: initial;
+}
+  
+.chuchoa-card-post__image{
+  max-width: 100%;
+}
+
+.chuchoa-card-post__title{
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  color: #fff;
+  background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.4) 100%);
+}
+
+.chuchoa-card-post__title-text{
+  height: 28px;
+  width: 100%;
+  line-height: 28px;
+}
+
+.chuchoa-card-post__title-text a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: lighter;
+}
+
+.chuchoa-card-post__info {
+    font-size: 12px;
+    line-height: 24px;
+    display: block;
+}
+
+.chuchoa-card-post__media {
+    overflow: hidden;
+    position: relative;
+    min-height: 84px;
+}
+
+
+
+@media (max-width: 900px) {
+ 
+}
+
+@media (max-width: 415px) {
+
+}
+/* end chuchoa-news-section */
