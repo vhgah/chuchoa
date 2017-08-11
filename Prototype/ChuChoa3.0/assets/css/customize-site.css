@@ -31,6 +31,18 @@
   color: rgb(33,150,243);
 }
 
+/* rewrite divider*/
+.chuchoa-color-primary .chuchoa-divider__border {
+    background: rgba(255, 255, 255, 1)
+}
+.chuchoa-color-accent .chuchoa-divider__border {
+    background: rgba(255, 255, 255, 1)
+}
+.chuchoa-color-light .chuchoa-divider__border {
+    background: #fff
+}
+/* end rewrite divider */
+
 /*
     chuchoa-banner-section
 */
@@ -108,19 +120,26 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 0;
   }
 
   .chuchoa-caption--page-button{
-    margin-top: 7px;
+    margin-top: 0;
+  }
+
+  .pt-dots {
+    visibility: collapse;
   }
 
   /*end caption Page*/
 }
 
-@media (max-width: 416px) {
+@media (max-width: 415px) {
   /*caption Page*/
   .chuchoa-caption--page{
     top: 8%;
+    max-width: 90%;
+    left: 5%;
   }
 
   .chuchoa-caption--page-header{
@@ -137,10 +156,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 0;
   }
 
   .chuchoa-caption--page-button{
-    margin-top: 3px;
+    visibility: hidden;
   }
 
   /*end caption Page*/
@@ -148,3 +168,331 @@
 /*
     end chuchoa-banner-section
 */
+
+/*
+  chuchoa-hot-product  
+*/
+.chuchoa-section__content-item{
+  margin-bottom: 40px;
+}
+.chuchoa-card-order,
+.chuchoa-card-product {
+    transition: all .3s;
+    max-width: 100%;
+    overflow: hidden
+}
+.chuchoa-card-order:hover,
+.chuchoa-card-product:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.chuchoa-card-product {
+    width: 100%
+}
+.chuchoa-card-product__image {
+    display: block;
+    transition: opacity .5s, -webkit-transform .5s;
+    transition: opacity .5s, transform .5s;
+    z-index: 1;
+    max-width: 100%;
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+.chuchoa-card-product__image:last-child {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+.chuchoa-card-product__media:hover .chuchoa-card-product__image:last-child {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+.chuchoa-card-product__media {
+    overflow: hidden;
+    position: relative
+}
+.chuchoa-card-product__title {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 3;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .4) 100%)
+}
+.chuchoa-card-product__title>* {
+    -webkit-align-self: flex-start;
+    align-self: flex-start
+}
+.chuchoa-card-product__title.chuchoa-card-product__title--darker {
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .6) 100%)
+}
+.chuchoa-card-product__title.chuchoa-card-product__title--inverse {
+    color: #333;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 100%)
+}
+.chuchoa-card-product__tags a,
+.chuchoa-card-product__title-text a {
+    color: inherit;
+    text-decoration: none
+}
+.chuchoa-card-product__title-text {
+    height: 28px;
+    width: 100%;
+    line-height: 28px
+}
+.chuchoa-card-product__title-text a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.chuchoa-card-product__badge {
+    -webkit-transform: scale(.9);
+    transform: scale(.9)
+}
+.chuchoa-card-product:hover .chuchoa-card-product__badge {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+.chuchoa-card-product__tags {
+    font-size: 12px;
+    line-height: 20px
+}
+.chuchoa-card-product__rating--animated {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .3s, opacity .3s ease-out .3s, -webkit-transform .2s ease-out .3s;
+    transition: max-height .3s, opacity .3s ease-out .3s, transform .2s ease-out .3s;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px)
+}
+.chuchoa-card-product:hover .chuchoa-card-product__rating--animated {
+    max-height: 20px;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+.chuchoa-card-product-actions {
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+.chuchoa-product-badge {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 56px;
+    text-align: center;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    background: rgba(68, 138, 255, .8);
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+} 
+
+/* rating */
+.chuchoa-rating,
+.chuchoa-rating-set {
+    line-height: 20px;
+    height: 20px;
+    width: calc(5em + 15px);
+    letter-spacing: 3px;
+    overflow: hidden
+}
+.chuchoa-rating {
+    position: relative;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none
+}
+.chuchoa-rating--medium {
+    font-size: 16px
+}
+.chuchoa-rating--big {
+    font-size: 18px
+}
+.chuchoa-rating span,
+.chuchoa-rating span:before,
+.chuchoa-rating:before {
+    font-family: 'Material Icons';
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-weight: 400;
+    text-decoration: none
+}
+.chuchoa-rating:before {
+    content: "\E83A \E83A \E83A \E83A \E83A"
+}
+.chuchoa-rating span {
+    overflow: hidden;
+    padding-top: 1em
+}
+.chuchoa-rating span:before {
+    content: "\E838 \E838 \E838 \E838 \E838"
+}
+.chuchoa-rating-set {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none
+}
+.chuchoa-rating-set:before,
+.chuchoa-rating-set__star {
+    font-family: 'Material Icons';
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-weight: 400;
+    text-decoration: none
+}
+.chuchoa-rating-set:before {
+    content: "\E83A \E83A \E83A \E83A \E83A";
+    z-index: 0
+}
+.chuchoa-rating-set__star {
+    height: 24px;
+    z-index: 1
+}
+.chuchoa-rating-set__star:after {
+    opacity: 0;
+    transition: all .2s;
+    color: #448aff;
+    cursor: pointer
+}
+.chuchoa-rating-set__star:hover:after {
+    opacity: 1
+}
+.chuchoa-rating-set__star:nth-child(1) {
+    width: 1em;
+    z-index: 5
+}
+.chuchoa-rating-set__star:nth-child(1):after {
+    content: "\E838"
+}
+.chuchoa-rating-set__star:nth-child(2) {
+    width: 2em;
+    z-index: 4
+}
+.chuchoa-rating-set__star:nth-child(2):after {
+    content: "\E838 \E838"
+}
+.chuchoa-rating-set__star:nth-child(3) {
+    width: 3em;
+    z-index: 3
+}
+.chuchoa-rating-set__star:nth-child(3):after {
+    content: "\E838 \E838 \E838"
+}
+.chuchoa-rating-set__star:nth-child(4) {
+    width: 3em;
+    z-index: 2
+}
+.chuchoa-rating-set__star:nth-child(4):after {
+    content: "\E838 \E838 \E838 \E838"
+}
+.chuchoa-rating-set__star:nth-child(5) {
+    width: 3em;
+    z-index: 1
+}
+.chuchoa-rating-set__star:nth-child(5):after {
+    content: "\E838 \E838 \E838 \E838 \E838"
+}
+/* end rating */
+/*
+  and chucho-hot-product
+*/
+
+/* chuchoa-contact-section */
+.chuchoa-contact-section--label{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.chuchoa-contact-section--form{
+  margin-bottom: 80px;
+}
+.chuchoa-contact-section--button-discount{
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+/* end chuchoa-contact-section */
+
+/* chuchoa-news-section */
+.chuchoa-card-post {
+    transition: all .3s;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    min-height: initial;
+}
+  
+.chuchoa-card-post__image{
+  max-width: 100%;
+}
+
+.chuchoa-card-post__title{
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+  color: #fff;
+  background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.4) 100%);
+}
+
+.chuchoa-card-post__title-text{
+  height: 28px;
+  width: 100%;
+  line-height: 28px;
+}
+
+.chuchoa-card-post__title-text a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: lighter;
+}
+
+.chuchoa-card-post__info {
+    font-size: 12px;
+    line-height: 24px;
+    display: block;
+}
+
+.chuchoa-card-post__media {
+    overflow: hidden;
+    position: relative;
+    min-height: 84px;
+}
+
+
+
+@media (max-width: 900px) {
+ 
+}
+
+@media (max-width: 415px) {
+
+}
+/* end chuchoa-news-section */

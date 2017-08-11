@@ -245,7 +245,291 @@ a img{
   End Slide
 */
 
-/**** Mobile layout ****/
+/* section*/
+.chuchoa-section {
+    overflow: hidden;
+    position: relative;
+    z-index: 1
+}
+.chuchoa-section__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+.chuchoa-section__background img {
+    position: absolute;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.chuchoa-section__background--top-align img {
+    top: 0
+}
+.chuchoa-section__background--bottom-align img {
+    bottom: 0
+}
+.chuchoa-section__background--middle-align img {
+    top: 0;
+    -webkit-transform: translate3d(-50%, -25%, 0);
+    transform: translate3d(-50%, -25%, 0)
+}
+.chuchoa-section__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3
+}
+.chuchoa-section__overlay--color-0 {
+    background-color: transparent
+}
+.chuchoa-section__overlay--color-5 {
+    background-color: rgba(0, 0, 0, .05)
+}
+.chuchoa-section__overlay--color-10 {
+    background-color: rgba(0, 0, 0, .1)
+}
+.chuchoa-section__overlay--color-15 {
+    background-color: rgba(0, 0, 0, .15)
+}
+.chuchoa-section__overlay--color-20 {
+    background-color: rgba(0, 0, 0, .2)
+}
+.chuchoa-section__overlay--color-25 {
+    background-color: rgba(0, 0, 0, .25)
+}
+.chuchoa-section__overlay--color-30 {
+    background-color: rgba(0, 0, 0, .3)
+}
+.chuchoa-section__overlay--color-35 {
+    background-color: rgba(0, 0, 0, .35)
+}
+.chuchoa-section__overlay--color-40 {
+    background-color: rgba(0, 0, 0, .4)
+}
+.chuchoa-section__overlay--color-45 {
+    background-color: rgba(0, 0, 0, .45)
+}
+.chuchoa-section__overlay--color-50 {
+    background-color: rgba(0, 0, 0, .5)
+}
+.chuchoa-section__overlay--color-55 {
+    background-color: rgba(0, 0, 0, .55)
+}
+.chuchoa-section__overlay--color-60 {
+    background-color: rgba(0, 0, 0, .6)
+}
+.chuchoa-section__overlay--color-65 {
+    background-color: rgba(0, 0, 0, .65)
+}
+.chuchoa-section__overlay--color-70 {
+    background-color: rgba(0, 0, 0, .7)
+}
+.chuchoa-section__overlay--color-75 {
+    background-color: rgba(0, 0, 0, .75)
+}
+.chuchoa-section__overlay--color-80 {
+    background-color: rgba(0, 0, 0, .8)
+}
+.chuchoa-section__overlay--color-85 {
+    background-color: rgba(0, 0, 0, .85)
+}
+.chuchoa-section__overlay--color-90 {
+    background-color: rgba(0, 0, 0, .9)
+}
+.chuchoa-section__overlay--color-95 {
+    background-color: rgba(0, 0, 0, .95)
+}
+.chuchoa-section__overlay--color-100 {
+    background-color: #000
+}
+.chuchoa-section__overlay--gradient-from-bottom-0 {
+    background: linear-gradient(to top, transparent 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-5 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .05) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-10 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .1) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-15 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .15) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-20 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .2) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-25 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .25) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-30 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .3) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-35 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .35) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-40 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .4) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-45 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .45) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-50 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .5) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-55 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .55) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-60 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .6) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-65 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .65) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-70 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .7) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-75 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .75) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-80 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .8) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-85 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .85) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-90 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .9) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-95 {
+    background: linear-gradient(to top, rgba(0, 0, 0, .95) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-bottom-100 {
+    background: linear-gradient(to top, #000 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-0 {
+    background: linear-gradient(to bottom, transparent 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-5 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .05) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-10 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-15 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .15) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-20 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .2) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-25 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-30 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-35 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .35) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-40 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .4) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-45 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .45) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-50 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-55 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .55) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-60 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-65 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .65) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-70 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .7) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-75 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .75) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-80 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-85 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .85) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-90 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .9) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-95 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .95) 0, transparent 100%)
+}
+.chuchoa-section__overlay--gradient-from-top-100 {
+    background: linear-gradient(to bottom, #000 0, transparent 100%)
+}
+.chuchoa-section__content {
+    position: relative;
+    z-index: 4
+}
+
+.chuchoa-section__content-header{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+/* end section*/
+
+/* divider */
+.chuchoa-divider {
+    position: relative;
+    height: 1px
+}
+.chuchoa-divider__border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    max-width: 100%;
+    height: 100%;
+    background: #e91e63
+}
+.chuchoa-divider--center .chuchoa-divider__border {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.chuchoa-divider--right .chuchoa-divider__border {
+    left: auto;
+    right: 0
+}
+.chuchoa-divider--accent .chuchoa-divider__border {
+    background: #448aff
+}
+/* end divider*/
+
+/* animation */
+.chuchoa-animation {
+    opacity: 0
+}
+/* end animation*/
+
+@media screen and (min-width: 840px) {
+  .mdl-grid--no-fullwidth {
+      width: 1170px;
+      max-width: 90%
+  }
+}
+
+/**** Medium layout ****/
 @media (max-width: 900px) {
   .chuchoa-navigation-container {
     display: none;
@@ -283,7 +567,10 @@ a img{
     width: 100%;
   }
 
-
+  .chuchoa-section--header{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
 
   .chuchoa-fab {
@@ -292,5 +579,13 @@ a img{
 
   .chuchoa-footer .mdl-mega-footer--bottom-section {
     display: none;
+  }
+}
+
+/**** Small layout ****/
+@media (max-width: 415px) {
+  .chuchoa-section--header{
+    margin-top: 15px;
+    margin-bottom: 7px;
   }
 }
