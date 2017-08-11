@@ -222,7 +222,7 @@
     bottom: 0;
     z-index: 3;
     color: #fff;
-    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .4) 100%)
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .7) 100%)
 }
 .chuchoa-card-product__title>* {
     -webkit-align-self: flex-start;
@@ -264,7 +264,7 @@
     font-size: 12px;
     line-height: 20px
 }
-.chuchoa-card-product__rating--animated {
+.chuchoa-card-product__installment--animated {
     max-height: 0;
     opacity: 0;
     transition: max-height .3s, opacity .3s ease-out .3s, -webkit-transform .2s ease-out .3s;
@@ -272,7 +272,8 @@
     -webkit-transform: translateY(10px);
     transform: translateY(10px)
 }
-.chuchoa-card-product:hover .chuchoa-card-product__rating--animated {
+
+.chuchoa-card-product:hover .chuchoa-card-product__installment--animated {
     max-height: 20px;
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -292,7 +293,8 @@
     width: 56px;
     height: 56px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     line-height: 56px;
     text-align: center;
     top: 12px;
@@ -307,118 +309,163 @@
     backface-visibility: hidden
 } 
 
-/* rating */
-.chuchoa-rating,
-.chuchoa-rating-set {
-    line-height: 20px;
-    height: 20px;
-    width: calc(5em + 15px);
-    letter-spacing: 3px;
-    overflow: hidden
+@media (min-width: 840px) and (max-width: 980px) { 
+    .chuchoa-product-badge {        
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        line-height: 42px;
+        top: 12px;
+        right: 12px;
+    } 
+
+    .chuchoa-card-product__title-text{
+        font-size: 18px;
+        line-height: 22px
+    }
+
+    .chuchoa-card-product__tags, .chuchoa-card-product-installment {
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
-.chuchoa-rating {
-    position: relative;
-    font-size: 13px;
-    font-weight: 400;
-    text-decoration: none
+
+.chuchoa-card-product__badge-height{
+    background-color: red;
 }
-.chuchoa-rating--medium {
-    font-size: 16px
-}
-.chuchoa-rating--big {
-    font-size: 18px
-}
-.chuchoa-rating span,
-.chuchoa-rating span:before,
-.chuchoa-rating:before {
-    font-family: 'Material Icons';
-    top: 0;
-    left: 0;
-    position: absolute;
-    font-weight: 400;
-    text-decoration: none
-}
-.chuchoa-rating:before {
-    content: "\E83A \E83A \E83A \E83A \E83A"
-}
-.chuchoa-rating span {
-    overflow: hidden;
-    padding-top: 1em
-}
-.chuchoa-rating span:before {
-    content: "\E838 \E838 \E838 \E838 \E838"
-}
-.chuchoa-rating-set {
+
+.chuchoa-product-info--icon{
+    top: 2px;
     position: relative;
     font-size: 16px;
-    font-weight: 400;
-    text-decoration: none
+    margin-right: 2px;
 }
-.chuchoa-rating-set:before,
-.chuchoa-rating-set__star {
-    font-family: 'Material Icons';
-    top: 0;
-    left: 0;
-    position: absolute;
-    font-weight: 400;
-    text-decoration: none
-}
-.chuchoa-rating-set:before {
-    content: "\E83A \E83A \E83A \E83A \E83A";
-    z-index: 0
-}
-.chuchoa-rating-set__star {
-    height: 24px;
-    z-index: 1
-}
-.chuchoa-rating-set__star:after {
-    opacity: 0;
-    transition: all .2s;
-    color: #448aff;
-    cursor: pointer
-}
-.chuchoa-rating-set__star:hover:after {
-    opacity: 1
-}
-.chuchoa-rating-set__star:nth-child(1) {
-    width: 1em;
-    z-index: 5
-}
-.chuchoa-rating-set__star:nth-child(1):after {
-    content: "\E838"
-}
-.chuchoa-rating-set__star:nth-child(2) {
-    width: 2em;
-    z-index: 4
-}
-.chuchoa-rating-set__star:nth-child(2):after {
-    content: "\E838 \E838"
-}
-.chuchoa-rating-set__star:nth-child(3) {
-    width: 3em;
-    z-index: 3
-}
-.chuchoa-rating-set__star:nth-child(3):after {
-    content: "\E838 \E838 \E838"
-}
-.chuchoa-rating-set__star:nth-child(4) {
-    width: 3em;
-    z-index: 2
-}
-.chuchoa-rating-set__star:nth-child(4):after {
-    content: "\E838 \E838 \E838 \E838"
-}
-.chuchoa-rating-set__star:nth-child(5) {
-    width: 3em;
-    z-index: 1
-}
-.chuchoa-rating-set__star:nth-child(5):after {
-    content: "\E838 \E838 \E838 \E838 \E838"
-}
-/* end rating */
+
 /*
-  and chucho-hot-product
+  end chuchoa-hot-product
 */
+
+/* chuchoa-card-brand */
+.chuchoa-card-brand-tags a,
+blockquote {
+    font-style: italic
+}
+.chuchoa-card-brand:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+.chuchoa-card-brand {
+  transition: all .3s;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  min-height: initial
+}
+.chuchoa-card-brand--row {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    align-items: flex-start
+}
+@media (max-width: 479px) {
+    .chuchoa-card-brand--row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: center;
+        align-items: center
+    }
+}
+.chuchoa-card-brand__media {
+    overflow: hidden;
+    position: relative;
+    min-height: 84px
+}
+.chuchoa-card-brand__image {
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    z-index: 1;
+    max-width: 100%;
+    position: relative
+}
+.chuchoa-card-brand:hover .chuchoa-card-brand__image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+.chuchoa-card-brand__avatar {
+    padding: 16px;
+    border-radius: 50%;
+    max-width: 100%
+}
+.chuchoa-card-brand__title {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 3;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .4) 100%)
+}
+.chuchoa-card-brand__title>* {
+    -webkit-align-self: flex-start;
+    align-self: flex-start
+}
+.chuchoa-card-brand__title.chuchoa-card-brand__title--darker {
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .6) 100%)
+}
+.chuchoa-card-brand__title.chuchoa-card-brand__title--inverse {
+    color: #333;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 100%)
+}
+.chuchoa-card-brand-tags a,
+.chuchoa-card-brand__info a,
+.chuchoa-card-brand__title-text a {
+    color: inherit;
+    text-decoration: none
+}
+.chuchoa-card-brand__title-text {
+    height: 28px;
+    width: 100%;
+    line-height: 28px
+}
+.chuchoa-card-brand__title-text a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: lighter
+}
+.chuchoa-card-brand__info {
+    font-size: 12px;
+    line-height: 24px;
+    display: block
+}
+
+.chuchoa-card__supporting-text {
+    line-height: 23px;
+    width: 100%;
+    box-sizing: border-box
+}
+.chuchoa-card__supporting-text .mdl-card__title {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 0 0 16px
+}
+.chuchoa-card__supporting-text .mdl-card__title-text {
+    -webkit-align-self: flex-start;
+    align-self: flex-start
+}
+.chuchoa-card-brand-actions {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between
+}
+/* end chuchoa-card-brand */
 
 /* chuchoa-contact-section */
 .chuchoa-contact-section--label{

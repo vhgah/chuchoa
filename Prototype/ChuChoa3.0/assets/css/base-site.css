@@ -522,6 +522,32 @@ a img{
 }
 /* end animation*/
 
+/* overite*/
+.mdl-card__supporting-text {
+    color: rgba(0, 0, 0, .54);
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px;
+    width: 90%
+}
+.mdl-card__title-text {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    color: inherit;
+    display: block;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: normal;
+    overflow: hidden;
+    -webkit-transform-origin: 149px 48px;
+    transform-origin: 149px 48px;
+    margin: 0
+}
+/* end overite*/
+
 @media screen and (min-width: 840px) {
   .mdl-grid--no-fullwidth {
       width: 1170px;

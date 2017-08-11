@@ -85,8 +85,10 @@ var PageTransitions = (function() {
 			var animation = (animate) ? animate : GetRandRange();
 
 			if( isAnimating ) {
-				return false;
-			}
+				isAnimating = !(endCurrPage && endNextPage);
+				if (isAnimating)
+					return false;
+			}			
 
 			isAnimating = true;
 
@@ -140,7 +142,7 @@ var PageTransitions = (function() {
 				var codeAnimation = GetAnimation(GetRandRange());
 
 				nextcaption.dataset.originalClassList = nextcaption.className;
-				nextcaption.className += ' pt-page-delay200 ' + codeAnimation[1];
+				nextcaption.className += ' pt-page-delay300 ' + codeAnimation[1];
 			}
 
 			function InAnimEndEventName(){
