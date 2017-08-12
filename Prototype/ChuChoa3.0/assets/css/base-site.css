@@ -32,7 +32,7 @@ a img{
 
 .chuchoa-fab {
   position: absolute;
-  right: 20%;
+  right: 10%;
   bottom: -26px;
   z-index: 3;
 }
@@ -545,6 +545,19 @@ a img{
     -webkit-transform-origin: 149px 48px;
     transform-origin: 149px 48px;
     margin: 0
+}
+.mdl-mega-footer--heading, .mdl-mega-footer__heading {
+    position: relative;
+    width: 100%;
+    padding-right: 39.8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 23.8px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 /* end overite*/
 

@@ -31,7 +31,7 @@
   color: rgb(33,150,243);
 }
 
-/* rewrite divider*/
+/* rewrite */
 .chuchoa-color-primary .chuchoa-divider__border {
     background: rgba(255, 255, 255, 1)
 }
@@ -41,7 +41,19 @@
 .chuchoa-color-light .chuchoa-divider__border {
     background: #fff
 }
-/* end rewrite divider */
+
+.chuchoa-color-primary {
+    color: rgba(255, 255, 255, 1)
+}
+.chuchoa-color-primary a {
+    color: rgba(255, 255, 255, 1)
+}
+.chuchoa-color-primary .mdl-textfield__input,
+.chuchoa-color-primary .mdl-textfield__label {
+    color: rgba(255, 255, 255, 1);
+    border-bottom-color: rgba(255, 255, 255, 1)
+}
+/* end rewrite */
 
 /*
     chuchoa-banner-section
@@ -492,33 +504,56 @@ blockquote {
     min-height: initial;
 }
   
-.chuchoa-card-post__image{
-  max-width: 100%;
+.chuchoa-card-post__image {
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    z-index: 1;
+    max-width: 100%;
+    position: relative
+}
+.chuchoa-card-post:hover .chuchoa-card-post__image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
 }
 
-.chuchoa-card-post__title{
-  display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 3;
-  color: #fff;
-  background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.4) 100%);
+.chuchoa-card-post__title {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 3;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .4) 100%)
 }
-
-.chuchoa-card-post__title-text{
-  height: 28px;
-  width: 100%;
-  line-height: 28px;
+.chuchoa-card-post__title>* {
+    -webkit-align-self: flex-start;
+    align-self: flex-start
 }
-
+.chuchoa-card-post__title.chuchoa-card-post__title--darker {
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .6) 100%)
+}
+.chuchoa-card-post__title.chuchoa-card-post__title--inverse {
+    color: #333;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .2) 100%)
+}
+.chuchoa-card-post-tags a,
+.chuchoa-card-post__info a,
+.chuchoa-card-post__title-text a {
+    color: inherit;
+    text-decoration: none
+}
+.chuchoa-card-post__title-text {
+    height: 28px;
+    width: 100%;
+    line-height: 28px
+}
 .chuchoa-card-post__title-text a {
     display: block;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-weight: lighter;
+    font-weight: lighter
 }
 
 .chuchoa-card-post__info {
