@@ -184,13 +184,25 @@
 /* search section */
 .chuchoa-search-section--parallax{
     background-image: url("../images/backgrounds/bg-search.png");
-    height: 250px;
+    height: 100%;
     background-attachment: fixed;
     background-position: left -600px center;
     background-repeat: no-repeat;
     background-size: 1500px auto;
-    background-color: green;
     position: static;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.chuchoa-search--header{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+@media (max-width: 839px) {
+    .chuchoa-search-section--parallax{
+        background-image: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 /* end search section */
 
@@ -369,6 +381,38 @@
 /*
   end chuchoa-hot-product
 */
+
+/* usermail section */
+.chuchoa-usermail-section--parallax{
+    background-image: url("../images/backgrounds/bg-usermail.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: right -500px  center;
+    background-repeat: no-repeat;
+    background-size: 1500px auto;
+    position: static;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 839px) {
+    .chuchoa-usermail-section--parallax{
+        background-image: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.chuchoa-usermail-section--header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 415px) {
+    .chuchoa-usermail-section--header{
+        text-align: center;
+        font-size: 28px;
+    }
+}
+/* end usermail section */
 
 /* chuchoa-card-brand */
 .chuchoa-card-brand-tags a,
