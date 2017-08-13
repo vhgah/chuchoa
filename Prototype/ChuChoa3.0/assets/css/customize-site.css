@@ -181,6 +181,19 @@
     end chuchoa-banner-section
 */
 
+/* search section */
+.chuchoa-search-section--parallax{
+    background-image: url("../images/backgrounds/bg-search.png");
+    height: 250px;
+    background-attachment: fixed;
+    background-position: left -600px center;
+    background-repeat: no-repeat;
+    background-size: 1500px auto;
+    background-color: green;
+    position: static;
+}
+/* end search section */
+
 /*
   chuchoa-hot-product  
 */

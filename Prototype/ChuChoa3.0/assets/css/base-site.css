@@ -251,35 +251,11 @@ a img{
     position: relative;
     z-index: 1
 }
-.chuchoa-section__background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2
+
+.chuchoa-section--parallax{
+    position: static;
 }
-.chuchoa-section__background img {
-    position: absolute;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-}
-.chuchoa-section__background--top-align img {
-    top: 0
-}
-.chuchoa-section__background--bottom-align img {
-    bottom: 0
-}
-.chuchoa-section__background--middle-align img {
-    top: 0;
-    -webkit-transform: translate3d(-50%, -25%, 0);
-    transform: translate3d(-50%, -25%, 0)
-}
+
 .chuchoa-section__overlay {
     position: absolute;
     width: 100%;
