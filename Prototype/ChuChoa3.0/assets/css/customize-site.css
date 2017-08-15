@@ -198,10 +198,8 @@
     margin-bottom: 10px;
 }
 @media (max-width: 839px) {
-    .chuchoa-search-section--parallax{
-        background-image: none;
-        padding-top: 0;
-        padding-bottom: 0;
+    #chuchoa-search-section{
+        display: none;
     }
 }
 /* end search section */
@@ -396,11 +394,7 @@
 }
 
 @media (max-width: 839px) {
-    .chuchoa-usermail-section--parallax{
-        background-image: none;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+    
 }
 .chuchoa-usermail-section--header{
     margin-top: 20px;
