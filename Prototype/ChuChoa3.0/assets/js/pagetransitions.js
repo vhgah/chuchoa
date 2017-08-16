@@ -67,6 +67,8 @@ var PageTransitions = (function() {
 				}
 				return animcursor;
 			};
+
+			setTimeout(function (){nextPage()}, 8000);
 		}
 
 		function nextPage() {
@@ -153,7 +155,7 @@ var PageTransitions = (function() {
 				}
 			}
 			$nextPage.addEventListener( animEndEventName, InAnimEndEventName );
-			$nextPage.className += ' ' + inClass;	
+			$nextPage.className += ' ' + inClass;
 		}
 
 		function onEndAnimation( $outpage, $inpage ) {
@@ -161,6 +163,8 @@ var PageTransitions = (function() {
 			endNextPage = false;
 			resetPage( $outpage, $inpage );
 			isAnimating = false;
+
+			setTimeout(function (){nextPage()}, 8000);
 		}
 
 		function resetPage( $outpage, $inpage ) {

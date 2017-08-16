@@ -94,6 +94,7 @@
   font-weight: 400;
   font-size: 21px;
   line-height: 31px;
+  text-shadow: black 2px 3px 15px;
 }
 
 .chuchoa-caption--page-button{
@@ -104,11 +105,11 @@
 
 /* caption 3 */
 .chuchoa-caption--page3{
-  color: rgb(33,150,243);
+  
 }
 
 .chuchoa-caption--page3 .chuchoa-caption--page-header{
-  text-shadow: white 5px 8px 35px;
+  
 }
 /* end caption 3 */
 
