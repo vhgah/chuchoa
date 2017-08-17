@@ -11,7 +11,7 @@
   background-color: transparent !important;
 }
 
-.chuchoa-navigation .mdl-navigation__link:hover {
+.chuchoa-navigation .mdl-navigation__link:hover, .chuchoa-navigation .mdl-navigation__link.active {
   border-bottom: 4px solid greenyellow;
 }
 
