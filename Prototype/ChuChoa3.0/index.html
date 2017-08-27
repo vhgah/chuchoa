@@ -10,6 +10,7 @@
 
   <title>Auto-Car Store</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,900" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/css/icon.css" />
   <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="assets/css/material.min.css" />
@@ -40,23 +41,44 @@
         </div>
         <!-- Navigation -->
         <div class="chuchoa-navigation-container">
-          <nav class="chuchoa-navigation mdl-navigation">
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="shop.html">Mua bán</a>
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Dịch vụ</a>
-            <a class="chuchoa-navigation__link--more mdl-navigation__link mdl-typography--text-uppercase" href="javascript:void(0)">
+          <nav class="chuchoa-navigation mdl-navigation">                        
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy">              
+              Mua
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-buy">
+              <li class="mdl-menu__item">Tìm xe</li>
+              <li class="mdl-menu__item">Tìm theo người bán</li>
+              <li class="mdl-menu__item">Tìm theo nhà cung cấp</li>
+            </ul>     
+            
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell">              
+              Bán
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-sell">
+              <li class="mdl-menu__item">Rao bán</li>
+              <li class="mdl-menu__item">Định giá xe</li>
+            </ul>   
+
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              Dịch vụ
+            </button>
+
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
               Tin tức
-              <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button-news">
-                <i class="material-icons">arrow_drop_down</i>
-              </button>
-            </a>
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
             <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-news">
               <li class="mdl-menu__item">Thị trường</li>
               <li class="mdl-menu__item">Tư vấn</li>
               <li class="mdl-menu__item">Đánh giá</li>
               <li class="mdl-menu__item">Công nghệ</li>
-            </ul>
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Giới thiệu</a>
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Liên hệ</a>
+            </ul>   
+            
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              Liên hệ
+            </button>
           </nav>
         </div>
         <a class="chuchoa-mobile-title mdl-layout-title" href="">
@@ -66,8 +88,9 @@
           <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-          <li class="mdl-menu__item">Câu hỏi thường gặp</li>
+          <li class="mdl-menu__item">Giới thiệu</li>
           <li class="mdl-menu__item">Tuyển dụng</li>
+          <li class="mdl-menu__item">Câu hỏi thường gặp</li>
           <li class="mdl-menu__item">Đăng nhập</li>
         </ul>
       </div>
