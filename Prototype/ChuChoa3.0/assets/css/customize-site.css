@@ -681,3 +681,17 @@ blockquote {
 
 }
 /* end chuchoa-news-section */
+
+/* chuchoa-shop-search-section*/
+.chuchoa-shop-search-section--parallax{
+    background-image: url("../images/shop/bg_topsearch.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: left -600px center;
+    background-repeat: no-repeat;
+    background-size: 1500px auto;
+    position: static;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+/* end chuchoa-shop-search-section*/
