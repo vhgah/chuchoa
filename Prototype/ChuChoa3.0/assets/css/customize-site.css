@@ -65,9 +65,7 @@
 */
 .chuchoa-banner-section {
   position: relative;
-  height: 0;
   width: 100%;
-  padding-bottom: 48.43%;
 }
 
 .chuchoa-banner-section .pt-page img {
@@ -118,6 +116,10 @@
 }
 /* end caption 3 */
 
+.chuchoa-banner--title, .chuchoa-banner--subtitle{
+    text-shadow: 2px 2px 5px gray;
+}
+
 @media (max-width: 900px) {
   /*caption Page*/
   .chuchoa-caption--page{
@@ -152,6 +154,14 @@
   /*end caption Page*/
 }
 
+.ls-fullwidth .ls-bottom-slidebuttons {
+   margin-right: 35px !important;
+}
+
+.ls-bottom-nav-wrapper{
+   z-index: 4;
+}
+
 @media (max-width: 415px) {
   /*caption Page*/
   .chuchoa-caption--page{
@@ -182,12 +192,23 @@
   }
 
   /*end caption Page*/
+
+  .ls-fullwidth .ls-bottom-slidebuttons{
+    visibility: hidden;
+    }
 }
 /*
     end chuchoa-banner-section
 */
 
 /* search section */
+.chuchoa-search-grid{
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    z-index: 2;
+}
+
 .chuchoa-search-section--parallax{
     background-image: url("../images/backgrounds/bg-search.png");
     height: 100%;
@@ -203,12 +224,43 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.chuchoa-search-grid .mdl-textfield__input {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.chuchoa-search-grid .mdl-textfield__label, .chuchoa-search-grid .is-upgraded .mdl-textfield__label{
+    color: white;
+}
+
 @media (max-width: 839px) {
     #chuchoa-search-section{
         display: none;
     }
+    .chuchoa-search-grid{
+        position: relative;
+        bottom: 0;
+    }
 }
 /* end search section */
+
+/* lastest section */
+.chuchoa-lastest-section{
+    margin-top: 40px;
+}
+
+.mdl-tabs__tab.is-active {
+    background: rgb(255,255,255) !important; 
+
+}
+
+@media (max-width: 839px) {
+    .chuchoa-lastest-section{
+        margin-top: 0;
+    }
+}
+/* end lastest section */
 
 /*
   chuchoa-hot-product  

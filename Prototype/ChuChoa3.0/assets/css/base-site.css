@@ -247,7 +247,7 @@ a img{
 
 /* section*/
 .chuchoa-section {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
     z-index: 1
 }
