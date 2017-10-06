@@ -898,3 +898,24 @@ a img{
     margin-bottom: 7px;
   }
 }
+
+.chuchoa--opacity-50 {
+    opacity: 0.5;
+}
+
+.chuchoa--opacity-75 {
+    opacity: 0.75;
+}
+
+.chuchoa--opacity-85 {
+    opacity: 0.85;
+}
+
+.chuchoa-content--left{
+    justify-content: flex-start;
+}
+
+.chuchoa-content--center{
+    text-align: center;
+    vertical-align: middle;
+}

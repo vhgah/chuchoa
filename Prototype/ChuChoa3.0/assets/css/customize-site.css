@@ -230,8 +230,12 @@
     border-bottom: 1px solid white;
 }
 
-.chuchoa-search-grid .mdl-textfield__label, .chuchoa-search-grid .is-upgraded .mdl-textfield__label{
+.chuchoa-search-grid .mdl-textfield__label, .chuchoa-search-grid .is-upgraded .mdl-textfield__label, .chuchoa-search-grid .material-icons{
     color: white;
+}
+
+.temple-hidden{
+    display: none;
 }
 
 @media (max-width: 839px) {
