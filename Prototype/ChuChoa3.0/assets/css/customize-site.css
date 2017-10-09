@@ -751,3 +751,54 @@ blockquote {
     padding-bottom: 20px;
 }
 /* end chuchoa-shop-search-section*/
+
+/* chuchoa-head-section */
+.chuchoa-head-section{
+    height: 150px;
+}
+/* end chuchoa-head-section */
+
+.noUi-handle:focus{
+    outline: none;
+}
+
+.noUi-handle.noUi-active:focus{
+    width: 18px;
+    height: 18px;
+    top: -8px;
+}
+
+.noUi-handle{
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: rgb(33,150,243);
+}
+
+.noUi-horizontal .noUi-handle{
+    width: 14px;
+    height: 14px;
+    left: -7px;
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    content: "";
+    display: none;
+    position: inherit;
+}
+
+.noUi-horizontal{
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(0,0,0,.26);
+}
+
+.noUi-connect{
+    background: rgb(33,150,243);
+}
+
+.chuchoa-shop--content{
+    padding-top: 0;
+    margin-top: 0;
+}

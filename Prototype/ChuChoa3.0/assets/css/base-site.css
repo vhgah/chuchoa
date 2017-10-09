@@ -919,3 +919,128 @@ a img{
     text-align: center;
     vertical-align: middle;
 }
+
+.fa-ul,
+.chuchoa-breadcrumb,
+.chuchoa-comment-list,
+.chuchoa-list,
+.chuchoa-pagination {
+    list-style-type: none
+}
+
+.chuchoa-widget {
+    max-width: 100%
+}
+
+.chuchoa-widget {
+    margin-bottom: 16px;
+    width: initial
+}
+.chuchoa-widget__content {
+    width: 100%;
+    box-sizing: border-box
+}
+.chuchoa-widget__content .chuchoa-list,
+.chuchoa-widget__content .chuchoa-list__item {
+    padding: 0
+}
+.chuchoa-widget__content .mdl-slider,
+.chuchoa-widget__content .mdl-slider__background-flex {
+    margin: 0;
+    width: 100%
+}
+.chuchoa-widget__content .mdl-textfield {
+    width: 100%;
+    max-width: initial
+}
+
+.chuchoa-list {
+    display: block;
+    padding: 8px 0;
+    margin: 0;
+    overflow: auto
+}
+.chuchoa-list__item {
+    padding: 0 16px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+    min-height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+.chuchoa-list--full-width .chuchoa-list__item {
+    padding: 0
+}
+.chuchoa-list__item--top {
+    -webkit-align-items: flex-start;
+    align-items: flex-start
+}
+.chuchoa-list__item--bottom {
+    -webkit-align-items: flex-bottom;
+    align-items: flex-bottom
+}
+.chuchoa-list__icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    box-sizing: content-box
+}
+.chuchoa-list__item--top .chuchoa-list__icon {
+    padding-top: 8px
+}
+.chuchoa-list__item-text {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 0;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis
+}
+.chuchoa-list__title {
+    /* display: block; */
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
+}
+.material-icons.mdl-dark,
+.chuchoa-list__subtitle {
+    color: rgba(0, 0, 0, .54)
+}
+.chuchoa-list__subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none
+}
+
+.chuchoa-list__title,
+.chuchoa-list__title a {
+    color: rgba(0, 0, 0, .74);
+    text-decoration: none;
+    font-weight: 400
+}
+
+.chuchoa-full-width,
+.chuchoa-image-responsive,
+.chuchoa-list__icon img,
+.chuchoa-widget {
+    max-width: 100%
+}
+
+.chuchoa-margin-top-20 {
+    margin-top: 20px !important;
+}
