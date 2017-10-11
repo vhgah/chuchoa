@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Best Auto-Car Store ever">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <title>Auto-Car Store</title>
+
+  <link rel="stylesheet" href="assets/css/icon.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/material.min.css" />
+
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <link href="assets/css/nouislider.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/getmdl-select.min.css">
+
+  <link rel="stylesheet" href="assets/css/base-site.css" />
+  <link rel="stylesheet" href="assets/css/customize-site.css" />
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="chuchoa-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <a class="chuchoa-title mdl-layout-title" href="index.html">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="chuchoa-header-spacer mdl-layout-spacer"></div>
+        <div class="chuchoa-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="chuchoa-navigation-container">
+          <nav class="chuchoa-navigation mdl-navigation">                        
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy">              
+              Mua
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-buy">
+              <li class="mdl-menu__item">Tìm mua xe</li>
+              <li class="mdl-menu__item">Tìm mua theo người bán</li>
+              <li class="mdl-menu__item">Tìm mua theo hãng</li>
+            </ul>     
+            
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell">              
+              Bán
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-sell">
+              <li class="mdl-menu__item">Rao bán</li>
+              <li class="mdl-menu__item">Định giá xe</li>
+            </ul>   
+
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              Dịch vụ
+            </button>
+
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
+              Tin tức
+              <i class="material-icons">arrow_drop_down</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="more-button-news">
+              <li class="mdl-menu__item">Thị trường</li>
+              <li class="mdl-menu__item">Tư vấn</li>
+              <li class="mdl-menu__item">Đánh giá</li>
+              <li class="mdl-menu__item">Công nghệ</li>
+            </ul>   
+            
+            <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              Liên hệ
+            </button>
+          </nav>
+        </div>
+        <a class="chuchoa-mobile-title mdl-layout-title" href="">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item">Giới thiệu</li>
+          <li class="mdl-menu__item">Tuyển dụng</li>
+          <li class="mdl-menu__item">Hướng dẫn rao bán</li>
+          <li class="mdl-menu__item">Đăng nhập</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="chuchoa-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="chuchoa-logo-image" src="assets/images/logo.png">
+      </span>
+      <nav class="mdl-navigation">
+          <span class="mdl-navigation__link" href="">Mua</span>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo người bán</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Bán</span>
+        <a class="mdl-navigation__link" href="">Rao bán</a>        
+        <a class="mdl-navigation__link" href="">Định giá xe</a>        
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Tin tức</span>
+        <a class="mdl-navigation__link" href="">Thị trường</a>
+        <a class="mdl-navigation__link" href="">Tư vấn</a>
+        <a class="mdl-navigation__link" href="">Đánh giá</a>
+        <a class="mdl-navigation__link" href="">Công nghệ</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <a class="mdl-navigation__link" href="">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="">Hướng dẫn rao bán</a>
+        <a class="mdl-navigation__link" href="">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="">Liên hệ</a>        
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Đăng nhập</span>
+      </nav>
+    </div>
+
+    <div class="chuchoa-content mdl-layout__content">
+      <a name="top"></a>
+      
+      <div class="chuchoa-section chuchoa-head-section chuchoa-section--parallax">
+        <div class="chuchoa-section__content chuchoa-single-search-section--parallax mdl-color--primary">
+          
+        </div>
+      </div>
+
+      <div class="chuchoa-section">
+        <div class="chuchoa-section__content">
+          <div class="mdl-grid mdl-grid--no-fullwidth">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+              <div class="chuchoa-product-slider">
+                <div class="chuchoa-product-badge">Sale</div>
+                <div class="flexslider chuchoa-product-slider__slides flex-controls-outside flex-controls-left flex-caption-undefined" data-flex-animation="slide" data-flex-controls="thumbnails" data-flex-controlsalign="left" data-flex-controlsposition="outside" data-flex-directions="hide" data-flex-directions-type="simple" data-flex-duration="600" data-flex-slideshow="true" data-flex-speed="7000" id="product-images"><div class="flex-viewport" style="overflow: hidden; position: relative; height: 631px;"><ul class="slides" style="width: 1000%; margin-left: -946px;"><li data-thumb="assets/images/products/product-31-c-small-notinclude.jpg" class="clone" aria-hidden="true" style="width: 473px; float: left; display: block;"><img alt="Top Fancy" src="assets/images/products/product-31-c-big-notinclude.jpg" draggable="false"></li><li data-thumb="assets/images/products/product-31-a-small-notinclude.jpg" style="width: 473px; float: left; display: block;" class=""><img alt="Top Fancy" src="assets/images/products/product-31-a-big-notinclude.jpg" draggable="false"></li><li data-thumb="assets/images/products/product-31-b-small-notinclude.jpg" class="flex-active-slide" style="width: 473px; float: left; display: block;"><img alt="Top Fancy" src="assets/images/products/product-31-b-big-notinclude.jpg" draggable="false"></li><li data-thumb="assets/images/products/product-31-c-small-notinclude.jpg" class="" style="width: 473px; float: left; display: block;"><img alt="Top Fancy" src="assets/images/products/product-31-c-big-notinclude.jpg" draggable="false"></li><li data-thumb="assets/images/products/product-31-a-small-notinclude.jpg" style="width: 473px; float: left; display: block;" class="clone" aria-hidden="true"><img alt="Top Fancy" src="assets/images/products/product-31-a-big-notinclude.jpg" draggable="false"></li></ul></div><ol class="flex-control-nav flex-control-thumbs"><li><img src="assets/images/products/product-31-a-small-notinclude.jpg" class="" draggable="false"></li><li><img src="assets/images/products/product-31-b-small-notinclude.jpg" draggable="false" class="flex-active"></li><li><img src="assets/images/products/product-31-c-small-notinclude.jpg" draggable="false" class=""></li></ol></div></div></div><div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone chuchoa-product-details"><h1 class="mdl-typography--display-1 chuchoa-margin-top-0 chuchoa-margin-bottom-10">Green Fancy Top</h1><p class="mdl-typography--display-1 chuchoa-margin-0 chuchoa-margin-bottom-20 chuchoa-product-price"><del><span>£55.00</span></del><ins><span>£35.00</span></ins></p><a href="#product-reviews-tab" id="review-rating-tooltip" class="chuchoa-rating chuchoa-rating--big chuchoa-margin-bottom-20 chuchoa-display-inline-block" title="Rated 4.00 out of 5" tabindex="0"><span style="width:85%"><strong class="chuchoa-rating__stars">4.00</strong> out of 5</span></a><div class="mdl-tooltip" for="review-rating-tooltip" data-upgraded=",MaterialTooltip" style="left: 852px; margin-left: -49px; top: 206px;"><span itemprop="reviewCount" class="count">1</span> customer review</div><p class="mdl-typography--title mdl-typography--font-light chuchoa-typography-line-height-normal chuchoa-opacity-50">Material Design Lite is a light-weight implementation of design, specifically crafted for the web. For more detailed guidelines and specifications for other platforms please refer to the Material Design site. Thats the spirit of material design. Get started now.</p><form class="chuchoa-margin-bottom-30"><table class="chuchoa-product-details__options"><tbody><tr><td><label for="color">Size:</label></td><td><div class="mdl-selectfield mdl-js-selectfield" tabindex="-1" data-upgraded=",MaterialSelectfield"><select name="orderby" class="mdl-selectfield__select"><option value="Small">Small</option><option value="Medium">Medium</option><option value="Large">Large</option></select><a class="mdl-select__button mdl-button mdl-js-button">Small</a><div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--bottom-left"></div><ul class="mdl-select__menu mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialMenu"><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Small<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Medium<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Large<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li></ul></div></div></td></tr><tr><td><label for="color">Color:</label></td><td><div class="mdl-selectfield mdl-js-selectfield" tabindex="-1" data-upgraded=",MaterialSelectfield"><select name="orderby" class="mdl-selectfield__select"><option value="Green">Green</option><option value="Red">Red</option><option value="Yellow">Yellow</option><option value="Pink" selected="">Pink</option></select><a class="mdl-select__button mdl-button mdl-js-button">Pink</a><div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--bottom-left"></div><ul class="mdl-select__menu mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialMenu"><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Green<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Red<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Yellow<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1">Pink<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li></ul></div></div><button class="chuchoa-display-block mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary" data-upgraded=",MaterialButton,MaterialRipple">Clear selection<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button></td></tr></tbody></table><div class="chuchoa-quantity"><input type="button" value="-"><div class="mdl-textfield mdl-js-textfield is-dirty is-upgraded" data-upgraded=",MaterialTextfield"><input type="number" step="1" min="0" name="cart" value="2" title="Qty" class="mdl-textfield__input" id="q1"> <label class="mdl-textfield__label" for="q1"></label></div><input type="button" value="+"></div><button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-upgraded=",MaterialButton">Add to cart</button></form><div class="mdl-grid"><div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet mdl-cell mdl-cell--2-col-phone mdl-cell--middle"><div class="chuchoa-product-details__meta"><span>Category: <a href="shop.html" rel="tag">Bags</a></span> <span>Tags: <a href="shop.html" rel="tag">summer</a>, <a href="shop.html" rel="tag">womens</a></span></div></div><div class="mdl-cell mdl-cell--6-col mdl-cell mdl-cell--4-col-tablet mdl-cell mdl-cell--2-col-phone mdl-cell--middle mdl-typography--text-right"><button id="product-share" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i class="material-icons">share</i></button><div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--top-right"></div><ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" for="product-share" data-upgraded=",MaterialMenu,MaterialRipple"><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple">Share on facebook<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple">Share on twitter<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li><li class="mdl-menu__item mdl-js-ripple-effect" tabindex="-1" data-upgraded=",MaterialRipple">Share on google+<span class="mdl-menu__item-ripple-container"><span class="mdl-ripple"></span></span></li></ul></div></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chuchoa-section chuchoa-section--parallax">
+        <div class="chuchoa-section__content chuchoa-usermail-section--parallax mdl-color--primary">
+          <div class="mdl-grid mdl-grid--no-fullwidth  mdl-color--primary-contrast mdl-shadow--2dp">
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--12-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                <h2 class="chuchoa-color-light mdl-typography--display-1 mdl-typography--font-thin chuchoa-usermail-section--header">
+                  Đừng bỏ lỡ cơ hội mua xe tốt
+                </h2>
+              </div>
+              <div class="mdl-cell mdl-cell--3-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                <div class="mdl-textfield mdl-js-textfield textfield-demo mdl-textfield--floating-label">
+                  <label class="mdl-textfield__label" for="signup-name">Tên của bạn</label> 
+                  <input class="mdl-textfield__input" type="text">
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--3-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                <div class="mdl-textfield mdl-js-textfield textfield-demo mdl-textfield--floating-label">
+                  <label class="mdl-textfield__label" for="signup-email">Email của bạn</label> 
+                  <input class="mdl-textfield__input" type="text">
+                </div>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--middle chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-margin-bottom-10">Gửi</button>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+      <footer class="mdl-mega-footer chuchoa-color-primary">
+        <div class="mdl-mega-footer--middle-section">
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Chứng nhận</h1>
+            <div class="mdl-mega-footer__widget">              
+              <p>Giấy chứng nhận đăng ký doanh nghiệp số xxxxxxxxx do Sở Kế Hoạch và Đầu Tư XXXX cấp ngày 08/08/2017 </p>
+            </div>
+            <div class="mdl-mega-footer__widget">
+              <i class="fa fa-cc-mastercard"></i> &nbsp; <i class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i class="fa fa-cc-jcb"></i>
+            </div>
+          </div>
+          
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Địa chỉ</h1>
+            <div class="mdl-mega-footer__widget">
+              <p>Liên hệ với chúng tôi ngay khi bạn cần.</p>
+              <p>Số xxx, ngõ yyy<br>Đường Hoàng Quốc Việt<br>Quận Cầu Giấy<br>0979.908.950<br></p>
+              <p><a href="#">chuchoa.com</a><br>cuongnd@chuchoa.com</p>
+              <p>
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-twitter"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-flickr"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-linkedin"></i></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Xe mới đăng bán</h1><div class="mdl-mega-footer__widget">
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+            </div>
+          </div>
+
+           <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">            
+            <h1 class="mdl-mega-footer--heading">ChuChoa.com</h1>
+            <div class="mdl-mega-footer__widget">              
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="page-card.html">Mua bán</a></li>
+                <li><a href="page-card.html">Dịch vụ</a></li>
+                <li><a href="page-card.html">Tin tức</a></li>
+                <li><a href="page-card.html">Tuyển dụng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>          
+      </footer>
+
+    </div>
+  </div>
+  
+  <script defer src="assets/js/material.js"></script>  
+  <script defer src="assets/js/getmdl-select.min.js"></script>
+  <script src="assets/js/nouislider.min.js"></script>  
+
+  <script defer src="assets/js/base-site.js"></script>
+</body>
+
+</html>

@@ -1041,6 +1041,146 @@ a img{
     max-width: 100%
 }
 
+.chuchoa-full-width {
+    width: 100%;
+    box-sizing: border-box
+}
+
 .chuchoa-margin-top-20 {
     margin-top: 20px !important;
+}
+
+.chuchoa-pagination__item {
+    display: inline-block
+}
+
+.chuchoa-pagination {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+.chuchoa-pagination__link {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    opacity: .4
+}
+.chuchoa-pagination__link .material-icons {
+    line-height: 40px;
+    font-size: 18px
+}
+.chuchoa-pagination__link:hover {
+    color: #fff;
+    background: #e91e63;
+    opacity: 1
+}
+.chuchoa-pagination__link--current {
+    opacity: 1
+}
+.chuchoa-pagination__link--current:hover {
+    color: #000;
+    background-color: transparent;
+    cursor: default
+}
+
+.chuchoa-product-slider {
+    position: relative;
+    padding-left: 96px
+}
+@media (max-width: 839px) {
+    .chuchoa-product-slider {
+        padding-left: 0
+    }
+}
+.chuchoa-product-slider__slides ol,
+.chuchoa-product-slider__slides ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+.chuchoa-product-slider__slides .flex-control-thumbs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px
+}
+.chuchoa-product-slider__slides .flex-control-thumbs img {
+    max-width: 100%;
+    margin-bottom: 16px;
+    opacity: .4;
+    transition: opacity .3s;
+    cursor: pointer;
+    position: relative;
+    padding: 2px;
+    box-sizing: border-box;
+    display: block
+}
+.chuchoa-product-slider__slides .flex-control-thumbs img.flex-active {
+    opacity: 1;
+    box-shadow: 0 0 0 2px rgba(68, 138, 255, .8) inset
+}
+@media (max-width: 839px) {
+    .chuchoa-product-slider__slides .flex-control-thumbs {
+        position: relative;
+        width: 100%
+    }
+    .chuchoa-product-slider__slides .flex-control-thumbs li {
+        float: left
+    }
+    .chuchoa-product-slider__slides .flex-control-thumbs img {
+        width: 60px;
+        margin-top: 16px;
+        margin-right: 16px
+    }
+}
+
+.chuchoa-product-badge {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 56px;
+    text-align: center;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    background: rgba(68, 138, 255, .8);
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+.flexslider {
+    margin: 0;
+    padding: 0
+}
+.flexslider .slides>li {
+    display: none;
+    -webkit-backface-visibility: hidden
+}
+.flexslider .slides img,
+.no-js .flexslider .slides>li:first-child,
+html[xmlns] .flexslider .slides {
+    display: block
+}
+.flexslider .slides img {
+    width: 100%
+}
+.flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+* html .flexslider .slides {
+    height: 1%
 }
