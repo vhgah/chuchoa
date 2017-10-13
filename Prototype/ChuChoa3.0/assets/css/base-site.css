@@ -1050,6 +1050,19 @@ a img{
     margin-top: 20px !important;
 }
 
+.chuchoa-margin-top-10 {
+    margin-top: 10px !important;
+}
+.chuchoa-margin-bottom-10{
+    margin-bottom: 10px !important;
+}
+.chuchoa-margin-0 {
+    margin: 0 !important;
+}
+.chuchoa-margin-bottom-20{
+    margin-bottom: 20px !important;
+}
+
 .chuchoa-pagination__item {
     display: inline-block
 }
@@ -1183,4 +1196,47 @@ html[xmlns] .flexslider .slides {
 }
 * html .flexslider .slides {
     height: 1%
+}
+
+.rev_slider .no-slides-text {
+    font-weight: 700;
+    text-align: center;
+    padding-top: 80px
+}
+
+.tp-revslider-mainul,
+.tp-revslider-slidesli {
+    padding: 0!important;
+    margin: 0!important;
+    list-style: none!important
+}
+
+.chuchoa-product-details__options {
+    max-width: 300px
+}
+.chuchoa-product-details__options tr td:first-child {
+    min-width: 108px
+}
+.chuchoa-product-details__options tr:last-child td:first-child label {
+    display: block;
+    margin-bottom: 38px
+}
+@media (max-width: 479px) {
+    .chuchoa-product-details__options .mdl-selectfield {
+        width: 100%
+    }
+}
+.chuchoa-product-details__meta {
+    color: #888
+}
+.chuchoa-product-details__meta span {
+    padding-right: 10px
+}
+.chuchoa-product-details__meta a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .87);
+    transition: all .2s
+}
+.chuchoa-product-details__meta a:hover {
+    color: #448aff
 }
