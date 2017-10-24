@@ -1240,3 +1240,30 @@ html[xmlns] .flexslider .slides {
 .chuchoa-product-details__meta a:hover {
     color: #448aff
 }
+
+.chuchoa-display-block {
+    display: block!important
+}
+.chuchoa-display-inline-block {
+    display: inline-block!important
+}
+.chuchoa-display-inline {
+    display: inline!important
+}
+.chuchoa-float-left {
+    float: left!important
+}
+.chuchoa-float-right {
+    float: right!important
+}
+.chuchoa-clear:after,
+.chuchoa-clear:before {
+    content: " ";
+    display: table
+}
+.chuchoa-clear:after {
+    clear: both
+}
+.chuchoa-make-round {
+    border-radius: 50%
+}
