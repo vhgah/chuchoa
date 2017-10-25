@@ -1267,3 +1267,52 @@ html[xmlns] .flexslider .slides {
 .chuchoa-make-round {
     border-radius: 50%
 }
+
+.chuchoa-typography-line-height-short {
+    line-height: 1
+}
+.chuchoa-typography-line-height-normal {
+    line-height: 1.5
+}
+.chuchoa-typography-line-height-tall {
+    line-height: 2
+}
+
+
+.chuchoa-opacity-0 {
+    opacity: 0!important
+}
+.chuchoa-opacity-10 {
+    opacity: .1!important
+}
+.chuchoa-opacity-20 {
+    opacity: .2!important
+}
+.chuchoa-opacity-30 {
+    opacity: .3!important
+}
+.chuchoa-opacity-40 {
+    opacity: .4!important
+}
+.chuchoa-opacity-50 {
+    opacity: .5!important
+}
+.chuchoa-opacity-60 {
+    opacity: .6!important
+}
+.chuchoa-opacity-70 {
+    opacity: .7!important
+}
+.chuchoa-opacity-80 {
+    opacity: .8!important
+}
+.chuchoa-opacity-89 {
+    opacity: .9!important
+}
+.chuchoa-opacity-99 {
+    opacity: 1!important
+}
+.chuchoa-overlay-0 {
+    position: relative;
+    z-index: 1
+}

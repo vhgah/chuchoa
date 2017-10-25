@@ -807,6 +807,10 @@ blockquote {
     margin-top: 40px!important
 }
 
+.chuchoa-margin-bottom-30 {
+    margin-bottom: 30px!important
+}
+
 .chuchoa-margin-bottom-40 {
     margin-bottom: 40px!important
 }
@@ -942,4 +946,20 @@ blockquote {
 }
 .chuchoa-rating-set__star:nth-child(5):after {
     content: "\E838 \E838 \E838 \E838 \E838"
+}
+
+.chuchoa-product-details__options {
+    max-width: 300px
+}
+.chuchoa-product-details__options tr td:first-child {
+    min-width: 108px
+}
+.chuchoa-product-details__options tr:last-child td:first-child label {
+    display: block;
+    margin-bottom: 38px
+}
+@media (max-width: 479px) {
+    .chuchoa-product-details__options .mdl-selectfield {
+        width: 100%
+    }
 }
