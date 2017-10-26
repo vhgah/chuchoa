@@ -1053,6 +1053,9 @@ a img{
 .chuchoa-margin-top-10 {
     margin-top: 10px !important;
 }
+.chuchoa-margin-top-40 {
+    margin-top: 40px !important;
+}
 .chuchoa-margin-bottom-10{
     margin-bottom: 10px !important;
 }
@@ -1315,4 +1318,25 @@ html[xmlns] .flexslider .slides {
 .chuchoa-overlay-0 {
     position: relative;
     z-index: 1
+}
+
+.chuchoa-flex-justify-start {
+    -webkit-justify-content: flex-start!important;
+    justify-content: flex-start!important
+}
+.chuchoa-flex-justify-end {
+    -webkit-justify-content: flex-end!important;
+    justify-content: flex-end!important
+}
+.chuchoa-flex-justify-center {
+    -webkit-justify-content: center!important;
+    justify-content: center!important
+}
+
+.chuchoa-padding-bottom-20 {
+    padding-bottom: 20px!important
+}
+
+.chuchoa-padding-top-20 {
+    padding-top: 20px!important
 }
