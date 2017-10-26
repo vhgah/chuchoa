@@ -14,6 +14,7 @@
   <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
   <link rel="stylesheet" href="assets/css/material.min.css" /> -->
   <link rel="stylesheet" href="assets/css/base-site.css" />
+  <link rel="stylesheet" href="assets/css/fotorama.css" />
 
   <link rel="stylesheet" href="assets/css/animations.css" />
 
@@ -123,40 +124,14 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
               <div class="chuchoa-product-slider">
                 <div class="chuchoa-product-badge">Hot</div>
-                <div class="flexslider chuchoa-product-slider__slides" data-flex-animation="slide" data-flex-controls="thumbnails" data-flex-controlsalign="left" data-flex-controlsposition="outside" data-flex-directions="hide" data-flex-directions-type="simple" data-flex-duration="600" data-flex-slideshow="true" data-flex-speed="7000">
-                  <div class="flex-viewport">
-                    <ul class="slides">
-                      <li data-thumb="assets/images/product/shop_icon_00.png">
-                        <img alt="Top Fancy" src="assets/images/product/shop_icon_00.png" draggable="false">
-                      </li>
-                      <li data-thumb="assets/images/product/shop_icon_01.png">
-                        <img alt="Top Fancy" src="assets/images/product/shop_icon_01.png" draggable="false">
-                      </li>
-                      <li data-thumb="assets/images/products/product-31-b-small-notinclude.jpg">
-                        <img alt="Top Fancy" src="assets/images/product/shop_icon_02.png" draggable="false">
-                      </li>
-                      <li data-thumb="assets/images/products/product-31-c-small-notinclude.jpg">
-                        <img alt="Top Fancy" src="assets/images/products/product-31-c-big-notinclude.jpg" draggable="false">
-                      </li>
-                      <li data-thumb="assets/images/products/product-31-a-small-notinclude.jpg">
-                        <img alt="Top Fancy" src="assets/images/products/product-31-a-big-notinclude.jpg" draggable="false">
-                      </li>
-                    </ul>
-                  </div>
-                  <ol class="flex-control-nav flex-control-thumbs">
-                    <li>
-                      <img src="assets/images/products/product-31-a-small-notinclude.jpg" draggable="false">
-                    </li>
-                    <li>
-                      <img src="assets/images/products/product-31-b-small-notinclude.jpg" draggable="false">
-                    </li>
-                    <li>
-                      <img src="assets/images/products/product-31-c-small-notinclude.jpg" draggable="false">
-                    </li>
-                  </ol>
+                <div class="fotorama" data-autoplay="true" data-arrows="true" data-nav="thumbs" data-fit="cover" data-allowfullscreen="native" data-loop="true">
+                  <img src="assets/images/product/shop_icon_00.png">    
+                  <img src="assets/images/product/shop_icon_01.png">
+                  <img src="assets/images/product/shop_icon_02.png">
                 </div>
               </div>
             </div>
+
             <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone chuchoa-product-details">
               <h1 class="mdl-typography--display-1 chuchoa-margin-top-0 chuchoa-margin-bottom-10">Green Fancy Top</h1>
               <p class="mdl-typography--display-1 chuchoa-margin-0 chuchoa-margin-bottom-20 chuchoa-product-price">
@@ -580,7 +555,9 @@
     </div>
   </div>
   
+  <script defer src="assets/js/jquery-1.12.4.js"></script>
   <script defer src="assets/js/material.js"></script> 
+  <script defer src="assets/js/fotorama.js"></script>   
 
   <script defer src="assets/js/base-site.js"></script>
 </body>

@@ -815,3 +815,7 @@ blockquote {
     align-items: center;
     justify-content: center;
 }
+
+.mdl-color--grey-075{
+    background-color: rgba(128, 128, 128, 0.75);
+}

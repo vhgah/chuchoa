@@ -6402,8 +6402,7 @@ input.mdl-button[type=submit] {
     height: 100%
 }
 .mdl-layout-title {
-    display: block;
-    position: relative;
+    display: block;    
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 20px;
     line-height: 1;
@@ -18973,7 +18972,7 @@ img.tp-slider-alternative-image {
 }
 .chuchoa-product-slider {
     position: relative;
-    padding-left: 96px
+    /* padding-left: 96px */
 }
 @media (max-width: 839px) {
     .chuchoa-product-slider {
