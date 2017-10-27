@@ -408,8 +408,28 @@
     }
 }
 
-.chuchoa-card-product__badge-height{
+.chuchoa-card-product__badge-hight{
     background-color: red;
+}
+
+.chuchoa-product-badge--checked{
+    position: absolute;
+    text-align: center;
+    top: 12px;
+    right: 12px;
+    color: rgba(68, 138, 255, .8);
+    z-index: 2;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+}
+.chuchoa-product-badge--checked i{
+    font-size: 64px;
+}
+
+@media (max-width: 839px) {
+    .chuchoa-product-badge--checked i{
+        font-size: 48px;
+    }
 }
 
 .chuchoa-product-info--icon{
@@ -818,4 +838,20 @@ blockquote {
 
 .mdl-color--grey-075{
     background-color: rgba(128, 128, 128, 0.75);
+}
+
+.chuchoa-contact--tel{
+    height: 62px;
+}
+
+.chuchoa-buy--list{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.chuchoa-buy--list li{
+    line-height: 1;
+}
+
+.chuchoa-default--hide{
+    display: none;
 }
