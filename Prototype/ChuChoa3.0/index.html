@@ -44,15 +44,18 @@
         <!-- Navigation -->
         <div class="chuchoa-navigation-container">
             <nav class="chuchoa-navigation mdl-navigation">                        
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy">              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy"
+                onclick="location.href='shop.html';">              
                 Mua
               </button>
               
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell">              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell"
+                onclick="location.href='sell.html';">              
                 Bán
               </button>
   
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
+                onclick="location.href='service.html';">              
                 Dịch vụ
               </button>
   
@@ -60,7 +63,8 @@
                 Tin tức
               </button>          
               
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast">              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"              
+                onclick="location.href='contact.html';">
                 Liên hệ
               </button>
             </nav>
@@ -72,10 +76,9 @@
           <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-          <li class="mdl-menu__item">Giới thiệu</li>
-          <li class="mdl-menu__item">Tuyển dụng</li>
-          <li class="mdl-menu__item">Hướng dẫn rao bán</li>
-          <li class="mdl-menu__item">Đăng nhập</li>
+          <li class="mdl-menu__item" onclick="location.href='about.html';">Giới thiệu</li>
+          <li class="mdl-menu__item" onclick="location.href='recruitment.html';">Tuyển dụng</li>
+          <li class="mdl-menu__item" onclick="location.href='sell-guide.html';">Hướng dẫn rao bán</li>
         </ul>
       </div>
     </div>
@@ -91,8 +94,8 @@
         <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
         <div class="chuchoa-drawer-separator"></div>
         <span class="mdl-navigation__link" href="">Bán</span>
-        <a class="mdl-navigation__link" href="">Rao bán</a>        
-        <a class="mdl-navigation__link" href="">Định giá xe</a>        
+        <a class="mdl-navigation__link" href="sell.html">Rao bán</a>        
+        <a class="mdl-navigation__link" href="sell-guide.html">Hướng dẫn rao bán</a>        
         <div class="chuchoa-drawer-separator"></div>
         <span class="mdl-navigation__link" href="">Tin tức</span>
         <a class="mdl-navigation__link" href="">Thị trường</a>
@@ -100,13 +103,10 @@
         <a class="mdl-navigation__link" href="">Đánh giá</a>
         <a class="mdl-navigation__link" href="">Công nghệ</a>
         <div class="chuchoa-drawer-separator"></div>
-        <a class="mdl-navigation__link" href="">Dịch vụ</a>
-        <a class="mdl-navigation__link" href="">Hướng dẫn rao bán</a>
-        <a class="mdl-navigation__link" href="">Tuyển dụng</a>
-        <a class="mdl-navigation__link" href="">Giới thiệu</a>
-        <a class="mdl-navigation__link" href="">Liên hệ</a>        
-        <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">Đăng nhập</span>
+        <a class="mdl-navigation__link" href="service.html">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="recruitment.html">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="about.html">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="contact.html">Liên hệ</a>
       </nav>
     </div>
 
@@ -597,7 +597,7 @@
       <div class="chuchoa-section chuchoa-section--parallax">
         <div class="chuchoa-section__content chuchoa-usermail-section--parallax mdl-color--primary">
           <div class="mdl-grid mdl-grid--no-fullwidth  mdl-color--primary-contrast mdl-shadow--2dp">
-            <div class="mdl-grid">
+            <div class="mdl-grid chuchoa-margin-left-20">
               <div class="mdl-cell mdl-cell--12-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                 <h2 class="mdl-typography--display-1 mdl-typography--font-thin chuchoa-usermail-section--header">
                   Đừng bỏ lỡ cơ hội mua xe tốt
