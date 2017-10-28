@@ -855,3 +855,21 @@ blockquote {
 .chuchoa-default--hide{
     display: none;
 }
+
+/* chuchoa-about--section*/
+.chuchoa-about-head-section--parallax{
+    background-image: url("../images/about/bg_tophead.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: right -600px center;
+    background-repeat: no-repeat;
+    background-size: 1500px auto;
+    position: static;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.chuchoa-divider__border--large {
+    width: 70%;
+}
+/* end chuchoa-about-section*/
