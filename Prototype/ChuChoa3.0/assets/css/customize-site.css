@@ -877,7 +877,7 @@ blockquote {
 /* chuchoa-contact--section*/
 .chuchoa-contact-head-section--parallax{
     background-image: url("../images/contact/bg_head.png");
-    height: 100%;
+    height: 200px;
     background-attachment: fixed;
     background-position: right -500px center;
     background-repeat: no-repeat;
