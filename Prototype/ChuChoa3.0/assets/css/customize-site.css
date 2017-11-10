@@ -887,3 +887,17 @@ blockquote {
     padding-bottom: 20px;
 }
 /* end chuchoa-contact-section*/
+
+/* chuchoa-service--section*/
+.chuchoa-service-section--parallax{
+    background-image: url("../images/service/bg_top.png");
+    height: 200px;
+    background-attachment: fixed;
+    background-position: right -200px top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: static;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+/* end chuchoa-service-section*/

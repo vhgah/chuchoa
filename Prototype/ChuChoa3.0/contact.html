@@ -116,81 +116,61 @@
             <div class="chuchoa-section__overlay"></div>
             <div class="chuchoa-section__content">
                 <div class="mdl-grid mdl-grid--no-fullwidth">
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-margin-top-40 chuchoa-margin-bottom-20">Liên lạc với chúng tôi</h2>
-                        <div class="chuchoa-divider chuchoa-divider--center">
-                            <div class="chuchoa-divider__border"></div>
-                        </div>
+                    <div class="mdl-cell mdl-cell--6-col">
+                        d
                     </div>
-                </div>
-                <form action="contact-mailer.php" class="contact-form chuchoa-margin-top-40 mdl-typography--text-center" id="contactForm">
-                    <div class="mdl-grid mdl-grid--no-fullwidth">
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--8-col-tablet mdl-cell--4-col-phone"></div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                    <div class="mdl-cell mdl-cell--6-col">
+                      <form action="contact-mailer.php" class="contact-form chuchoa-margin-top-40 mdl-typography--text-center" id="contactForm">
+                        <div class="mdl-grid mdl-grid--no-fullwidth">
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
                                 <input class="mdl-textfield__input" type="text" id="name">
                                 <label class="mdl-textfield__label" for="name">Họ và tên</label>
+                              </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                    <input class="mdl-textfield__input" type="text" id="tel">
+                                    <label class="mdl-textfield__label" for="tel">Số điện thoại</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                    <input class="mdl-textfield__input" type="email" id="email">
+                                    <label class="mdl-textfield__label" for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                    <textarea class="mdl-textfield__input" type="text" name="message" rows="10" id="message" ></textarea>
+                                    <label class="mdl-textfield__label" for="message">Nội dung</label>
+                                </div>            
+                                               
+                                <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-margin-bottom-10">Gửi</button>
+                                <div class="chuchoa-margin-top-40 chuchoa-margin-bottom-80">
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook" style="color: #3b5998;"></i></a> 
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-twitter" style="color: #00aced;"></i></a> 
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-flickr" style="color: #ff0084;"></i></a> 
+                                    <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-linkedin" style="color: #007bb5;"></i></a>
+                                </div>
+                                <div class="chuchoa-messages"></div>
                             </div>
                         </div>
-                        <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
-                                <input class="mdl-textfield__input" type="email" id="email">
-                                <label class="mdl-textfield__label" for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--8-col-tablet mdl-cell--4-col-phone"></div>
-                        <div class="mdl-cell mdl-cell--2-col mdl-cell--8-col-tablet mdl-cell--4-col-phone"></div>
-                        <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
-                                <textarea class="mdl-textfield__input" type="text" name="message" rows="10" id="message" ></textarea>
-                                <label class="mdl-textfield__label" for="message">Nội dung</label>
-                            </div>            
-                                           
-                            <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-margin-bottom-10">Gửi</button>
-                            <div class="chuchoa-margin-top-40 chuchoa-margin-bottom-80">
-                                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook" style="color: #3b5998;"></i></a> 
-                                <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-twitter" style="color: #00aced;"></i></a> 
-                                <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-flickr" style="color: #ff0084;"></i></a> 
-                                <a href="#" class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary"><i class="fa fa-linkedin" style="color: #007bb5;"></i></a>
-                            </div>
-                            <div class="chuchoa-messages"></div>
-                        </div>
+                      </form>
                     </div>
-                </form>
+                </div>
+                
             </div>
         </div>
         
         <div class="chuchoa-section">
             <div class="chuchoa-section__content">
               <div class="mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                   <div class="google-map" id="map">
                     <!-- AIzaSyCmqQab02Sp0bQOb2c6izrXt7BVaA_HjXw -->
                     <iframe frameborder="0" style="width:100%;height:395px;border:0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=21.0461%2C105.8055&key=AIzaSyCmqQab02Sp0bQOb2c6izrXt7BVaA_HjXw" allowfullscreen></iframe>
                   </div>
-                </div>  
-                <div class="mdl-grid mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone chuchoa-animation mdl-color--primary mdl-color-text--primary-contrast" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
-                  <div class="mdl-cell mdl-cell--12-col">
-                    <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-margin-top-40 chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">Địa điểm</h2>
-                    <div class="chuchoa-divider chuchoa-divider--center">
-                      <div class="chuchoa-divider__border"></div>
-                    </div>
-                  </div>
-                  <div class="mdl-cell mdl-cell--1-col mdl-cell--8-col-tablet"></div>
-                  <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet chuchoa-animation mdl-typography--text-center" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
-                    <h4 class="mdl-typography--title">ChuChoa.com</h4>
-                    <p>Hoàng Quốc Việt</p>
-                    <p>Cầu Giấy</p>
-                    <p>Hà Nội</p>                
-                  </div>
-                  <div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-tablet chuchoa-animation mdl-typography--text-center" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
-                    <h4 class="mdl-typography--title">Hotline</h4>
-                    <p>Bán hàng 1: 0979908950</p>
-                    <p>Bán hàng 2: 0979908950</p>
-                    <p>Bán hàng 3: 0979908950</p>
-                    <p>Kỹ thuật  : 0979908950</p>
-                  </div>
-                  <div class="mdl-cell mdl-cell--1-col mdl-cell--8-col-tablet"></div>
                 </div>  
               </div>          
             </div>
