@@ -886,6 +886,12 @@ blockquote {
     padding-top: 40px;
     padding-bottom: 20px;
 }
+
+@media (max-width: 839px) {
+#contactForm{
+    margin-top: -50px !important;
+}
+}
 /* end chuchoa-contact-section*/
 
 /* chuchoa-service--section*/
@@ -901,3 +907,17 @@ blockquote {
     padding-bottom: 20px;
 }
 /* end chuchoa-service-section*/
+
+/* chuchoa-sell--section*/
+.chuchoa-sell-section--parallax{
+    background-image: url("../images/sell/bg_head.png");
+    height: 200px;
+    background-attachment: fixed;
+    background-position: left -160px top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: static;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+/* end chuchoa-sell-section*/
