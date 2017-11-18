@@ -185,9 +185,10 @@
 /* search section */
 .chuchoa-search-grid{
     position: absolute;
-    bottom: -50px;
+    bottom: 50px;
     width: 100%;
     z-index: 2;
+    opacity: 0.95;
 }
 
 .chuchoa-search-section--parallax{
@@ -209,6 +210,12 @@
 .chuchoa-search-grid .mdl-textfield__input {
     color: white;
     border-bottom: 1px solid white;
+    margin-top: 10px;
+}
+
+.chuchoa-search-grid .mdl-tabs__tab, .chuchoa-search-grid .mdl-tabs__tab-bar {
+    height: 38px;
+    line-height: 38px;
 }
 
 .chuchoa-search-grid .mdl-textfield__label, .chuchoa-search-grid .is-upgraded .mdl-textfield__label, .chuchoa-search-grid .material-icons{

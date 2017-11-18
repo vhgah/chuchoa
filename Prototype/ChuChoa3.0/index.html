@@ -21,6 +21,16 @@
   <link rel="stylesheet" href="assets/plugins/layerslider/css/layerslider.css" />
   
   <link rel="stylesheet" href="assets/css/customize-site.css" />
+
+  <script type="text/javascript" src="assets/js/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="assets/plugins/layerslider/js/greensock.js"></script>
+  <script type="text/javascript" src="assets/plugins/layerslider/js/layerslider.transitions.js"></script>
+  <script type="text/javascript" src="assets/plugins/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+  <script type="text/javascript" src="assets/js/layer-slider.js"></script>
+  
+    
+  <script defer src="assets/js/material.js"></script>  
+  <script defer src="assets/js/getmdl-select.min.js"></script>
 </head>
 
 <body>
@@ -173,7 +183,7 @@
         </div> 
 
         <div class="chuchoa-search-grid">
-          <div class="mdl-grid mdl-grid--no-fullwidth mdl-shadow--4dp mdl-color--grey-075 mdl-grid--no-margin">
+          <div class="mdl-grid mdl-grid--no-fullwidth mdl-shadow--4dp mdl-color--grey-800 mdl-grid--no-margin">
             <div class="mdl-cell mdl-cell--12-col">
               <div class="mdl-cell mdl-cell--12-col mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar chuchoa-flex-justify-start">
@@ -591,28 +601,31 @@
 
       <div class="chuchoa-section chuchoa-section--parallax">
         <div class="chuchoa-section__content chuchoa-usermail-section--parallax mdl-color--primary">
-          <div class="mdl-grid mdl-grid--no-fullwidth  mdl-color--primary-contrast mdl-shadow--2dp">
-            <div class="mdl-grid chuchoa-margin-left-20">
+          <div class="mdl-grid mdl-grid--no-fullwidth mdl-color--primary-contrast mdl-shadow--2dp">
+            <div class="mdl-grid chuchoa-margin-left-20 mdl-typography--text-center">
               <div class="mdl-cell mdl-cell--12-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                 <h2 class="mdl-typography--display-1 mdl-typography--font-thin chuchoa-usermail-section--header">
                   Đừng bỏ lỡ cơ hội mua xe tốt
                 </h2>
               </div>
-              <div class="mdl-cell mdl-cell--3-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-tablet mdl-cell--12-col-phone"></div>
+
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                 <div class="mdl-textfield mdl-js-textfield textfield-demo mdl-textfield--floating-label">
                   <label class="mdl-textfield__label" for="signup-name">Tên của bạn</label> 
                   <input class="mdl-textfield__input" type="text">
                 </div>
               </div>
-              <div class="mdl-cell mdl-cell--3-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+              <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                 <div class="mdl-textfield mdl-js-textfield textfield-demo mdl-textfield--floating-label">
                   <label class="mdl-textfield__label" for="signup-email">Email của bạn</label> 
                   <input class="mdl-textfield__input" type="text">
                 </div>
               </div>
-              <div class="mdl-cell mdl-cell--6-col mdl-cell--middle chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--middle chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-margin-bottom-10">Gửi</button>
               </div>
+              <div class="mdl-cell mdl-cell--2-col"></div>
             </div>
           </div>          
         </div>
@@ -897,10 +910,12 @@
                 <label class="mdl-textfield__label" for="discount-email">Email của bạn</label> 
                 <input class="mdl-textfield__input" type="text" id="discount-email">
               </div>
+            </div>
+            <div class="mdl-cell mdl-cell--12-col mdl-cell--middle mdl-typography--text-center">
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-contact--button">
                 Theo dõi
               </button>
-            </div>
+           </div>
           </div>   
         </div>
       </div>
@@ -986,8 +1001,7 @@
             <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
             <h1 class="mdl-mega-footer--heading">Địa chỉ</h1>
             <div class="mdl-mega-footer__widget">
-              <p>Liên hệ với chúng tôi ngay khi bạn cần.</p>
-              <p>Số xxx, ngõ yyy<br>Đường Hoàng Quốc Việt<br>Quận Cầu Giấy<br>0979.908.950<br></p>
+              <p>Số xxx, ngõ yyy, Đường Hoàng Quốc Việt, Quận Cầu Giấy<br>0979.908.950<br></p>
               <p><a href="#">chuchoa.com</a><br>cuongnd.ami@outlook.com</p>
               <p>
                 <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook"></i></a> 
@@ -1010,9 +1024,7 @@
               <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
               <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
               <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
-              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
-              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
-              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              
             </div>
           </div>
 
@@ -1021,10 +1033,12 @@
             <h1 class="mdl-mega-footer--heading">ChuChoa.com</h1>
             <div class="mdl-mega-footer__widget">              
               <ul class="mdl-mega-footer--link-list">
-                <li><a href="page-card.html">Mua bán</a></li>
-                <li><a href="page-card.html">Dịch vụ</a></li>
+                <li><a href="shop.html">Mua</a></li>
+                <li><a href="sell.html">Bán</a></li>
+                <li><a href="service.html">Dịch vụ</a></li>
                 <li><a href="page-card.html">Tin tức</a></li>
-                <li><a href="page-card.html">Tuyển dụng</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
               </ul>
             </div>
           </div>
@@ -1034,20 +1048,6 @@
     </div>
   </div>
   
-  <!--<script defer src="assets/js/jquery-1.12.4.js"></script>-->
-  <!--<script defer src="assets/js/modernizr.custom.js"></script>  -->
-  <!-- <script defer src="assets/js/pagetransitions.js"></script> -->
-
-  <script type="text/javascript" src="assets/js/jquery-1.12.4.js"></script>
-  <script type="text/javascript" src="assets/plugins/layerslider/js/greensock.js"></script>
-  <script type="text/javascript" src="assets/plugins/layerslider/js/layerslider.transitions.js"></script>
-  <script type="text/javascript" src="assets/plugins/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
-  <script type="text/javascript" src="assets/js/layer-slider.js"></script>
-  
-    
-  <script defer src="assets/js/material.js"></script>  
-  <script defer src="assets/js/getmdl-select.min.js"></script>
-
   <script defer src="assets/js/base-site.js"></script>
   <script defer src="assets/js/custom-site.js"></script>
 </body>
