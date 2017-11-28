@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Best Auto-Car Store ever">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+    <title>Chu Choa - mua bán xe giá hấp dẫn</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/icon.css" />
+    <link rel="stylesheet" href="assets/css/base-site.css" />
+    <link rel="stylesheet" href="assets/css/getmdl-select.min.css">
+
+    <link rel="stylesheet" href="assets/css/customize-site.css" />
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="chuchoa-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <a class="chuchoa-title mdl-layout-title" href="index.html">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="chuchoa-header-spacer mdl-layout-spacer"></div>
+        <div class="chuchoa-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="chuchoa-navigation-container">
+            <nav class="chuchoa-navigation mdl-navigation">                        
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy"
+                onclick="location.href='shop.html';">              
+                Mua
+              </button>
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell"
+                onclick="location.href='sell.html';">              
+                Bán
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
+                onclick="location.href='service.html';">              
+                Dịch vụ
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
+                Tin tức
+              </button>          
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"              
+                onclick="location.href='contact.html';">
+                Liên hệ
+              </button>
+            </nav>
+        </div>
+        <a class="chuchoa-mobile-title mdl-layout-title" href="">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item" onclick="location.href='about.html';">Giới thiệu</li>
+          <li class="mdl-menu__item" onclick="location.href='recruitment.html';">Tuyển dụng</li>
+          <li class="mdl-menu__item" onclick="location.href='sell-guide.html';">Hướng dẫn rao bán</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chuchoa-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="chuchoa-logo-image" src="assets/images/logo.png">
+      </span>
+      <nav class="mdl-navigation">
+        <span class="mdl-navigation__link" href="">Mua</span>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo người bán</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Bán</span>
+        <a class="mdl-navigation__link" href="sell.html">Rao bán</a>        
+        <a class="mdl-navigation__link" href="sell-guide.html">Hướng dẫn rao bán</a>        
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Tin tức</span>
+        <a class="mdl-navigation__link" href="">Thị trường</a>
+        <a class="mdl-navigation__link" href="">Tư vấn</a>
+        <a class="mdl-navigation__link" href="">Đánh giá</a>
+        <a class="mdl-navigation__link" href="">Công nghệ</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <a class="mdl-navigation__link" href="service.html">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="recruitment.html">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="about.html">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+      <div class="chuchoa-section chuchoa-head-section chuchoa-section--parallax">
+        <div class="chuchoa-section__content chuchoa-sell-section--parallax mdl-color--primary">
+          
+        </div>
+      </div>
+
+      <div class="chuchoa-section">
+        <div class="chuchoa-section__content">
+            <div class="mdl-grid mdl-grid--no-fullwidth chuchoa-margin-top-20 chuchoa-margin-bottom-10">
+            
+            <div class="mdl-cell--middle mdl-cell mdl-cell--12-col">
+                <ol class="chuchoa-breadcrumb">
+                <li class="chuchoa-breadcrumb__item"><a href="shop.html">Home</a></li>
+                <li class="chuchoa-breadcrumb__item"><a href="shop.html">Honda</a></li>
+                <li class="chuchoa-breadcrumb__item"><span>Honda City 1.5AT 2015</span></li>
+                </ol>
+            </div>
+            </div>
+        </div>
+        </div>
+
+      <div class="chuchoa-section">
+        <div class="chuchoa-section__overlay"></div>
+        <div class="chuchoa-section__content">
+            <div class="mdl-grid mdl-grid--no-fullwidth">
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                    <form action="contact-mailer.php" class="contact-form chuchoa-margin-top-0" id="contactForm">
+                    <div class="mdl-grid mdl-grid--no-fullwidth">
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="name">
+                            <label class="mdl-textfield__label" for="name">Họ và tên</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="tel">
+                            <label class="mdl-textfield__label" for="tel">Số điện thoại</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                <input class="mdl-textfield__input" type="email" id="email">
+                                <label class="mdl-textfield__label" for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="carName">
+                            <label class="mdl-textfield__label" for="carName">Tên xe</label>
+                            </div>
+                        </div>         
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="tel">
+                            <label class="mdl-textfield__label" for="tel">Phiên bản</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="tel">
+                            <label class="mdl-textfield__label" for="tel">Biển số</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth mdl-col" style="width:100%">
+                                <input class="mdl-textfield__input" type="text" id="filterUsed" value="Xe mới và cũ" readonly tabIndex="-1" />
+                                <label for="filterUsed">
+                                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                </label>
+                                <label for="filterUsed" class="mdl-textfield__label">Sở hữu</label>
+                                <ul for="filterUsed" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <li class="mdl-menu__item" data-val="MC">Cá nhân</li>
+                                    <li class="mdl-menu__item" data-val="XM">Tổ chức</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="tel">
+                            <label class="mdl-textfield__label" for="tel">Động cơ</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                <input class="mdl-textfield__input" type="email" id="email">
+                                <label class="mdl-textfield__label" for="email">Hộp số</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="tel">
+                            <label class="mdl-textfield__label" for="tel">Năm sản xuất</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                <input class="mdl-textfield__input" type="email" id="email">
+                                <label class="mdl-textfield__label" for="email">Xuất xứ</label>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="carName">
+                            <label class="mdl-textfield__label" for="carName">Giá bán</label>
+                            </div>
+                        </div> 
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                            <input class="mdl-textfield__input" type="text" id="carName">
+                            <label class="mdl-textfield__label" for="carName">Địa chỉ xem xe</label>
+                            </div>
+                        </div> 
+                        <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-textfield--full-width">
+                                <textarea class="mdl-textfield__input" type="text" name="message" rows="10" id="message" ></textarea>
+                                <label class="mdl-textfield__label" for="message">Nội dung</label>
+                            </div>            
+                                            
+                            <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-js-ripple-effect mdl-button--accent chuchoa-margin-bottom-10">Gửi yêu cầu</button>                              
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+                    <div class="mdl-typography--headline-color-contrast chuchoa-margin-top-0 chuchoa-margin-bottom-10">ChuChoa.Com</div>
+                    <div class="mdl-typography--title-color-contrast chuchoa-margin-bottom-10">Hà Nội - Trụ sở chính</div>
+                    <p class="mdl-typography--body chuchoa-margin-bottom-5">
+                    <i class="chuchoa-product-info--icon material-icons">place</i>
+                    Số 24, Nghách 4, Ngõ 93, Hoàng Quốc Việt, Cầu Giấy, Hà Nội
+                    </p>
+                    <p class="mdl-typography--body chuchoa-margin-bottom-0">
+                    <i class="chuchoa-product-info--icon material-icons">contact_phone</i>
+                    0979908950
+                    </p>
+                    <p class="mdl-typography--body chuchoa-margin-bottom-0">
+                        <i class="chuchoa-product-info--icon material-icons">email</i>
+                        cuongnd.ami@outlook.com
+                    </p>
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-animation chuchoa-margin-top-20" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+                        <div class="google-map" id="map">
+                            <!-- AIzaSyCmqQab02Sp0bQOb2c6izrXt7BVaA_HjXw -->
+                            <iframe frameborder="0" style="width:100%;height:395px;border:0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=21.0461%2C105.8055&key=AIzaSyCmqQab02Sp0bQOb2c6izrXt7BVaA_HjXw" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+
+      <footer class="mdl-mega-footer">
+          <div class="mdl-mega-footer--middle-section">
+              <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+              <h1 class="mdl-mega-footer--heading">Chứng nhận</h1>
+              <div class="mdl-mega-footer__widget">              
+                  <p>Giấy chứng nhận đăng ký doanh nghiệp số xxxxxxxxx do Sở Kế Hoạch và Đầu Tư XXXX cấp ngày 08/08/2017 </p>
+              </div>
+              <div class="mdl-mega-footer__widget">
+                  <i class="fa fa-cc-mastercard"></i> &nbsp; <i class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i class="fa fa-cc-jcb"></i>
+              </div>
+              </div>
+              
+              <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+              <h1 class="mdl-mega-footer--heading">Địa chỉ</h1>
+              <div class="mdl-mega-footer__widget">
+                  <p>Liên hệ với chúng tôi ngay khi bạn cần.</p>
+                  <p>Số xxx, ngõ yyy<br>Đường Hoàng Quốc Việt<br>Quận Cầu Giấy<br>0979.908.950<br></p>
+                  <p><a href="#">chuchoa.com</a><br>cuongnd.ami@outlook.com</p>
+                  <p>
+                  <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook"></i></a> 
+                  <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-twitter"></i></a> 
+                  <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-flickr"></i></a> 
+                  <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-linkedin"></i></a>
+                  </p>
+              </div>
+              </div>
+              
+              <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+              <h1 class="mdl-mega-footer--heading">Xe mới đăng bán</h1><div class="mdl-mega-footer__widget">
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+                  <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              </div>
+              </div>
+  
+              <div class="mdl-mega-footer--drop-down-section">
+              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">            
+              <h1 class="mdl-mega-footer--heading">ChuChoa.com</h1>
+              <div class="mdl-mega-footer__widget">              
+                  <ul class="mdl-mega-footer--link-list">
+                  <li><a href="page-card.html">Mua bán</a></li>
+                  <li><a href="page-card.html">Dịch vụ</a></li>
+                  <li><a href="page-card.html">Tin tức</a></li>
+                  <li><a href="page-card.html">Tuyển dụng</a></li>
+                  </ul>
+              </div>
+              </div>
+          </div>          
+      </footer>
+    </main>
+  </div>
+  
+
+    <script type="text/javascript" src="assets/js/jquery-1.12.4.js"></script>    
+    <script defer src="assets/js/material.js"></script>  
+    <script defer src="assets/js/getmdl-select.min.js"></script>
+
+    <script defer src="assets/js/base-site.js"></script>
+</body>
+
+</html>

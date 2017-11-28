@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Best Auto-Car Store ever">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+  <title>Chu Choa - mua bán xe giá hấp dẫn</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic,400italic,500,500italic,700,900" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="assets/css/icon.css" />
+  <link rel="stylesheet" href="assets/css/base-site.css" />
+  <link rel="stylesheet" href="assets/css/getmdl-select.min.css">
+  
+  <link rel="stylesheet" href="assets/css/customize-site.css" />
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div class="chuchoa-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+        <a class="chuchoa-title mdl-layout-title" href="index.html">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="chuchoa-header-spacer mdl-layout-spacer"></div>
+        <div class="chuchoa-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="chuchoa-navigation-container">
+            <nav class="chuchoa-navigation mdl-navigation">                        
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy"
+                onclick="location.href='shop.html';">              
+                Mua
+              </button>
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell"
+                onclick="location.href='sell.html';">              
+                Bán
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
+                onclick="location.href='service.html';">              
+                Dịch vụ
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
+                Tin tức
+              </button>          
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"              
+                onclick="location.href='contact.html';">
+                Liên hệ
+              </button>
+            </nav>
+        </div>
+        <a class="chuchoa-mobile-title mdl-layout-title" href="">
+          <img class="chuchoa-logo-image" src="assets/images/logo-white.png">
+        </a>
+        <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item" onclick="location.href='about.html';">Giới thiệu</li>
+          <li class="mdl-menu__item" onclick="location.href='recruitment.html';">Tuyển dụng</li>
+          <li class="mdl-menu__item" onclick="location.href='sell-guide.html';">Hướng dẫn rao bán</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chuchoa-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="chuchoa-logo-image" src="assets/images/logo.png">
+      </span>
+      <nav class="mdl-navigation">
+        <span class="mdl-navigation__link" href="">Mua</span>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo người bán</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Bán</span>
+        <a class="mdl-navigation__link" href="sell.html">Rao bán</a>        
+        <a class="mdl-navigation__link" href="sell-guide.html">Hướng dẫn rao bán</a>        
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Tin tức</span>
+        <a class="mdl-navigation__link" href="">Thị trường</a>
+        <a class="mdl-navigation__link" href="">Tư vấn</a>
+        <a class="mdl-navigation__link" href="">Đánh giá</a>
+        <a class="mdl-navigation__link" href="">Công nghệ</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <a class="mdl-navigation__link" href="service.html">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="recruitment.html">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="about.html">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+
+    <div class="chuchoa-content mdl-layout__content">
+      <a name="top"></a>
+      
+      <div class="chuchoa-section chuchoa-head-section chuchoa-section--parallax">
+        <div class="chuchoa-section__content chuchoa-about-head-section--parallax mdl-color--primary">
+          
+        </div>
+      </div>
+
+      <div class="chuchoa-section">
+        <div class="chuchoa-section__content">
+          <div class="mdl-grid mdl-grid--no-fullwidth mdl-color--primary-contrast">
+            <div class="mdl-cell mdl-cell--12-col">
+              <blockquote>
+                <a href="chuchoa.com">ChuChoa.com</a> đã đang và sẽ luôn mang đến cho khách hàng phương thức mua, bán, trao đổi xe với sự an tâm và an toàn cao nhất.
+                Hãy yên tâm khi đến với <a href="chuchoa.com">ChuChoa.com</a>, quý khách sẽ được đảm bảo bằng quy trình kiểm định và cấp Giấy chứng nhận chất lượng cho tất cả các xe đã đăng ký kiểm định.
+              </blockquote>
+              <div class="mdl-typography--body-1 chuchoa-margin-left-50 chuchoa-margin-right-10 mdl-typography--text-justify">
+                  <p>Kính gửi quý khách hàng.</p>
+                  
+                  <p>Thay mặt toàn thể cán bộ công nhân viên <a href="chuchoa.com">ChuChoa.com</a>, tôi xin gửi tới quý khách hàng lời chào trân trọng nhất. </p>
+                  
+                  <p>Kính thưa quý khách, hiện nay nhu cầu mua, bán xe hơi đang ngày một tăng cùng với sự đi lên của mức sống người dân. Tuy nhiên, trong quá trình tìm hiểu và nghiên cứu thị trường, chúng tôi đã nhận ra một điều khiến khách hàng băn khoăn trước quyết định mua xe hơi đã qua sử dụng là do khách hàng không hoàn toàn an tâm về chất lượng và lịch sử của chiếc xe. </p>
+                  
+                  <p><a href="chuchoa.com">ChuChoa.com</a> được ra đời để đem lại cho người tiêu dùng Việt Nam một phương thức mua, bán, trao đổi xe với sự an tâm, an toàn cao nhất. Lần đầu tiên tại Việt Nam, việc kinh doanh xe ô tô đã qua sử dụng được chuyên nghiệp hóa theo một hệ thống hoàn chỉnh mà nổi bật là quy trình kiểm định và cấp Giấy chứng nhận chất lượng cho tất cả các xe bán ra với kết quả chi tiết được cung cấp đầy đủ và công khai tới khách hàng. </p>
+                  
+                  <p>Phương châm “Tạo Dựng Niềm Tin” chính là triết lý kinh doanh và là kim chỉ nam mà <a href="chuchoa.com">ChuChoa.com</a> trung thành để đem đến những sản phẩm chất lượng thông qua sự phục vụ chuyên nghiệp và tận tâm. Với nỗ lực đó, Anycar trở thành thương hiệu kinh doanh xe hơi đã qua sử dụng uy tín số 1 Việt Nam. Chúng tôi vô cùng biết ơn qúy khách hàng đã đặt niềm tin vào Anycar. Đó là nguồn khích lệ lớn lao để chúng tôi tiếp tục sứ mệnh phụng sự, đem đến sự an tâm và thỏa mãn cao nhất tới quý khách hàng. Hãy để chúng tôi gửi đến hành trình vạn dặm trong cuộc đời quý vị những chiếc xe hơi tuyệt hảo nhất. </p>
+              </div>
+
+              <div class="chuchoa-divider chuchoa-divider--center chuchoa-margin-top-50">
+                <div class="chuchoa-divider__border chuchoa-divider__border--large"></div>
+              </div>
+              <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-section__content-header chuchoa-margin-top-20">
+                Lịch sử hình thành
+              </h2>
+              
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--1-order-tablet mdl-cell--1-order-phone">
+                    <img class="chuchoa-image-responsive chuchoa-full-width" src="assets/images/about/history.jpg" />
+                </div>
+                <div class="mdl-cell mdl-cell--middle mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--2-order-tablet mdl-cell--2-order-phone">
+                  <div class="mdl-typography--body-2">Với mong muốn tạo ra sự khác biệt về tính quy mô của hệ thống, quy chuẩn về hình ảnh, sự cam kết chất lượng đối với thị trường xe hơi:</div>
+                  <ul class="chuchoa-buy--list chuchoa-padding-left-20">
+                    <li>Năm 2016: dự án ChuChoa.com khởi động với mảng tin tức xe hơi.</li>
+                    <li>Năm 2017: dự án ChuChoa.com mở rộng sang mảng đăng tin mua, bán và trao đổi xe hơi.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="chuchoa-divider chuchoa-divider--center chuchoa-margin-top-50">
+                <div class="chuchoa-divider__border chuchoa-divider__border--large"></div>
+              </div>
+              <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-section__content-header chuchoa-margin-top-20">
+                Tầm nhìn
+              </h2>
+              
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--middle mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--2-order-tablet mdl-cell--2-order-phone">
+                  <div class="mdl-typography--body-2">Luôn giữ vững vị thế là doanh nghiệp kinh doanh xe ô tô đã qua sử dụng có quy mô và uy tín lớn nhất Việt Nam</div>
+                  <ul class="chuchoa-buy--list chuchoa-padding-left-20">
+                    <li>Chúng tôi vận động không ngừng để tạo ra những giá trị mới, dịch vụ mới có chất lượng cao và đem đến sự hài lòng hơn nữa cho khách hàng.</li>
+                    <li>Bám sát vào quyền lợi của người tiêu dùng và minh bạch hóa thị trường đã qua sử dụng là quan điểm xuyên suốt quá trình kinh doanh của chúng tôi.</li>
+                  </ul>
+                </div>
+                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--1-order-tablet mdl-cell--1-order-phone">
+                    <img class="chuchoa-image-responsive chuchoa-full-width" src="assets/images/about/future.jpg" />
+                </div>                  
+              </div>
+
+              <div class="chuchoa-divider chuchoa-divider--center chuchoa-margin-top-50">
+                <div class="chuchoa-divider__border chuchoa-divider__border--large"></div>
+              </div>
+              <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-section__content-header chuchoa-margin-top-20">
+                Chiến lược kinh doanh
+              </h2>
+              
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--1-order-tablet mdl-cell--1-order-phone">
+                    <img class="chuchoa-image-responsive chuchoa-full-width" src="assets/images/about/stratery.png" />
+                </div>                  
+                <div class="mdl-cell mdl-cell--middle mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--2-order-tablet mdl-cell--2-order-phone">
+                  <div class="mdl-typography--body-2">Hướng tới thiết lập và phát triển cả về chất và lượng với một hệ thống đạt quy chuẩn về hình ảnh, hoạt động xuyên suốt trên toàn quốc.</div>
+                  <ul class="chuchoa-buy--list chuchoa-padding-left-20">
+                    <li>Tạo nguồn hàng ổn định, tin cậy và đa dạng, cam kết về giá bán hợp lý, sản phẩm đạt chất lượng, dịch vụ hậu mãi chu đáo, chuyên nghiệp.</li>
+                    <li>Chế độ bảo hành đầy đủ, hợp lý.</li>
+                    <li>Ứng dụng triệt để công nghệ và thương mại điện tử vào mô hình kinh doanh.</li>
+                    <li>Tăng cường khả năng kết nối, tương tác với khách hàng thông qua đường dây nóng 091 332 1999 – 1900 9212.</li>
+                    <li>Quan tâm, chăm sóc khách hàng, quản lý và bảo mật dữ liệu, thông tin khách hàng tối đa.</li>
+                    <li>Chú trọng vào việc thu hút và đào tạo nguồn nhân lực chuyên nghiệp để hoạt động trong một quy trình quy chuẩn đồng nhất trên toàn hệ thống.</li>
+                  </ul>
+                </div>                
+              </div>
+
+              <div class="chuchoa-divider chuchoa-divider--center chuchoa-margin-top-50">
+                <div class="chuchoa-divider__border chuchoa-divider__border--large"></div>
+              </div>
+              <h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-section__content-header chuchoa-margin-top-20">
+                Vì sao nên chọn ChuChoa.com
+              </h2>
+              
+              <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--middle mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--2-order-tablet mdl-cell--2-order-phone">
+                  <div class="mdl-typography--body-2">Đến với Anycar, Quý khách mua xe cũ nhưng tận hưởng dịch vụ như hãng xe mới.</div>
+                  <ul class="chuchoa-buy--list chuchoa-padding-left-20">
+                    <li>Chất lượng tiên phong</li>
+                    <li>Đổi xe khác nếu không ưng - bán lại xe không lo mất giá!</li>
+                    <li>Luôn bên cạnh và sẵn sàng hỗ trợ khách hàng</li>
+                  </ul>
+                </div>             
+                <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-cell--1-order-tablet mdl-cell--1-order-phone">
+                    <img class="chuchoa-image-responsive chuchoa-full-width" src="assets/images/about/whychoseus.jpg" />
+                </div>                  
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+
+      <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer--middle-section">
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Chứng nhận</h1>
+            <div class="mdl-mega-footer__widget">              
+              <p>Giấy chứng nhận đăng ký doanh nghiệp số xxxxxxxxx do Sở Kế Hoạch và Đầu Tư XXXX cấp ngày 08/08/2017 </p>
+            </div>
+            <div class="mdl-mega-footer__widget">
+              <i class="fa fa-cc-mastercard"></i> &nbsp; <i class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i class="fa fa-cc-jcb"></i>
+            </div>
+          </div>
+          
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Địa chỉ</h1>
+            <div class="mdl-mega-footer__widget">
+              <p>Liên hệ với chúng tôi ngay khi bạn cần.</p>
+              <p>Số xxx, ngõ yyy<br>Đường Hoàng Quốc Việt<br>Quận Cầu Giấy<br>0979.908.950<br></p>
+              <p><a href="#">chuchoa.com</a><br>cuongnd.ami@outlook.com</p>
+              <p>
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-twitter"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-flickr"></i></a> 
+                <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-linkedin"></i></a>
+              </p>
+            </div>
+          </div>
+          
+          <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+            <h1 class="mdl-mega-footer--heading">Xe mới đăng bán</h1><div class="mdl-mega-footer__widget">
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-a.jpg" alt="product thumbnail"></a> 
+              <a href="single-product.html"><img width="60" class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" src="assets/images/product/default-b.jpg" alt="product thumbnail"></a> 
+            </div>
+          </div>
+
+           <div class="mdl-mega-footer--drop-down-section">
+            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">            
+            <h1 class="mdl-mega-footer--heading">ChuChoa.com</h1>
+            <div class="mdl-mega-footer__widget">              
+              <ul class="mdl-mega-footer--link-list">
+                <li><a href="page-card.html">Mua bán</a></li>
+                <li><a href="page-card.html">Dịch vụ</a></li>
+                <li><a href="page-card.html">Tin tức</a></li>
+                <li><a href="page-card.html">Tuyển dụng</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>          
+      </footer>
+
+    </div>
+  </div>
+  
+
+  <script type="text/javascript" src="assets/js/jquery-1.12.4.js"></script>    
+  <script defer src="assets/js/material.js"></script>  
+  <script defer src="assets/js/getmdl-select.min.js"></script>
+
+  <script defer src="assets/js/base-site.js"></script>
+</body>
+
+</html>
