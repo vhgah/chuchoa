@@ -71,7 +71,8 @@ function _tk_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	*/
 	register_nav_menus( array(
-		'primary'  => __( 'Header bottom menu', '_tk' ),
+		'primary'  => __( 'Header visible menu', '_tk' ),
+		'secondary'  => __( 'Header collaped menu', '_tk' ),
 		) );
 
 }

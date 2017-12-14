@@ -56,12 +56,12 @@
 				<div class="navbar navbar-default">
 					<div class="navbar-header">
 						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-							<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+								<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
 	
 						<!-- Your site title as branding in the menu -->
 						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
@@ -78,6 +78,21 @@
 							'menu_class' 		=> 'nav navbar-nav',
 							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
 							'menu_id'			=> 'main-menu',
+							'walker' 			=> new wp_bootstrap_navwalker()
+						)
+					); ?>
+
+					<!-- The WordPress Menu goes here -->
+					<?php wp_nav_menu(
+						array(
+							'theme_location' 	=> 'secondary',
+							'depth'             => 2,
+							'container'         => 'nav',
+							'container_id'      => 'navbar-collapse',
+							'container_class'   => 'collapse navbar-collapse',
+							'menu_class' 		=> 'nav navbar-nav',
+							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
+							'menu_id'			=> 'second-menu',
 							'walker' 			=> new wp_bootstrap_navwalker()
 						)
 					); ?>
