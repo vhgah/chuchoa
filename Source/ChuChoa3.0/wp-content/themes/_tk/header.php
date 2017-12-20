@@ -25,88 +25,106 @@
 <body <?php body_class(); ?>>
 	<?php do_action( 'before' ); ?>
 
-<header id="masthead" class="site-header" role="banner">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <div id="masthead" class="chuchoa-header mdl-layout__header mdl-layout__header--waterfall">
+      <div class="mdl-layout__header-row">
+	  	<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) { ?>
+				<a class="chuchoa-title mdl-layout-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="ChuChoa.com">
+					<img class="chuchoa-logo-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+				</a>
+		<?php } // end if ( ! empty( $header_image ) ) ?>
+
+        <!-- Add spacer, to align navigation to the right in desktop -->
+        <div class="chuchoa-header-spacer mdl-layout-spacer"></div>
+        <div class="chuchoa-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search-field">
+          </div>
+        </div>
+        <!-- Navigation -->
+        <div class="chuchoa-navigation-container">
+			<?php $primary_menus = wp_get_nav_menu_items('primary'); 
+				echo $primary_menusmenu;
+			?>
+
+            <nav class="chuchoa-navigation mdl-navigation">                        
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy"
+                onclick="location.href='shop.html';">              
+                Mua
+              </button>
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell"
+                onclick="location.href='sell.html';">              
+                Bán
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
+                onclick="location.href='service.html';">              
+                Dịch vụ
+              </button>
+  
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
+                Tin tức
+              </button>          
+              
+              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"              
+                onclick="location.href='contact.html';">
+                Liên hệ
+              </button>
+            </nav>
+        </div>
+
+		<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) { ?>
+				<a class="chuchoa-mobile-title mdl-layout-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="ChuChoa.com">
+					<img class="chuchoa-logo-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+				</a>
+		<?php } // end if ( ! empty( $header_image ) ) ?>
+        
+        <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+          <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+          <li class="mdl-menu__item" onclick="location.href='about.html';">Giới thiệu</li>
+          <li class="mdl-menu__item" onclick="location.href='recruitment.html';">Tuyển dụng</li>
+          <li class="mdl-menu__item" onclick="location.href='sell-guide.html';">Hướng dẫn rao bán</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chuchoa-drawer mdl-layout__drawer">
+      <span class="mdl-layout-title">
+        <img class="chuchoa-logo-image" src="assets/images/logo.png">
+      </span>
+      <nav class="mdl-navigation">
+        <span class="mdl-navigation__link" href="">Mua</span>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo người bán</a>
+        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Bán</span>
+        <a class="mdl-navigation__link" href="sell.html">Rao bán</a>        
+        <a class="mdl-navigation__link" href="sell-guide.html">Hướng dẫn rao bán</a>        
+        <div class="chuchoa-drawer-separator"></div>
+        <span class="mdl-navigation__link" href="">Tin tức</span>
+        <a class="mdl-navigation__link" href="">Thị trường</a>
+        <a class="mdl-navigation__link" href="">Tư vấn</a>
+        <a class="mdl-navigation__link" href="">Đánh giá</a>
+        <a class="mdl-navigation__link" href="">Công nghệ</a>
+        <div class="chuchoa-drawer-separator"></div>
+        <a class="mdl-navigation__link" href="service.html">Dịch vụ</a>
+        <a class="mdl-navigation__link" href="recruitment.html">Tuyển dụng</a>
+        <a class="mdl-navigation__link" href="about.html">Giới thiệu</a>
+        <a class="mdl-navigation__link" href="contact.html">Liên hệ</a>
+      </nav>
+    </div>
+
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-header-inner col-sm-12">
-
-				<?php $header_image = get_header_image();
-				if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-				<?php } // end if ( ! empty( $header_image ) ) ?>
-
-
-				<div class="site-branding">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description lead"><?php bloginfo( 'description' ); ?></p>
-				</div>
-
-			</div>
-		</div>
-	</div><!-- .container -->
-</header><!-- #masthead -->
-
-<nav class="site-navigation">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div class="site-navigation-inner col-sm-12">
-				<div class="navbar navbar-default">
-					<div class="navbar-header">
-						<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-								<span class="sr-only"><?php _e('Toggle navigation','_tk') ?> </span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-	
-						<!-- Your site title as branding in the menu -->
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</div>
-
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location' 	=> 'primary',
-							'depth'             => 2,
-							'container'         => 'nav',
-							'container_id'      => 'navbar-collapse',
-							'container_class'   => 'collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav',
-							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
-							'menu_id'			=> 'main-menu',
-							'walker' 			=> new wp_bootstrap_navwalker()
-						)
-					); ?>
-
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location' 	=> 'secondary',
-							'depth'             => 2,
-							'container'         => 'nav',
-							'container_id'      => 'navbar-collapse',
-							'container_class'   => 'collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav',
-							'fallback_cb' 		=> 'wp_bootstrap_navwalker::fallback',
-							'menu_id'			=> 'second-menu',
-							'walker' 			=> new wp_bootstrap_navwalker()
-						)
-					); ?>
-
-				</div><!-- .navbar -->
-			</div>
-		</div>
-	</div><!-- .container -->
-</nav><!-- .site-navigation -->
-
-<div class="main-content">
-<?php // substitute the class "container-fluid" below if you want a wider content area ?>
-	<div class="container">
-		<div class="row">
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
-
+    <div id="content" class="chuchoa-content mdl-layout__content">
+      <a name="top"></a>
+     
