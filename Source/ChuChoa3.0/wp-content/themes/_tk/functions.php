@@ -146,6 +146,11 @@ require THEME_DIR_PATH . '/includes/template-tags.php';
 require THEME_DIR_PATH . '/includes/extras.php';
 
 /**
+ * Custom functions that act independently of the theme templates.
+ */
+require THEME_DIR_PATH . '/includes/cc_extras.php';
+
+/**
  * Customizer additions.
  */
 require THEME_DIR_PATH . '/includes/customizer.php';
