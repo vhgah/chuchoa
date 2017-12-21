@@ -172,6 +172,8 @@ require THEME_DIR_PATH . '/includes/cc_extras.php';
  * Customizer additions.
  */
 require THEME_DIR_PATH . '/includes/customizer.php';
+require THEME_DIR_PATH . '/includes/cc_customizer.php';
+
 
 /**
  * Load Jetpack compatibility file.

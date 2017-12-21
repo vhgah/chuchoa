@@ -48,51 +48,35 @@
         </div>
         <!-- Navigation -->
         <div class="chuchoa-navigation-container">
-			<?php $primary_menus = wp_get_nav_menu_items('primary'); 
-				echo $primary_menusmenu;
-			?>
-
             <nav class="chuchoa-navigation mdl-navigation">                        
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-buy"
-                onclick="location.href='shop.html';">              
-                Mua
-              </button>
-              
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-sell"
-                onclick="location.href='sell.html';">              
-                Bán
-              </button>
-  
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
-                onclick="location.href='service.html';">              
-                Dịch vụ
-              </button>
-  
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast" id="more-button-news">              
-                Tin tức
-              </button>          
-              
-              <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"              
-                onclick="location.href='contact.html';">
-                Liên hệ
-              </button>
+              <?php  $primary_menu = cc_get_menu('primary'); 
+                foreach($primary_menu as $menu){
+              ?>
+                  <button class="chuchoa-navigation--button mdl-button mdl-js-button mdl-js-ripple-effect mdl-typography--text-uppercase mdl-typography--font-bold mdl-color-text--primary-contrast"
+                    onclick="location.href='<?php echo $menu->url; ?>';">              
+                    <?php echo $menu->title; ?>
+                  </button>
+              <?php } ?>
             </nav>
         </div>
 
-		<?php $header_image = get_header_image();
-			if ( ! empty( $header_image ) ) { ?>
-				<a class="chuchoa-mobile-title mdl-layout-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="ChuChoa.com">
-					<img class="chuchoa-logo-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-				</a>
-		<?php } // end if ( ! empty( $header_image ) ) ?>
+        <?php $header_image = get_header_image();
+          if ( ! empty( $header_image ) ) { ?>
+            <a class="chuchoa-mobile-title mdl-layout-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="ChuChoa.com">
+              <img class="chuchoa-logo-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+            </a>
+        <?php } // end if ( ! empty( $header_image ) ) ?>
         
         <button class="chuchoa-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
           <i class="material-icons">more_vert</i>
         </button>
+
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-          <li class="mdl-menu__item" onclick="location.href='about.html';">Giới thiệu</li>
-          <li class="mdl-menu__item" onclick="location.href='recruitment.html';">Tuyển dụng</li>
-          <li class="mdl-menu__item" onclick="location.href='sell-guide.html';">Hướng dẫn rao bán</li>
+          <?php  $second_menu = cc_get_menu('secondary'); 
+            foreach($second_menu as $menu){
+          ?>
+            <li class="mdl-menu__item" onclick="location.href='<?php echo $menu->url; ?>';"><?php echo $menu->title; ?></li>              
+          <?php } ?>
         </ul>
       </div>
     </div>
