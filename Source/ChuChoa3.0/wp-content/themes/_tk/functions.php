@@ -73,11 +73,32 @@ function _tk_setup() {
 	register_nav_menus( array(
 		'primary'  => __( 'Header visible menu', '_tk' ),
 		'secondary'  => __( 'Header collaped menu', '_tk' ),
+		'left'  => __( 'Left site menu', '_tk' ),
 		) );
 
 }
 endif; // _tk_setup
 add_action( 'after_setup_theme', '_tk_setup' );
+
+/**
+ * Filter hook to disable deactivate function for some plugin
+ */
+add_filter( 'plugin_action_links', function ( $actions, $plugin_file, $plugin_data, $context ) {
+	// Remove edit link
+	if ( array_key_exists( 'edit', $actions ) ) {
+		// unset( $actions['edit'] );
+	}
+
+	$must_use_plugins = [
+		'menu-item-custom-fields\menu-item-custom-fields.php',
+	];
+
+	if ( array_key_exists( 'deactivate', $actions ) && in_array( $plugin_file, $must_use_plugins ) ) {
+		unset( $actions['deactivate'] );
+	}
+
+	return $actions;
+} , 10, 4 );
 
 /**
  * Register widgetized area and update sidebar with default widgets
@@ -192,3 +213,5 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+
+include THEME_DIR_PATH . '/includes/menu-item-custom-fields-leftmenu-checkbox.php';

@@ -83,28 +83,35 @@
 
     <div class="chuchoa-drawer mdl-layout__drawer">
       <span class="mdl-layout-title">
-        <img class="chuchoa-logo-image" src="assets/images/logo.png">
+      <?php $header_image = cc_get_site_home_image();
+        if ( ! empty( $header_image ) ) { ?>
+          <a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="ChuChoa.com">
+            <img class="chuchoa-logo-image" src="<?php echo $header_image; ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+          </a>
+      <?php } // end if ( ! empty( $header_image ) ) ?>
       </span>
       <nav class="mdl-navigation">
-        <span class="mdl-navigation__link" href="">Mua</span>
-        <a class="mdl-navigation__link" href="shop.html">Tìm mua</a>
-        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo người bán</a>
-        <a class="mdl-navigation__link" href="shop.html">Tìm mua theo hãng</a>
-        <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">Bán</span>
-        <a class="mdl-navigation__link" href="sell.html">Rao bán</a>        
-        <a class="mdl-navigation__link" href="sell-guide.html">Hướng dẫn rao bán</a>        
-        <div class="chuchoa-drawer-separator"></div>
-        <span class="mdl-navigation__link" href="">Tin tức</span>
-        <a class="mdl-navigation__link" href="">Thị trường</a>
-        <a class="mdl-navigation__link" href="">Tư vấn</a>
-        <a class="mdl-navigation__link" href="">Đánh giá</a>
-        <a class="mdl-navigation__link" href="">Công nghệ</a>
-        <div class="chuchoa-drawer-separator"></div>
-        <a class="mdl-navigation__link" href="service.html">Dịch vụ</a>
-        <a class="mdl-navigation__link" href="recruitment.html">Tuyển dụng</a>
-        <a class="mdl-navigation__link" href="about.html">Giới thiệu</a>
-        <a class="mdl-navigation__link" href="contact.html">Liên hệ</a>
+        <?php 
+          $left_menu = cc_get_menu('left');
+          foreach($left_menu as $menu){
+            if (empty(cc_get_leftmenu_item_type_field($menu->ID))){
+              if ($menu->menu_item_parent == 0){
+                ?>
+                  <a href="<?php echo $menu->href; ?>"><span class="mdl-navigation__link"><?php echo $menu->title; ?></span></a> 
+                <?php
+              }
+              else{
+                ?>
+                  <a class="mdl-navigation__link" href="<?php echo $menu->href; ?>"><?php echo $menu->title; ?></a> 
+                <?php
+              }
+            }
+            else{
+              ?>
+                <div class="chuchoa-drawer-separator"></div>
+              <?php
+            }
+           } ?>       
       </nav>
     </div>
 

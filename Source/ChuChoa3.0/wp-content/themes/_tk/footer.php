@@ -8,7 +8,7 @@
  */
 ?>
 
-<footer class="mdl-mega-footer">
+      <footer class="mdl-mega-footer">
         <div class="mdl-mega-footer--middle-section">
           <div class="mdl-mega-footer--drop-down-section">
             <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
@@ -25,7 +25,7 @@
             <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
             <h1 class="mdl-mega-footer--heading">Địa chỉ</h1>
             <div class="mdl-mega-footer__widget">
-              <p>Số xxx, ngõ yyy, Đường Hoàng Quốc Việt, Quận Cầu Giấy<br>0979.908.950<br></p>
+              <p><?php echo cc_get_footer_address(); ?><br><?php echo cc_get_footer_tel(); ?><br></p>
               <p><a href="#">chuchoa.com</a><br>cuongnd.ami@outlook.com</p>
               <p>
                 <a href="#" class="mdl-button mdl-js-button mdl-button--icon"><i class="fa fa-facebook"></i></a> 
