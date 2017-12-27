@@ -17,6 +17,44 @@
 if ( ! isset( $content_width ) )
 	$content_width = 750; /* pixels */
 
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Slider Posts.
+	 */
+
+	$labels = array(
+		"name" => __( "Slider Posts", "" ),
+		"singular_name" => __( "Sliders", "" ),
+		"all_items" => __( "Slider Posts", "" ),
+	);
+
+	$args = array(
+		"label" => __( "Slider Posts", "" ),
+		"labels" => $labels,
+		"description" => "Tạo bài viết chứa ảnh của slide trên trang chủ",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "cc_sliders", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "editor", "thumbnail", "excerpt", "custom-fields" ),
+	);
+
+	register_post_type( "cc_sliders", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+	
+
 if ( ! function_exists( '_tk_setup' ) ) :
 /**
  * Set up theme defaults and register support for various WordPress features.
