@@ -46,9 +46,7 @@ function cc_get_sliders_frontpage(){
 	return new WP_Query( [
 		'post_type' => 'cc_sliders',
 		'orderby' => ['ID' => 'DESC'],
-		'numberposts' => 1,
 		'nopaging' => true,
 		'post_status' => ['publish'],
-		'meta_query' => [ ['key' => '_thumbnail_id'] ],
 	] );
 }

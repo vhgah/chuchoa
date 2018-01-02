@@ -12,70 +12,39 @@
 get_header(); ?>
 
 <div class="chuchoa-content mdl-layout__content">
-	<a name="top"></a>
 	<div class="chuchoa-banner-section">
 		<div class="banner-slide">
 			<div class="slide">
 				<div id="layerslider" style="width: 100%; height: 600px;">
 					<?php 
 						$slider_posts_query = cc_get_sliders_frontpage();
-						if ($slider_posts_query->have_posts()){
+						while ($slider_posts_query->have_posts()){
 							$slider_posts_query->the_post();
-							print_r($post);
-						}
+							$slider_posts = get_attached_media( 'image', get_the_ID() );
+							foreach($slider_posts as $slider_post){
+							?>
+								<div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
+									<img src="<?php echo the_post_thumbnail_url();?>" class="ls-bg" alt="<?php the_title(); ?>">
+									<span class="chuchoa-banner--title ls-s-1" style=" color: #fff; line-height:35px; font-weight: 600; font-size: 32px; top:100px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 1000; durationout : 1000; text-transform: uppercase; ">
+										<?php the_title(); ?>
+									</span>
+									<span class="chuchoa-banner--subtitle ls-s-1" style=" color: #fff; line-height:24px; font-weight: 200; font-size: 18px; top:150px; left: 50px; slidedirection : left; slideoutdirection : right; durationin : 1000; durationout : 1000">
+										<?php the_excerpt(); ?>
+									</span>
+									<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary ls-s-1" 
+										href="#" 
+										style="top:225px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 2000; durationout : 2000;                    
+										height: 36px;margin: 0;padding: 0 16px;line-height: 36px;vertical-align: middle;">
+										Chi tiết
+									</a>
+								</div>	
+								
+							<?php
+							}
+						};
+						wp_reset_postdata();
 					?>
-					<div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-						<img src="assets/images/Slide/slider 08-min.jpg" class="ls-bg" alt="Slide background">
-						<span class="chuchoa-banner--title ls-s-1" style=" color: #fff; line-height:35px; font-weight: 600; font-size: 32px; top:100px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 1000; durationout : 1000; text-transform: uppercase; ">
-							Siêu khuyến mãi
-						</span>
-						<span class="chuchoa-banner--subtitle ls-s-1" style=" color: #fff; line-height:24px; font-weight: 200; font-size: 18px; top:150px; left: 50px; slidedirection : left; slideoutdirection : right; durationin : 1000; durationout : 1000">
-							Xe hạng sang, giá cạnh tranh. <br />
-							Hỗ trợ đăng ký mới, kèm theo bộ phụ tùng chính hiệu.
-						</span>
-						<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary ls-s-1" 
-							href="#" 
-							style="top:225px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 2000; durationout : 2000;                    
-							height: 36px;margin: 0;padding: 0 16px;line-height: 36px;vertical-align: middle;">
-							Chi tiết
-						</a>
-					</div>
-					<div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-						<img src="assets/images/Slide/slider 11.jpg" class="ls-bg" alt="Slide background">
-						<span class="chuchoa-banner--title ls-s-1" style=" color: #fff; line-height:35px; font-weight: 600; font-size: 32px; top:100px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 1000; durationout : 1000; text-transform: uppercase; ">
-							Rinh quà khủng
-						</span>
-						<span class="chuchoa-banner--subtitle ls-s-1" style=" color: #fff; line-height:24px; font-weight: 200; font-size: 18px; top:150px; left: 50px; slidedirection : left; slideoutdirection : right; durationin : 1000; durationout : 1000">
-							Chương trình chào hè 2017 <br />                  
-							Ford với những phần quà hấp dẫn
-						</span>
-						<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary ls-s-1" 
-							href="#" 
-							style="top:225px; left: 50px; slidedirection : right; slideoutdirection : left; durationin : 2000; durationout : 2000;                    
-							height: 36px;margin: 0;padding: 0 16px;line-height: 36px;vertical-align: middle;">
-							Chi tiết
-						</a>
-					</div>
-					<div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-						<img src="assets/images/Slide/slider 07.jpg" class="ls-bg" alt="Slide background">
-						<span class="chuchoa-banner--title mdl-color-text--primary-contrast ls-s-1" 
-								style="line-height:35px; font-weight: 600; font-size: 32px; top:100px; left: auto; slidedirection : right; slideoutdirection : left; durationin : 1000; durationout : 1000; text-transform: uppercase; 
-									float: right;right: 210px;">
-							Tăng nhiệt mùa hè
-						</span>
-						<span class="chuchoa-banner--subtitle mdl-color-text--primary-contrast ls-s-1" 
-							style="line-height:24px; font-weight: 200; font-size: 18px; top:150px; left: auto; slidedirection : left; slideoutdirection : right; durationin : 1000; durationout : 1000;
-							float: right;right: 210px;text-align:right;">
-							Độc và lạ <br />
-							Nhiều mẫu xe mới hè 2017 
-						</span>
-						<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--primary ls-s-1" 
-							href="#" 
-							style="top:225px; left: auto; slidedirection : right; slideoutdirection : left; durationin : 2000; durationout : 2000;                    
-									height: 36px;margin: 0;padding: 0 16px;line-height: 36px;vertical-align: middle;float: right;right: 210px;">
-							Chi tiết
-						</a>
-					</div>
+					
 				</div>
 			</div>
 		</div> 
