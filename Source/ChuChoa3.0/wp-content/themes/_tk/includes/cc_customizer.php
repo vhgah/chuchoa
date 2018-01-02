@@ -43,12 +43,21 @@ add_action( 'customize_register', function ( $wp_customize ) {
 		'priority' => 71,
 	] );
 	$wp_customize->add_setting( 'cc_footer_section_tel', [
-		] );
-		$wp_customize->add_control( 'cc_footer_section_tel', [
-			'label' => __( 'Điện thoại', '_tk' ),
-			'type' => 'text',
-			'section' => 'cc_footer_section',
-			'settings' => 'cc_footer_section_tel',
-			'priority' => 72,
-		] );
+	] );
+	$wp_customize->add_control( 'cc_footer_section_tel', [
+		'label' => __( 'Điện thoại', '_tk' ),
+		'type' => 'text',
+		'section' => 'cc_footer_section',
+		'settings' => 'cc_footer_section_tel',
+		'priority' => 72,
+	] );
+	$wp_customize->add_setting( 'cc_footer_section_Email', [
+	] );
+	$wp_customize->add_control( 'cc_footer_section_Email', [
+		'label' => __( 'Email', '_tk' ),
+		'type' => 'text',
+		'section' => 'cc_footer_section',
+		'settings' => 'cc_footer_section_Email',
+		'priority' => 73,
+	] );
 });

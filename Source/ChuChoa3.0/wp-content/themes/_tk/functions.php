@@ -124,11 +124,13 @@ add_action( 'after_setup_theme', '_tk_setup' );
 add_filter( 'plugin_action_links', function ( $actions, $plugin_file, $plugin_data, $context ) {
 	// Remove edit link
 	if ( array_key_exists( 'edit', $actions ) ) {
-		// unset( $actions['edit'] );
+		unset( $actions['edit'] );
 	}
 
 	$must_use_plugins = [
-		'menu-item-custom-fields\menu-item-custom-fields.php',
+		'menu-item-custom-fields/menu-item-custom-fields.php',
+		'custom-post-type-ui/custom-post-type-ui.php',
+		'smart-slider-3/smart-slider-3.php',
 	];
 
 	if ( array_key_exists( 'deactivate', $actions ) && in_array( $plugin_file, $must_use_plugins ) ) {
@@ -208,9 +210,6 @@ function _tk_scripts() {
 	wp_enqueue_script('cc-mdl-select', THEME_DIR_URI . '/includes/js/getmdl-select.min.js', true);
 
 	wp_enqueue_script( 'cc_base_site_js', THEME_DIR_URI . '/includes/js/base-site.js', true );
-	if (is_front_page()){
-		wp_enqueue_script( 'cc_custom_site_js', THEME_DIR_URI . '/includes/js/custom-site.js', array( 'jquery' ), true );
-	}
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );
 
