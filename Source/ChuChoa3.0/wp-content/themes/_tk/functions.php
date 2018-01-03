@@ -131,6 +131,9 @@ add_filter( 'plugin_action_links', function ( $actions, $plugin_file, $plugin_da
 		'menu-item-custom-fields/menu-item-custom-fields.php',
 		'custom-post-type-ui/custom-post-type-ui.php',
 		'smart-slider-3/smart-slider-3.php',
+		'woocommerce/woocommerce.php',
+		'tinymce-advanced/tinymce-advanced.php',
+		'jetpack/jetpack.php',
 	];
 
 	if ( array_key_exists( 'deactivate', $actions ) && in_array( $plugin_file, $must_use_plugins ) ) {

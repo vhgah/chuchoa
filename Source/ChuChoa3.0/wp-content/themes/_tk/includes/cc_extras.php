@@ -54,3 +54,14 @@ function cc_get_sliders_frontpage(){
 		'post_status' => ['publish'],
 	] );
 }
+
+function cc_get_latest_products($number = 8){
+	return new WP_Query( [
+		'post_type' => 'product',
+		'orderby' => ['ID' => 'DESC'],
+		'nopaging' => true,
+		'posts_per_page' => $number,
+		'post_status' => ['publish'],
+		'meta_query' =>  [['key' => '_price']],
+	] );
+}
