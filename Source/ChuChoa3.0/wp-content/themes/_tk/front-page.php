@@ -192,7 +192,7 @@ get_header(); ?>
 		</div>	
 	</div>
 
-  <?php if ( $cc_latest_products->have_posts() ) :?>
+  <?php if ( count($cc_latest_products) > 0 ) :?>
     <div class="chuchoa-section chuchoa-lastest-section">
       <div class="chuchoa-section__content">
         <div class="mdl-grid mdl-grid--no-fullwidth mdl-color--primary-contrast">
@@ -204,18 +204,17 @@ get_header(); ?>
           </div>
         </div>
         <div class="mdl-grid mdl-grid--no-fullwidth">
-          <?php while ( $cc_latest_products->have_posts() ) : $cc_latest_products->the_post(); ?>
-          <?php print_r($post); ?>
+          <?php foreach ( $cc_latest_products as $latest_product ) : ?>
             <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--6-col-phone chuchoa-section__content-item chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
               <div class="mdl-card mdl-shadow--2dp chuchoa-card-product">
                 <div class="mdl-card__media chuchoa-card-product__media">
-                  <a href="<?php echo esc_url( get_permalink() ); ?>">
-                    <img alt="<?php echo get_the_excerpt(); ?>" class="chuchoa-card-product__image" src="<?php echo esc_url( get_the_post_thumbnail_url());?>"> 
-                    <img alt="<?php echo get_the_excerpt(); ?>" class="chuchoa-card-product__image" src="<?php echo esc_url( get_the_post_thumbnail_url());?>">
+                  <a href="<?php echo esc_url( $latest_product['url'] ); ?>">
+                    <img alt="<?php echo $latest_product['excerpt']; ?>" class="chuchoa-card-product__image" src="<?php echo $latest_product['image_url'];?>"> 
+                    <img alt="<?php echo $latest_product['excerpt']; ?>" class="chuchoa-card-product__image" src="<?php echo $latest_product['image_url'];?>">
                   </a>
                   <div class="mdl-card__title chuchoa-card-product__title">
                     <h3 class="mdl-card__title-text chuchoa-card-product__title-text">
-                      <a href="<?php echo esc_url( get_permalink() ); ?>" class="mdl-typography--font-light">Toyota Innova</a>
+                      <a href="<?php echo esc_url( $latest_product['url'] ); ?>" class="mdl-typography--font-light"><?php echo $latest_product['title'] ?></a>
                     </h3>
                     <span class="mdl-typography--text-uppercase mdl-typography--font-bold chuchoa-card-product__tags">
                       <a href="shop.html" rel="tag">E 2.0MT</a>, <a href="shop.html" rel="tag">2012</a>
@@ -236,7 +235,7 @@ get_header(); ?>
                 </div>
               </div>
             </div>
-          <?php endwhile; ?>
+          <?php endforeach; ?>
         </div>
       </div>        
     </div>        

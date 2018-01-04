@@ -56,12 +56,28 @@ function cc_get_sliders_frontpage(){
 }
 
 function cc_get_latest_products($number = 8){
-	return new WP_Query( [
-		'post_type' => 'product',
-		'orderby' => ['ID' => 'DESC'],
+	$args = array(
 		'nopaging' => true,
+		'orderby' => array( 'ID' => 'DESC' ),
 		'posts_per_page' => $number,
 		'post_status' => ['publish'],
-		'meta_query' =>  [['key' => '_price']],
-	] );
+	);
+
+	$results = [];
+	$latest_products = wc_get_products($args);
+
+	if (is_null($latest_products))
+		return [];
+
+	foreach	($latest_products as $latest_product){
+		$results[] = [
+			'url' => get_permalink($latest_product->get_id()),
+			'excerpt' => $latest_product->short_description,
+			'image_url' => wp_get_attachment_image_src($latest_product->get_image_id(), 'full', false)[0],
+			'title' => $latest_product->get_title(),
+			'price' => $latest_product->price,
+		];
+	}
+
+	return $results;
 }
