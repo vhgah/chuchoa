@@ -68,14 +68,40 @@ function cc_get_latest_products($number = 8){
 
 	if (is_null($latest_products))
 		return [];
-
+	
 	foreach	($latest_products as $latest_product){
+		$arg_coupon = array(
+			'posts_per_page' => 1,
+			'post_type' => 'shop_coupon',
+			'nopaging' => true,
+			'post_status' => ['publish'],
+			'meta_query' => array(
+				array(
+				   'key'     => 'product_ids',
+				   'value'   => $latest_product->get_id(),
+				   'compare' => 'LIKE'
+				)
+			 )
+		);
+		$coupons = get_posts($arg_coupon);
+		$coupon = "";
+		if (count($coupons) > 0) {
+			$coupon = $coupons[0]->post_excerpt;
+		}
+		
 		$results[] = [
 			'url' => get_permalink($latest_product->get_id()),
 			'excerpt' => $latest_product->short_description,
 			'image_url' => wp_get_attachment_image_src($latest_product->get_image_id(), 'full', false)[0],
 			'title' => $latest_product->get_title(),
-			'price' => $latest_product->price,
+			'hot' => $latest_product->get_regular_price() > $latest_product->get_price(),
+			'price' => $latest_product->get_price(),
+			'tags' => $latest_product->get_tags(),
+			'coupone' => $coupon,
+			'tinh_trang' => $latest_product->get_attribute('tinh-trang'),
+			'so_km' => $latest_product->get_attribute('so-km-da-di'),
+			'hop_so' => $latest_product->get_attribute('hop-so'),
+			'dia_diem' => $latest_product->get_attribute('dia-diem'),
 		];
 	}
 

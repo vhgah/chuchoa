@@ -215,22 +215,24 @@ get_header(); ?>
                   <div class="mdl-card__title chuchoa-card-product__title">
                     <h3 class="mdl-card__title-text chuchoa-card-product__title-text">
                       <a href="<?php echo esc_url( $latest_product['url'] ); ?>" class="mdl-typography--font-light"><?php echo $latest_product['title'] ?></a>
-                    </h3>
+                    </h3>										
                     <span class="mdl-typography--text-uppercase mdl-typography--font-bold chuchoa-card-product__tags">
-                      <a href="shop.html" rel="tag">E 2.0MT</a>, <a href="shop.html" rel="tag">2012</a>
+											<?php echo $latest_product['tags'];?>
                     </span>
-                    <div class="chuchoa-card-product-installment chuchoa-card-product__installment--animated">
-                      <span>Mua trả góp chỉ từ 220 <em>triệu</em></span>
-                    </div>
+										<?php if ($latest_product['coupone'] != "") :?>
+											<div class="chuchoa-card-product-installment chuchoa-card-product__installment--animated">
+												<span><?php echo $latest_product['coupone']; ?></span>
+											</div>
+										<?php endif;?>                    
                   </div>
-                  <div class="chuchoa-card-product__badge chuchoa-card-product__badge-hight chuchoa-product-badge">590</div>
+                  <div class="chuchoa-card-product__badge <?php if ($latest_product['hot']) echo 'chuchoa-card-product__badge-hight';?> chuchoa-product-badge"><?php echo $latest_product['price']; ?></div>
                 </div>
                 <div class="mdl-card__actions chuchoa-card-product-actions">                  
                   <div class="chuchoa-product-info mdl-grid mdl-grid--no-spacing">
-                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">info_outline</i> Đã qua SD</span>
-                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">av_timer</i> 41.000km</span>
-                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">settings_input_svideo</i> Số sàn</span>
-                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">place</i> Hà Nội</span>
+                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">info_outline</i> <?php echo $latest_product['tinh_trang']; ?></span>
+                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">av_timer</i> <?php echo $latest_product['so_km']; ?></span>
+                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">settings_input_svideo</i> <?php echo $latest_product['hop_so']; ?></span>
+                    <span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">place</i><?php echo $latest_product['dia_diem']; ?></span>
                   </div>                  
                 </div>
               </div>
