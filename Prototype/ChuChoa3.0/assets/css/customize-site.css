@@ -928,3 +928,15 @@ blockquote {
     padding-bottom: 20px;
 }
 /* end chuchoa-sell-section*/
+.chuchoa-recruitment-section--parallax{
+    background-image: url("../images/recruitment/bg_top.png");
+    height: 200px;
+    background-attachment: fixed;
+    background-position: right -200px top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: static;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+/* end chuchoa-recruitment-section*/
