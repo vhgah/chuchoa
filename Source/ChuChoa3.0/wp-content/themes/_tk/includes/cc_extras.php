@@ -5,7 +5,9 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package cc
+ * cuong
  */
+ 
 
  /**
  * Adds custom classes to the array of body classes.
