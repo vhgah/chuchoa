@@ -242,6 +242,16 @@ get_header(); ?>
       </div>        
     </div>        
   <?php endif;?>
+		
+	<div class="chuchoa-section chuchoa-section--parallax">
+		<div class="chuchoa-section__content chuchoa-usermail-section--parallax mdl-color--primary">
+			<div class="mdl-grid mdl-grid--no-fullwidth mdl-color--primary-contrast mdl-shadow--2dp">
+				<?php 
+					echo do_shortcode('[contact-form-7 id="113" title="Đừng bỏ lỡ cơ hội mua xe tốt"]');
+				?>
+			</div>          
+		</div>
+	</div>
 	
 </div>	
 

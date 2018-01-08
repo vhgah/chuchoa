@@ -928,3 +928,8 @@ blockquote {
     padding-bottom: 20px;
 }
 /* end chuchoa-sell-section*/
+
+div.wpcf7-response-output, div.wpcf7-validation-errors { display: none !important; }
+.wpcf7-not-valid{border-color: red;}
+.wpcf7-not-valid-tip{font-size: 10px !important;margin-top: 0px;margin-left: -170px;}
+div.mdl-textfield.is-focused ~ span.wpcf7-not-valid-tip{display: none;}

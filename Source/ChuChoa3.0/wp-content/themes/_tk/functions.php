@@ -213,6 +213,8 @@ function _tk_scripts() {
 	wp_enqueue_script('cc-mdl-select', THEME_DIR_URI . '/includes/js/getmdl-select.min.js', true);
 
 	wp_enqueue_script( 'cc_base_site_js', THEME_DIR_URI . '/includes/js/base-site.js', true );
+
+	wp_enqueue_script( 'cc_custom_site_js', THEME_DIR_URI . '/includes/js/custom-site.js', array('jquery'), true );
 }
 add_action( 'wp_enqueue_scripts', '_tk_scripts' );
 
