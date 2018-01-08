@@ -5,9 +5,7 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package cc
- * cuong
  */
- 
 
  /**
  * Adds custom classes to the array of body classes.
@@ -43,7 +41,9 @@ function cc_get_footer_tel() {
 function cc_get_footer_Email() {
 	return get_theme_mod( 'cc_footer_section_Email' );
 }
-
+function cc_get_footer_Chungnhan() {
+	return get_theme_mod( 'cc_footer_section_ChungNhan' );
+}
 function cc_get_leftmenu_item_type_field($id){
 	return get_post_meta( $id, 'menu-item-leftmenu_item_type_field', true );
 }

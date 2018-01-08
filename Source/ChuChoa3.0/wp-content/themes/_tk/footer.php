@@ -14,7 +14,7 @@
             <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
             <h1 class="mdl-mega-footer--heading">Chứng nhận</h1>
             <div class="mdl-mega-footer__widget">              
-              <p>Giấy chứng nhận đăng ký doanh nghiệp số xxxxxxxxx do Sở Kế Hoạch và Đầu Tư XXXX cấp ngày 08/08/2017 </p>
+              <p><?php echo cc_get_footer_Chungnhan(); ?></p>
             </div>
             <div class="mdl-mega-footer__widget">
               <i class="fa fa-cc-mastercard"></i> &nbsp; <i class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i class="fa fa-cc-jcb"></i>
@@ -55,24 +55,33 @@
            <div class="mdl-mega-footer--drop-down-section">
             <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">            
             <h1 class="mdl-mega-footer--heading">ChuChoa.com</h1>
-            <div class="mdl-mega-footer__widget">              
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="shop.html">Mua</a></li>
-                <li><a href="sell.html">Bán</a></li>
-                <li><a href="service.html">Dịch vụ</a></li>
-                <li><a href="page-card.html">Tin tức</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
-                <li><a href="about.html">Giới thiệu</a></li>
-              </ul>
-            </div>
+             <nav class="mdl-mega-footer__widget">
+        <?php $footer_menu = cc_get_menu('footerMN');
+          foreach($footer_menu as $menu){
+            if (empty(cc_get_leftmenu_item_type_field($menu->ID))){
+              if ($menu->menu_item_parent == 0){
+                ?>
+                  <a href="<?php echo $menu->href; ?>"><span class="chuchoa-margin-bottom-10 chuchoa-margin-right-10	"><?php echo $menu->title; ?></span></a></br> 
+                <?php
+              }
+              else{
+                ?>
+                  <a class="chuchoa-margin-bottom-10 chuchoa-margin-right-10" href="<?php echo $menu->href; ?>"><?php echo $menu->title; ?></a></br>
+                <?php
+              }
+            }
+            else{
+              ?>
+                <div class="chuchoa-drawer-separator"></div>
+              <?php
+            }
+           } ?>       
+      </nav>  
           </div>
         </div>          
-      </footer>
-
+      </footer> 
     </div>
-  </div>
-
-<?php wp_footer(); ?>
-
+  </div> 
+<?php wp_footer(); ?> 
 </body>
 </html>
