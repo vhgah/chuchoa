@@ -60,6 +60,15 @@ add_action( 'customize_register', function ( $wp_customize ) {
 		'settings' => 'cc_footer_section_Email',
 		'priority' => 73,
 	] );
+	$wp_customize->add_setting( 'cc_footer_section_ChungNhan', [
+	] );
+	$wp_customize->add_control( 'cc_footer_section_ChungNhan', [
+		'label' => __( 'Giấy CN', '_tk' ),
+		'type' => 'text',
+		'section' => 'cc_footer_section',
+		'settings' => 'cc_footer_section_ChungNhan',
+		'priority' => 74,
+	] ); 
 });
 
 

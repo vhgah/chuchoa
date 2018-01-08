@@ -112,6 +112,7 @@ function _tk_setup() {
 		'primary'  => __( 'Header visible menu', '_tk' ),
 		'secondary'  => __( 'Header collaped menu', '_tk' ),
 		'left'  => __( 'Left site menu', '_tk' ),
+		'footerMN'  => __( 'Footer site menu', '_tk' ),
 		) );
 
 }
