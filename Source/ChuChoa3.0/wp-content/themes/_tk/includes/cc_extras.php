@@ -10,7 +10,8 @@
  /**
  * Adds custom classes to the array of body classes.
  */
-function cc_body_classes( $classes ) {
+
+ function cc_body_classes( $classes ) {
 	return [];
 }
 add_filter( 'body_class', 'cc_body_classes' );
@@ -107,5 +108,70 @@ function cc_get_latest_products($number = 8){
 		];
 	}
 
+	return $results;
+}
+
+function cc_get_most_view_products(){
+	$args = array(
+		'post_type'  => 'product', 
+		'order'     => 'DESC',
+		'meta_key' => 'post_views_count',
+		'orderby'   => 'meta_value',
+		'posts_per_page' => 3,
+		'nopaging' => true,
+		'post_status' => ['publish'],
+		'meta_query' => array(
+			array(
+				'key' => 'post_views_count',
+				'value' => 0,
+				'type' => 'numeric',
+				'compare' => '>'
+			)
+		)
+	);
+	
+	$query = new WP_Query($args); 
+	$results = [];
+	if ($query->have_posts()){
+		while ($query->have_posts()) {
+			$query->the_post();
+			$product = wc_get_product(get_the_ID());
+
+			$arg_coupon = array(
+				'posts_per_page' => 1,
+				'post_type' => 'shop_coupon',
+				'nopaging' => true,
+				'post_status' => ['publish'],
+				'meta_query' => array(
+					array(
+					   'key'     => 'product_ids',
+					   'value'   => $product->get_id(),
+					   'compare' => 'LIKE'
+					)
+				 )
+			);
+			$coupons = get_posts($arg_coupon);
+			$coupon = "";
+			if (count($coupons) > 0) {
+				$coupon = $coupons[0]->post_excerpt;
+			}
+			
+			$results[] = [
+				'url' => get_permalink($product->get_id()),
+				'excerpt' => $product->short_description,
+				'image_url' => wp_get_attachment_image_src($product->get_image_id(), 'full', false)[0],
+				'title' => $product->get_title(),
+				'hot' => $product->get_regular_price() > $product->get_price(),
+				'price' => $product->get_price(),
+				'tags' => $product->get_tags(),
+				'coupone' => $coupon,
+				'tinh_trang' => $product->get_attribute('tinh-trang'),
+				'so_km' => $product->get_attribute('so-km-da-di'),
+				'hop_so' => $product->get_attribute('hop-so'),
+				'dia_diem' => $product->get_attribute('dia-diem'),
+			];
+		}
+	}
+	
 	return $results;
 }

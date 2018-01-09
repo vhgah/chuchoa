@@ -30,6 +30,8 @@ get_header(); ?>
     <?php endwhile; // end of the loop. ?>
 </div>
 
+<?php setPostViews(get_the_ID());?>
+
 <?php get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

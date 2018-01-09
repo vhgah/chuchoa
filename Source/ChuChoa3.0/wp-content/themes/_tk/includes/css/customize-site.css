@@ -452,7 +452,7 @@
 
 /* usermail section */
 .chuchoa-usermail-section--parallax{
-    background-image: url("../images/backgrounds/bg-usermail.png");
+    background-image: url("../resources/images/backgrounds/bg-usermail-min.png");
     height: 100%;
     background-attachment: fixed;
     background-position: right -500px  center;

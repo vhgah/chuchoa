@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $cc_latest_products = cc_get_latest_products();
+$cc_most_view_products = cc_get_most_view_products();
 
 get_header(); ?>
 
@@ -250,6 +251,112 @@ get_header(); ?>
 					echo do_shortcode('[contact-form-7 id="113" title="Đừng bỏ lỡ cơ hội mua xe tốt"]');
 				?>
 			</div>          
+		</div>
+	</div>
+
+	<div class="chuchoa-section" id="chuchoa-top-product-section">
+		<div class="chuchoa-section__content">
+			<div class="mdl-grid mdl-grid--no-fullwidth">
+				<div class="mdl-cell mdl-cell--12-col chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+					<h2 class="mdl-typography--display-1 mdl-typography--text-center mdl-typography--font-light chuchoa-section__content-header">Đáng chú ý</h2>
+					<div class="chuchoa-divider chuchoa-divider--center chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
+						<div class="chuchoa-divider__border"></div>
+					</div>
+				</div>
+			</div>
+			<div class="mdl-grid mdl-grid--no-fullwidth">
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-section__content-item chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+					<div class="mdl-card mdl-shadow--2dp chuchoa-card-product">
+						<div class="mdl-card__media chuchoa-card-product__media">
+							<a href="single-product.html">
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-a.jpg"> 
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-b.jpg">
+							</a>
+							<div class="mdl-card__title chuchoa-card-product__title">
+								<h3 class="mdl-card__title-text chuchoa-card-product__title-text">
+									<a href="single-product.html" class="mdl-typography--font-light">Toyota Innova</a>
+								</h3>
+								<span class="mdl-typography--text-uppercase mdl-typography--font-bold chuchoa-card-product__tags">
+									<a href="shop.html" rel="tag">E 2.0MT</a>, <a href="shop.html" rel="tag">2012</a>
+								</span>
+								<div class="chuchoa-card-product-installment chuchoa-card-product__installment--animated">
+									<span>Mua trả góp chỉ từ 220 <em>triệu</em></span>
+								</div>
+							</div>
+							<div class="chuchoa-card-product__badge chuchoa-card-product__badge-hight chuchoa-product-badge">590</div>
+						</div>
+						<div class="mdl-card__actions chuchoa-card-product-actions">                  
+							<div class="chuchoa-product-info mdl-grid mdl-grid--no-spacing">
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">info_outline</i> Đã qua SD</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">av_timer</i> 41.000km</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">settings_input_svideo</i> Số sàn</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">place</i> Hà Nội</span>
+							</div>                  
+						</div>
+					</div>
+				</div>
+
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-section__content-item chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+					<div class="mdl-card mdl-shadow--2dp chuchoa-card-product">
+						<div class="mdl-card__media chuchoa-card-product__media">
+							<a href="single-product.html">
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-a.jpg"> 
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-b.jpg">
+							</a>
+							<div class="mdl-card__title chuchoa-card-product__title">
+								<h3 class="mdl-card__title-text chuchoa-card-product__title-text">
+									<a href="single-product.html" class="mdl-typography--font-light">Toyota Innova</a>
+								</h3>
+								<span class="mdl-typography--text-uppercase mdl-typography--font-bold chuchoa-card-product__tags">
+									<a href="shop.html" rel="tag">E 2.0MT</a>, <a href="shop.html" rel="tag">2012</a>
+								</span>
+								<div class="chuchoa-card-product-installment chuchoa-card-product__installment--animated">
+									<span>Mua trả góp chỉ từ 220 <em>triệu</em></span>
+								</div>
+							</div>
+							<div class="chuchoa-card-product__badge chuchoa-card-product__badge-hight chuchoa-product-badge">590</div>
+						</div>
+						<div class="mdl-card__actions chuchoa-card-product-actions">                  
+							<div class="chuchoa-product-info mdl-grid mdl-grid--no-spacing">
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">info_outline</i> Đã qua SD</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">av_timer</i> 41.000km</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">settings_input_svideo</i> Số sàn</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">place</i> Hà Nội</span>
+							</div>                  
+						</div>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone chuchoa-section__content-item chuchoa-animation" data-os-animation="fadeIn" data-os-animation-delay="0.1s">
+					<div class="mdl-card mdl-shadow--2dp chuchoa-card-product">
+						<div class="mdl-card__media chuchoa-card-product__media">
+							<a href="single-product.html">
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-a.jpg"> 
+								<img alt="some product" class="chuchoa-card-product__image" src="assets/images/product/default-b.jpg">
+							</a>
+							<div class="mdl-card__title chuchoa-card-product__title">
+								<h3 class="mdl-card__title-text chuchoa-card-product__title-text">
+									<a href="single-product.html" class="mdl-typography--font-light">Toyota Innova</a>
+								</h3>
+								<span class="mdl-typography--text-uppercase mdl-typography--font-bold chuchoa-card-product__tags">
+									<a href="shop.html" rel="tag">E 2.0MT</a>, <a href="shop.html" rel="tag">2012</a>
+								</span>
+								<div class="chuchoa-card-product-installment chuchoa-card-product__installment--animated">
+									<span>Mua trả góp chỉ từ 220 <em>triệu</em></span>
+								</div>
+							</div>
+							<div class="chuchoa-card-product__badge chuchoa-card-product__badge-hight chuchoa-product-badge">590</div>
+						</div>
+						<div class="mdl-card__actions chuchoa-card-product-actions">                  
+							<div class="chuchoa-product-info mdl-grid mdl-grid--no-spacing">
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">info_outline</i> Đã qua SD</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">av_timer</i> 41.000km</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">settings_input_svideo</i> Số sàn</span>
+								<span class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--2-col-phone"><i class="chuchoa-product-info--icon material-icons">place</i> Hà Nội</span>
+							</div>                  
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
