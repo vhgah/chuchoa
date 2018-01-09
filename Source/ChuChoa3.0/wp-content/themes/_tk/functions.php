@@ -135,6 +135,9 @@ add_filter( 'plugin_action_links', function ( $actions, $plugin_file, $plugin_da
 		'woocommerce/woocommerce.php',
 		'tinymce-advanced/tinymce-advanced.php',
 		'jetpack/jetpack.php',
+		'contact-form-7\wp-contact-form-7.php',
+		'flamingo\flamingo.php',
+		'sweet-alert-add-on-for-contact-form-7\plugin-sweet-alert-cf7.php',
 	];
 
 	if ( array_key_exists( 'deactivate', $actions ) && in_array( $plugin_file, $must_use_plugins ) ) {
