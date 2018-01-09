@@ -175,3 +175,27 @@ function cc_get_most_view_products(){
 	
 	return $results;
 }
+
+function cc_get_thuong_hieu(){
+	$query = new WP_Query( [
+		'post_type' => 'cc_thuonghieu',
+		'orderby' => ['ID' => 'ASC'],
+		'nopaging' => true,
+		'post_status' => ['publish'],
+	] );
+
+	$results = [];
+
+	if ($query->have_posts()){
+		while ($query->have_posts()) {
+			$query->the_post();
+			$results[] = [
+				'title' => get_the_title(),
+				'url'	=> get_permalink(get_the_ID()),
+				'tags' =>  wp_get_post_terms(get_the_ID(), 'dong_xe') ,
+			];
+		}
+	}
+
+	return $results;
+}
